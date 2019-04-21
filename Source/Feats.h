@@ -22,6 +22,7 @@ namespace Feats {
                 character.weaponProficiencies.add(weapon);
     };
     
+    
     //================FEATS==================//
     static const inline Feat    acrobatic{"acrobatic",[](Character& character){
                                     character.getSkill("jump").miscMod += 2;
@@ -42,6 +43,11 @@ namespace Feats {
                                 animalAffinity{"animal affinity",[](Character& character){
                                     character.getSkill("handle animal").miscMod += 2;
                                     character.getSkill("ride").miscMod += 2;
+                                }},
+    
+                                exoticProf{"exoticProf ", [](Character& character){
+                                    //TODO
+                                    
                                 }},
     
                                 improvedInitiative{"improved initiative", [](Character& character){

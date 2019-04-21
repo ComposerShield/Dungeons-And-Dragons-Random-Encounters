@@ -81,26 +81,60 @@ namespace Weapons {
                             quarterstaff    {"quarterstaff",    D6, D6, x2,         SIMPLE, ONE},
                             spear           {"spear",           D8, none, x3,       SIMPLE, ONE},
     
-    javelin     {"javelin",     D6, none, x2,       SIMPLE, ONE}
-
+    javelin     {"javelin",     D6, none, x2,       SIMPLE, ONE},
     
+    
+    
+    //Exotic STATS TODO
+    kama     {"javelin",     D6, none, x2,       EXOTIC, ONE},
+    nunchaku     {"javelin",     D6, none, x2,       EXOTIC, ONE},
+    sai     {"javelin",     D6, none, x2,       EXOTIC, ONE},
+    siangham     {"javelin",     D6, none, x2,       EXOTIC, ONE},
+    swordBastard     {"javelin",     D6, none, x2,       EXOTIC, ONE},
+    waraxeDrawven     {"javelin",     D6, none, x2,       EXOTIC, ONE},
+    whip     {"javelin",     D6, none, x2,       EXOTIC, ONE},
+    axeOrcDouble     {"javelin",     D6, none, x2,       EXOTIC, TWO},
+    chainSpiked     {"javelin",     D6, none, x2,       EXOTIC, TWO},
+    flailDire     {"javelin",     D6, none, x2,       EXOTIC, TWO},
+    hammerGnomeHooked     {"javelin",     D6, none, x2,       EXOTIC, TWO},
+    swordTwoBladed     {"javelin",     D6, none, x2,       EXOTIC, TWO},
+    urgoshDwarven     {"javelin",     D6, none, x2,       EXOTIC, TWO},
+    bolash     {"javelin",     D6, none, x2,       EXOTIC, TWO},
+    crossbowHand     {"javelin",     D6, none, x2,       EXOTIC, TWO},
+    crossbowHeavyRepeating     {"javelin",     D6, none, x2,       EXOTIC, TWO},
+    crossbowLightRepeating     {"javelin",     D6, none, x2,       EXOTIC, TWO},
+    net     {"javelin",     D6, none, x2,       EXOTIC, TWO},
+    shuriken     {"javelin",     D6, none, x2,       EXOTIC, ONE}
     ;
 
+    inline const Array<Weapon> allWeapons{gauntlet, unarmed, dagger, daggerPunching, gauntletSpiked,
+        maceLight, sickle, club, maceHeavy, morningstar, shortspear, longspear, quarterstaff, spear,
+        
+        kama, nunchaku, sai, siangham, swordBastard, waraxeDrawven, whip, axeOrcDouble, chainSpiked, flailDire,
+        hammerGnomeHooked, swordTwoBladed, urgoshDwarven, bolash, crossbowHand, crossbowHeavyRepeating,
+        crossbowLightRepeating, net, shuriken
+    };
+    
+    inline Array<Weapon> getWeaponList(WeaponType weaponType){
+        Array<Weapon> output;
+        for (auto weapon : allWeapons)
+            if(weapon.type==weaponType)
+                output.add(weapon);
+        return output;
+    };
     
     inline const Array<Weapon> simple{gauntlet, unarmed, dagger, daggerPunching, gauntletSpiked,
         maceLight, sickle, club, maceHeavy, morningstar, shortspear, longspear, quarterstaff, spear
     };
     
-    inline const Array<Weapon> martial{
-        
-    };
+    inline const Array<Weapon> martial = getWeaponList(EXOTIC);//TODO!
     
-    inline const Array<Weapon> exotic{
-        
-    };
+    inline const Array<Weapon> exotic = getWeaponList(EXOTIC);
     
-    
-    
+    inline Weapon getRandomExoticWeapon = []()->Weapon{
+        Random random;
+        return exotic[random.nextInt(exotic.size())];
+    }();
     
 }
 
