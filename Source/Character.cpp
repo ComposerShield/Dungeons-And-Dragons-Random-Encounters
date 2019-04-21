@@ -27,4 +27,10 @@ void Character::evaluateCharacterSheet(){
     
 }
 
+Skill& Character::getSkill(String skillName){
+    for(auto& skill : skills)
+        if(skill.name==skillName)
+            return skill;
+}
+
 

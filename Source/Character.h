@@ -29,7 +29,7 @@ public:
     
     String race;
     Array<Class> classes;
-    
+    Array<String> description;
     struct EquippedWeapons : Array<Weapons::Weapon>{};
     ;
     struct EquippedArmor   : Array<Armors::Armor>{
@@ -48,6 +48,7 @@ public:
     Die HD = D8; //default
     
     void evaluateCharacterSheet();
+    Skill& getSkill(String skill);
     
 private:
     constexpr int abilityMod(int input) const {return static_cast<int>((input-10)/2);}
@@ -78,4 +79,15 @@ class PC : public Character{
 struct Feat{
     String name;
     std::function<void(Character& character)> function;
+    Weapons::WeaponType weaponType;
+    
+    Feat(String Name, std::function<void(Character& character)> Function){
+        name = Name;
+        function = Function;
+    }
+    
+    Feat(String Name, Character& character, Weapons::WeaponType WeaponType){
+        name = Name;
+        weaponType = WeaponType;
+    }
 };

@@ -64,7 +64,6 @@ private:
     CharacterSheet test;
     HeaderControls headerControls;
     
-    //Monsters::Goblin jack;
     
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)
 };

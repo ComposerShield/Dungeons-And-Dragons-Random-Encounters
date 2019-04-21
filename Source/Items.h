@@ -42,7 +42,7 @@ namespace Weapons {
         }
     }
     
-    enum weaponType{
+    enum WeaponType{
         SIMPLE,
         MARTIAL_LIGHT_MELEE,
         MARTIAL_ONE_HANDED_MELEE,
@@ -61,7 +61,7 @@ namespace Weapons {
         Die melee;
         Die ranged;
         Critical crit;
-        weaponType type;
+        WeaponType type;
         NumOfHands numOfHands;
     };
     
