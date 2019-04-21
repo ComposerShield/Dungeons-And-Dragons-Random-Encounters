@@ -17,6 +17,8 @@
     This component lives inside our window, and this is where you should put all
     your controls and content.
 */
+
+
 class CharacterSheet : public Component{
 public:
     void paint (Graphics&) override;
@@ -26,28 +28,43 @@ private:
 
 };
 
+
+class HeaderControls : public Component{
+public:
+    HeaderControls();
+    void paint (Graphics&) override;
+    void resized() override;
+    
+private:
+    Image logo;
+    ComboBox monsterType;
+    ComboBox numOfMonsters;
+    TextButton generateButton;
+};
+
+
+//==============================================================================
+//============================MAIN COMPONENT====================================
+//==============================================================================
+
+
 class MainComponent   : public Component
 {
 public:
-    //==============================================================================
     MainComponent();
     ~MainComponent();
 
-    //==============================================================================
     void paint (Graphics&) override;
     void resized() override;
     
     Array<CharacterSheet> characterSheets;
+    void displayCharacterSheets();
 
 private:
-    //==============================================================================
-    Image logo;
     CharacterSheet test;
+    HeaderControls headerControls;
     
     //Monsters::Goblin jack;
     
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)
 };
-
-
-
