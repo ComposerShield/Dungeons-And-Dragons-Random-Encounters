@@ -44,8 +44,16 @@ namespace Weapons {
     
     enum weaponType{
         SIMPLE,
-        MARTIAL,
+        MARTIAL_LIGHT_MELEE,
+        MARTIAL_ONE_HANDED_MELEE,
+        MARTIAL_TWO_HANDED_MELEE,
+        MARTIAL_RANGED,
         EXOTIC
+    };
+    
+    enum NumOfHands{
+        ONE,
+        TWO
     };
     
     struct Weapon{
@@ -54,34 +62,46 @@ namespace Weapons {
         Die ranged;
         Critical crit;
         weaponType type;
+        NumOfHands numOfHands;
     };
     
     
-    namespace Simple{
-        static inline Weapon    gauntlet        {"gauntlet",        D3, none, x2,       SIMPLE},
-                                unarmed         {"unarmed strike",  D3, none, x2,       SIMPLE},
-                                dagger          {"dagger",          D4, none, _19_20x2, SIMPLE},
-                                daggerPunching  {"punching dagger", D4, none, x3,       SIMPLE},
-                                gauntletSpiked  {"spiked dagger",   D4, none, x3,       SIMPLE},
-                                maceLight       {"light mace",      D6, none, x2,       SIMPLE},
-                                sickle          {"sickle",          D6, none, x2,       SIMPLE},
-                                club            {"club",            D6, none, x2,       SIMPLE},
-                                maceHeavy       {"heavy mace",      D8, none, x2,       SIMPLE},
-                                morningstar     {"morningstar",     D6, none, x2,       SIMPLE},
-                                shortSpear      {"shortspear",      D6, none, x2,       SIMPLE},
-                                longSpear       {"longspear",       D8, none, x3,       SIMPLE},
-                                quarterstaff    {"quarterstaff",    D6, D6, x2,         SIMPLE},
-                                spear           {"spear",           D8, none, x3,       SIMPLE},
-        
-        javelin     {"javelin",     D6, none, x2,       SIMPLE}
-
-        
-        ;
-    }
+    static inline Weapon    gauntlet        {"gauntlet",        D3, none, x2,       SIMPLE, ONE},
+                            unarmed         {"unarmed strike",  D3, none, x2,       SIMPLE, ONE},
+                            dagger          {"dagger",          D4, none, _19_20x2, SIMPLE, ONE},
+                            daggerPunching  {"punching dagger", D4, none, x3,       SIMPLE, ONE},
+                            gauntletSpiked  {"spiked dagger",   D4, none, x3,       SIMPLE, ONE},
+                            maceLight       {"light mace",      D6, none, x2,       SIMPLE, ONE},
+                            sickle          {"sickle",          D6, none, x2,       SIMPLE, ONE},
+                            club            {"club",            D6, none, x2,       SIMPLE, ONE},
+                            maceHeavy       {"heavy mace",      D8, none, x2,       SIMPLE, ONE},
+                            morningstar     {"morningstar",     D6, none, x2,       SIMPLE, ONE},
+                            shortspear      {"shortspear",      D6, none, x2,       SIMPLE, ONE},
+                            longspear       {"longspear",       D8, none, x3,       SIMPLE, ONE},
+                            quarterstaff    {"quarterstaff",    D6, D6, x2,         SIMPLE, ONE},
+                            spear           {"spear",           D8, none, x3,       SIMPLE, ONE},
     
-    namespace Martial{
+    javelin     {"javelin",     D6, none, x2,       SIMPLE, ONE}
+
+    
+    ;
+
+    
+    inline const Array<Weapon> simple{gauntlet, unarmed, dagger, daggerPunching, gauntletSpiked,
+        maceLight, sickle, club, maceHeavy, morningstar, shortspear, longspear, quarterstaff, spear
+    };
+    
+    inline const Array<Weapon> martial{
         
-    }
+    };
+    
+    inline const Array<Weapon> exotic{
+        
+    };
+    
+    
+    
+    
 }
 
 namespace Armors {

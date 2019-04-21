@@ -22,8 +22,8 @@ namespace Monsters {
             race = "Goblin";
             sizeMod = 1;
             cr = 0.33;
-            commonWeapons = { Weapons::Simple::javelin,
-                              Weapons::Simple::morningstar };
+            commonWeapons = { Weapons::javelin,
+                              Weapons::morningstar };
         }
     };
 }

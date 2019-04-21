@@ -24,4 +24,8 @@ namespace Feats {
     static const inline Feat improvedInitiative{"improved initiative", [](Character& character){
         character.initMiscMod += 4;
     }};
+    
+    static const inline Feat martialWeaponProf{"exotic weapon prof", [](Character& character){
+        
+    }};
 }

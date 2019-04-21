@@ -44,6 +44,7 @@ public:
     EquippedArmor   equippedArmor;
     Array<Skill> skills = Skills::skillList;
     Array<Feat>  feats;
+    Array<Weapons::Weapon> weaponProficiencies;
     Die HD = D8; //default
     
     void evaluateCharacterSheet();
