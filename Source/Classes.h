@@ -11,13 +11,14 @@
 #pragma once
 
 struct Class{
+    String name;
     int level;
     
     
-    
 };
 
 
-struct Fighter : Class{
+namespace Classes{
     
-};
+    inline Class fighter{"Fighter", 1};
+}

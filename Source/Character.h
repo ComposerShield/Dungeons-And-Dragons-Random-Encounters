@@ -24,7 +24,15 @@ public:
     int strength, dexterity, constitution, intelligence, wisdom, charisma,
         baseFort, baseRef, baseWill, miscFort, miscRef, miscWill, sizeMod,
         baseAttackBonus, initiative, initMiscMod, hp, touchAC, touchACMisc,
-        currentHP;
+        currentHP, meleeMiscBonus, rangedMiscBonus, baseHP, miscHP;
+    
+    constexpr int getLevel(){
+        int sum{0};
+        for(auto& thisClass : classes)
+            sum += thisClass.level;
+        return sum;
+    }
+    std::optional<int> casterLevel;
     
     Character(Array<int> abilities, int baseAttack, int init, int HP);
     
@@ -81,15 +89,23 @@ struct Feat{
     String name;
     std::function<void(Character& character)> function;
     std::optional<String> prerequisiteFeat;
+    std::optional<std::pair<Ability, int>> prerequisiteAbility;
     
     Feat(String Name, std::function<void(Character& character)> Function){
         name = Name;
         function = Function;
     }
     
-    Feat(String Name, std::function<void(Character& character)> Function, String prereqFeat){
+    Feat(String Name, std::function<void(Character& character)> Function, Feat prereqFeat){
         name = Name;
         function = Function;
-        prerequisiteFeat = prereqFeat;
+        prerequisiteFeat = prereqFeat.name;
+    }
+    
+    Feat(String Name, std::function<void(Character& character)> Function, std::pair<Ability, int> prereqAbility){
+        name = Name;
+        function = Function;
+        prerequisiteAbility = prereqAbility;
     }
 };
+
