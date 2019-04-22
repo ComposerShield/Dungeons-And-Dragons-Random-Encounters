@@ -36,12 +36,12 @@ public:
     HeaderControls();
     void paint (Graphics&) override;
     void resized() override;
-    
-private:
-    Image logo;
     ComboBox monsterType;
     ComboBox numOfMonsters;
     TextButton generateButton;
+    
+private:
+    Image logo;
 };
 
 

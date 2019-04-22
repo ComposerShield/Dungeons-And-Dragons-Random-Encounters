@@ -42,6 +42,14 @@ void MainComponent::fillCharacterSheet(){
 }
 
 void MainComponent::buttonClicked(Button * button){
+    String monsterType = headerControls.monsterType.getText();
+    int numOfMonsters  = headerControls.numOfMonsters.getSelectedItemIndex();
+    
+    auto monster = [monsterType]()->NPC{
+        for(auto [name,thisMonster] : Monsters::monsters)
+            if (name==monsterType) return thisMonster;
+        return Monsters::Goblin();
+    }();
     
 }
 

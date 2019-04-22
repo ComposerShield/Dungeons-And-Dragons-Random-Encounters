@@ -13,6 +13,7 @@
 #include "Character.h"
 #include "array"
 #include "Feats.h"
+#include "map"
 
 namespace Monsters {
     //inline auto greg = std::array<int, 6>{11,13,12,10,9,6};
@@ -26,4 +27,22 @@ namespace Monsters {
                               Weapons::morningstar };
         }
     };
+    
+    struct Orc : public NPC{
+        Orc() : NPC({11,13,12,10,9,6}, 1, 1, 4){ //TODO, copied from Goblin
+            
+        }
+    };
+    
+    
+    
+    
+    
+    inline std::map<String, NPC> monsters = {
+        {"Goblin", Goblin()},
+        {"Orc", Orc()}
+    };
 }
+
+
+
