@@ -15,6 +15,7 @@
 #include "Items.h"
 #include "Classes.h"
 #include "array"
+#include "optional"
 
 struct Feat;
 
@@ -79,15 +80,16 @@ class PC : public Character{
 struct Feat{
     String name;
     std::function<void(Character& character)> function;
-    Weapons::WeaponType weaponType;
+    std::optional<String> prerequisiteFeat;
     
     Feat(String Name, std::function<void(Character& character)> Function){
         name = Name;
         function = Function;
     }
     
-    Feat(String Name, Character& character, Weapons::WeaponType WeaponType){
+    Feat(String Name, std::function<void(Character& character)> Function, String prereqFeat){
         name = Name;
-        weaponType = WeaponType;
+        function = Function;
+        prerequisiteFeat = prereqFeat;
     }
 };

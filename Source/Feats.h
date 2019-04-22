@@ -22,6 +22,10 @@ namespace Feats {
                 character.weaponProficiencies.add(weapon);
     };
     
+    template<Weapons::Weapon& exoticWeapon>
+    static const inline Feat exoticProf{"exoticProf " + exoticWeapon.name, [](Character& character){
+        character.weaponProficiencies.add(exoticWeapon);
+    }};
     
     //================FEATS==================//
     static const inline Feat    acrobatic{"acrobatic",[](Character& character){
@@ -45,9 +49,9 @@ namespace Feats {
                                     character.getSkill("ride").miscMod += 2;
                                 }},
     
-                                exoticProf{"exoticProf ", [](Character& character){
-                                    //TODO
-                                    
+                                athletic{"athletic",[](Character& character){
+                                    character.getSkill("climb").miscMod += 2;
+                                    character.getSkill("swim").miscMod += 2;
                                 }},
     
                                 improvedInitiative{"improved initiative", [](Character& character){
@@ -67,7 +71,7 @@ namespace Feats {
                                                            weaponProfFunc<Weapons::MARTIAL_RANGED>);
     
     
-    
+    inline const Array<Feat> featList{acrobatic, agile, alertness, animalAffinity, exoticProf<Weapons::getRandomExoticWeapon>, improvedInitiative};
     
     
 }
