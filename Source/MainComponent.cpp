@@ -51,6 +51,10 @@ void MainComponent::buttonClicked(Button * button){
         return Monsters::Goblin();
     }();
     
+    Array<NPC> outputMonsters;
+    for(auto i=0;i<numOfMonsters;++i){
+        outputMonsters.add(monster);
+    }
 }
 
 
@@ -81,6 +85,9 @@ HeaderControls::HeaderControls() : generateButton("Generate"){
         monsterType.addItem(monster, monsterType.getNumItems()+1);
     for(auto i=1; i<20 ;++i)
         numOfMonsters.addItem(static_cast<String>(i), i);
+    
+    monsterType.setText("goblin");
+    numOfMonsters.setText("1");
 }
 
 void HeaderControls::paint (Graphics& g){

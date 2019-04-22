@@ -34,6 +34,7 @@ public:
         return sum;
     }
     std::optional<int> casterLevel;
+    Array<int*> abilityList{&strength, &dexterity, &constitution, &intelligence, &wisdom, &charisma};
     
     Character(Array<int> abilities, int baseAttack, int init, int HP);
     
@@ -68,6 +69,8 @@ private:
     constexpr int getAC()        const {return equippedArmor.addArmor() + abilityMod(dexterity) + sizeMod; }
     constexpr int getTouchAC()   const {return abilityMod(dexterity) + sizeMod;}
     constexpr int rollForInitiative()  {return initiative + random.nextInt(2) + 1;};
+    void randomize();
+    void populateSkills(Array<std::pair<Skill, int>> skillList);
     
     Random random;
 };
@@ -79,6 +82,7 @@ public:
     Array<Weapons::Weapon> commonWeapons;
     Array<Armors::Armor>  commonArmor;
     double cr;
+    
 };
 
 class PC : public Character{

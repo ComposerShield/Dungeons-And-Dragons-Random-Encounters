@@ -25,7 +25,10 @@ Character::Character(Array<int> abilities, int baseAttack, int init, int HP){
 
 void Character::evaluateCharacterSheet(){
     Array<int*> resetList{&miscHP, &miscWill, &miscRef, &miscFort, &initMiscMod, &meleeMiscBonus, &rangedMiscBonus};
-    for(auto * val : resetList) val=0;
+    for(auto * val : resetList) *val=0;
+    
+    randomize();
+    //for(auto& skill : skills) skill.
     
     initiative = baseInitiative + initMiscMod;
     
@@ -40,4 +43,19 @@ Skill& Character::getSkill(String skillName){
     return Skills::jump;
 }
 
+void Character::populateSkills(Array<std::pair<Skill, int>> skillList){
+    for(auto [skillToEdit, val] : skillList){
+        Skill& skill = getSkill(skillToEdit.name);
+        skill.ranks = val;
+    }
+}
+
+void Character::randomize(){
+    for(auto* ability : abilityList){
+        if(random.nextBool()){
+            *ability += random.nextInt(*ability/5) - 2;
+        }
+    }
+    
+}
 

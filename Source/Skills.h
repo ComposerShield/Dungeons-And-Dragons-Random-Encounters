@@ -25,6 +25,23 @@ struct Skill{
     Ability keyAbility;
     int ranks;
     int miscMod;
+    int keyAbilityMod;
+    
+    int abilityFromArray(Array<int>& abilities){
+        switch(keyAbility){
+            case STR: return abilities[0];
+            case DEX: return abilities[1];
+            case CON: return abilities[2];
+            case INT: return abilities[3];
+            case WIS: return abilities[4];
+            case CHA: return abilities[5];
+        }
+    }
+    void calculateKeyAbilityMod(int abilityVal){
+        keyAbilityMod = abilityMod(abilityVal);
+    }
+    constexpr int abilityMod(int input) const {return static_cast<int>((input-10)/2);}
+    constexpr int total(){return ranks+miscMod+keyAbilityMod;}
     Skill(String Name, Ability KeyAbility){name=Name; keyAbility = KeyAbility;}
 };
 
