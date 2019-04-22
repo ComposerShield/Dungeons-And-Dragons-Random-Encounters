@@ -26,7 +26,7 @@ MainComponent::~MainComponent()
 void MainComponent::paint (Graphics& g)
 {
     auto [width, height] = std::pair<int, int>(getWidth(), getHeight());
-    g.fillAll (Colours::moccasin);
+    //g.fillAll (Colours::moccasin);
 
     g.setFont (Font (16.0f));
 }
@@ -36,11 +36,14 @@ void MainComponent::resized()
     headerControls.setBoundsRelative(0.0f, 0.0f, 1.0f, 0.15f);
 }
 
-void MainComponent::displayCharacterSheets(){
+void MainComponent::fillCharacterSheet(){
     for(auto& characterSheet : characterSheets)
         addAndMakeVisible(characterSheet);
 }
 
+void MainComponent::buttonClicked(Button * button){
+    
+}
 
 
 //============================Character_Sheet==================================

@@ -19,11 +19,17 @@ Character::Character(Array<int> abilities, int baseAttack, int init, int HP){
     charisma =      abilities[5];
     
     baseAttackBonus = baseAttack;
-    initiative = init;
+    baseInitiative = init;
     hp = HP;
 }
 
 void Character::evaluateCharacterSheet(){
+    Array<int*> resetList{&miscHP, &miscWill, &miscRef, &miscFort, &initMiscMod, &meleeMiscBonus, &rangedMiscBonus};
+    for(auto * val : resetList) val=0;
+    
+    initiative = baseInitiative + initMiscMod;
+    
+    
     
 }
 
@@ -31,6 +37,7 @@ Skill& Character::getSkill(String skillName){
     for(auto& skill : skills)
         if(skill.name==skillName)
             return skill;
+    return Skills::jump;
 }
 
 

@@ -23,7 +23,7 @@ namespace Feats {
     };
     
     template<Weapons::Weapon& exoticWeapon>
-    static const inline Feat exoticProf{"exoticProf " + exoticWeapon.name, [](Character& character){
+    static inline Feat exoticProf{"exoticProf ", [](Character& character){
         character.weaponProficiencies.add(exoticWeapon);
     }};
     
@@ -58,13 +58,13 @@ namespace Feats {
                                     character.description.add("Combat expertise: may trade attack bonus for AC");
                                 }},
     
-                                    improvedDisarm("improved disarm",[](Character& character){
+                                improvedDisarm{"improved disarm",[](Character& character){
                                         character.description.add("Improved disarm: +4 on disarm checks, no attacks of opportunity");
-                                    }, combatExpertise),
+                                }, combatExpertise},
     
-                                    improvedTrip("improved trip",[](Character& character){
+                                improvedTrip{"improved trip",[](Character& character){
                                         character.description.add("Improved trip: +4 on trip attempts, no attacks of opportunity");
-                                    }, combatExpertise),
+                                }, combatExpertise},
     
                                 combatReflexes{"combat reflexes",[](Character& character){
                                     character.description.add("Combat reflexes: attacks of opportunity while flat-footed, additional attacks per Dex bonus.");

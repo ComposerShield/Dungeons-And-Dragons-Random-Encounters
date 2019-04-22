@@ -24,6 +24,8 @@ public:
     void paint (Graphics&) override;
     void resized() override;
     
+    CharacterSheet(){}
+    
 private:
 
 };
@@ -48,7 +50,8 @@ private:
 //==============================================================================
 
 
-class MainComponent   : public Component
+class MainComponent   : public Component,
+                        public Button::Listener
 {
 public:
     MainComponent();
@@ -58,11 +61,12 @@ public:
     void resized() override;
     
     Array<CharacterSheet> characterSheets;
-    void displayCharacterSheets();
+    void fillCharacterSheet();
 
 private:
     CharacterSheet test;
     HeaderControls headerControls;
+    void buttonClicked (Button* button) override;
     
     
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)

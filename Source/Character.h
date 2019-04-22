@@ -24,7 +24,8 @@ public:
     int strength, dexterity, constitution, intelligence, wisdom, charisma,
         baseFort, baseRef, baseWill, miscFort, miscRef, miscWill, sizeMod,
         baseAttackBonus, initiative, initMiscMod, hp, touchAC, touchACMisc,
-        currentHP, meleeMiscBonus, rangedMiscBonus, baseHP, miscHP;
+        currentHP, meleeMiscBonus, rangedMiscBonus, baseHP, miscHP,
+        baseInitiative, characterLevel;
     
     constexpr int getLevel(){
         int sum{0};
