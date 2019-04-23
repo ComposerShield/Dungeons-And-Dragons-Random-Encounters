@@ -1,0 +1,16 @@
+PODS:
+  - "libc++ (5.0.1)"
+
+DEPENDENCIES:
+  - "libc++"
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - "libc++"
+
+SPEC CHECKSUMS:
+  "libc++": ff7cd4b1fa57ca576f2b057a89b614f337269fc1
+
+PODFILE CHECKSUM: 7977e93c6166f3fcd4e37f7f1ceba1c6b7cbd9b3
+
+COCOAPODS: 1.6.1

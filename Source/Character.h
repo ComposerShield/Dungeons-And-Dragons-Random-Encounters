@@ -16,6 +16,7 @@
 #include "Classes.h"
 #include "array"
 #include "optional"
+#include "variant"
 
 struct Feat;
 

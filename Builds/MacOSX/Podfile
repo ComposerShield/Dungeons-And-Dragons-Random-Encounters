@@ -1,0 +1,8 @@
+platform :osx, '10.12'
+
+
+target 'DnD - App' do
+  # Pods for DnD - App
+  pod 'libc++'
+  
+end

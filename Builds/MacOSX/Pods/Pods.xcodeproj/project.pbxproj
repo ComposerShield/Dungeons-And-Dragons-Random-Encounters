@@ -1,0 +1,516 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1C1BEE301CF589F80570B9A007379048 /* filesystem in Sources */ = {isa = PBXBuildFile; fileRef = 5D5B313D28397017BD1F71F77CFDDFCA /* filesystem */; };
+		224885C2E5719487BDD477C1CCCCDDAE /* Pods-DnD - App-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 808A7A77823C3CBD0975570CCBA8A709 /* Pods-DnD - App-dummy.m */; };
+		511B3AEACD23923B378BA5ECA7311881 /* libc++-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F531C5DBA687E6CB52FC5BDA583FD47 /* libc++-dummy.m */; };
+		66B886C57138DE85B7CFAF6D69798017 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = AFA6E2A61D8ACCED3176BF6DA8BDC87A /* README.md */; };
+		77BA073E1505684C9A75C97AFC1C6DFE /* optional in Sources */ = {isa = PBXBuildFile; fileRef = 5F62B1FAD72CDC7AB45FC3B077638C3E /* optional */; };
+		CDC493B287464BB32590D1CBAA523C6E /* variant in Sources */ = {isa = PBXBuildFile; fileRef = AEA4DCD0B6735A45F5BC57DAD1D173F8 /* variant */; };
+		E3A55A8736D4FE31CBE70E089DE51AC8 /* any in Sources */ = {isa = PBXBuildFile; fileRef = A7D3947804731CEBAE3AF900B72BB01D /* any */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		81050103331F845533FFAD95B9A763DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9337F17DF9B0DE7F5FCB5360CCD65E95;
+			remoteInfo = "libc++";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		189005E8FCCBA9573853DFB34AD2FA16 /* libc++-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "libc++-prefix.pch"; sourceTree = "<group>"; };
+		20766E4BB01B1D55F37422D6E57AB9B9 /* libc++.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "libc++.xcconfig"; sourceTree = "<group>"; };
+		46CD2FE1AEF67F81F6AF913ABFE2A7AD /* Pods-DnD - App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DnD - App.release.xcconfig"; sourceTree = "<group>"; };
+		5D5B313D28397017BD1F71F77CFDDFCA /* filesystem */ = {isa = PBXFileReference; includeInIndex = 1; name = filesystem; path = experimental/filesystem; sourceTree = "<group>"; };
+		5F531C5DBA687E6CB52FC5BDA583FD47 /* libc++-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "libc++-dummy.m"; sourceTree = "<group>"; };
+		5F62B1FAD72CDC7AB45FC3B077638C3E /* optional */ = {isa = PBXFileReference; includeInIndex = 1; path = optional; sourceTree = "<group>"; };
+		64C735B2031893837C4319C04C38C8A7 /* libPods-DnD - App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-DnD - App.a"; path = "libPods-DnD - App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		808A7A77823C3CBD0975570CCBA8A709 /* Pods-DnD - App-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DnD - App-dummy.m"; sourceTree = "<group>"; };
+		8580165A2A6B56C4C29E3B0A6F68EC3F /* liblibc++.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "liblibc++.a"; path = "liblibc++.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D5B83DF53133C1DCA38E33142D3E0DB /* Pods-DnD - App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DnD - App.debug.xcconfig"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A7D3947804731CEBAE3AF900B72BB01D /* any */ = {isa = PBXFileReference; includeInIndex = 1; path = any; sourceTree = "<group>"; };
+		AEA4DCD0B6735A45F5BC57DAD1D173F8 /* variant */ = {isa = PBXFileReference; includeInIndex = 1; path = variant; sourceTree = "<group>"; };
+		AFA6E2A61D8ACCED3176BF6DA8BDC87A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		F9C9C2D0B657EA4645E052BF502F1B08 /* Pods-DnD - App-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DnD - App-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FD7F518378B960367D8F0B71EB0E4268 /* Pods-DnD - App-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DnD - App-acknowledgements.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9DF498149E6110F25F5AEC3F7DB52CCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0DD8485FC14816FEF6B16EDD5B1A09A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3BBD4BC475917ED89663B11365223464 /* libc++ */ = {
+			isa = PBXGroup;
+			children = (
+				A7D3947804731CEBAE3AF900B72BB01D /* any */,
+				5D5B313D28397017BD1F71F77CFDDFCA /* filesystem */,
+				5F62B1FAD72CDC7AB45FC3B077638C3E /* optional */,
+				AFA6E2A61D8ACCED3176BF6DA8BDC87A /* README.md */,
+				AEA4DCD0B6735A45F5BC57DAD1D173F8 /* variant */,
+				A9A47BE11BC7A1953D792D30AE61DACA /* Support Files */,
+			);
+			name = "libc++";
+			path = "libc++";
+			sourceTree = "<group>";
+		};
+		570D2F361A503C38D6CD22EF65AB6088 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8580165A2A6B56C4C29E3B0A6F68EC3F /* liblibc++.a */,
+				64C735B2031893837C4319C04C38C8A7 /* libPods-DnD - App.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6EF000C17AE791BE32E9CFCE3217B066 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3BBD4BC475917ED89663B11365223464 /* libc++ */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A9A47BE11BC7A1953D792D30AE61DACA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				20766E4BB01B1D55F37422D6E57AB9B9 /* libc++.xcconfig */,
+				5F531C5DBA687E6CB52FC5BDA583FD47 /* libc++-dummy.m */,
+				189005E8FCCBA9573853DFB34AD2FA16 /* libc++-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/libc++";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				6EF000C17AE791BE32E9CFCE3217B066 /* Pods */,
+				570D2F361A503C38D6CD22EF65AB6088 /* Products */,
+				E1DFFAEF17F728F627308C72FF78022F /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E1DFFAEF17F728F627308C72FF78022F /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E2FF56E4FA6C83C2E9EF144988EF5002 /* Pods-DnD - App */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		E2FF56E4FA6C83C2E9EF144988EF5002 /* Pods-DnD - App */ = {
+			isa = PBXGroup;
+			children = (
+				F9C9C2D0B657EA4645E052BF502F1B08 /* Pods-DnD - App-acknowledgements.markdown */,
+				FD7F518378B960367D8F0B71EB0E4268 /* Pods-DnD - App-acknowledgements.plist */,
+				808A7A77823C3CBD0975570CCBA8A709 /* Pods-DnD - App-dummy.m */,
+				9D5B83DF53133C1DCA38E33142D3E0DB /* Pods-DnD - App.debug.xcconfig */,
+				46CD2FE1AEF67F81F6AF913ABFE2A7AD /* Pods-DnD - App.release.xcconfig */,
+			);
+			name = "Pods-DnD - App";
+			path = "Target Support Files/Pods-DnD - App";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2ACFEA3C52375E5A143DBED93BC526BB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86293EA85865E35889D3D7CFB2B397C2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		00DBD0585FC59484F368384F0045F49F /* Pods-DnD - App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FCD9D4373B978FAEE0B42B9B8BE0DCB /* Build configuration list for PBXNativeTarget "Pods-DnD - App" */;
+			buildPhases = (
+				86293EA85865E35889D3D7CFB2B397C2 /* Headers */,
+				20DD2CCBE358F1A5294B02711B82F4AA /* Sources */,
+				9DF498149E6110F25F5AEC3F7DB52CCF /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E7F9526151AB4F4B54EE0BA2DDC8F5DF /* PBXTargetDependency */,
+			);
+			name = "Pods-DnD - App";
+			productName = "Pods-DnD - App";
+			productReference = 64C735B2031893837C4319C04C38C8A7 /* libPods-DnD - App.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		9337F17DF9B0DE7F5FCB5360CCD65E95 /* libc++ */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CD2AFDD1F7538EBA8B17EADDA9E533E /* Build configuration list for PBXNativeTarget "libc++" */;
+			buildPhases = (
+				2ACFEA3C52375E5A143DBED93BC526BB /* Headers */,
+				60EF654A383D5CB9B026BD00D67B9830 /* Sources */,
+				D0DD8485FC14816FEF6B16EDD5B1A09A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "libc++";
+			productName = "libc++";
+			productReference = 8580165A2A6B56C4C29E3B0A6F68EC3F /* liblibc++.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 570D2F361A503C38D6CD22EF65AB6088 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9337F17DF9B0DE7F5FCB5360CCD65E95 /* libc++ */,
+				00DBD0585FC59484F368384F0045F49F /* Pods-DnD - App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		20DD2CCBE358F1A5294B02711B82F4AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				224885C2E5719487BDD477C1CCCCDDAE /* Pods-DnD - App-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60EF654A383D5CB9B026BD00D67B9830 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3A55A8736D4FE31CBE70E089DE51AC8 /* any in Sources */,
+				1C1BEE301CF589F80570B9A007379048 /* filesystem in Sources */,
+				511B3AEACD23923B378BA5ECA7311881 /* libc++-dummy.m in Sources */,
+				77BA073E1505684C9A75C97AFC1C6DFE /* optional in Sources */,
+				66B886C57138DE85B7CFAF6D69798017 /* README.md in Sources */,
+				CDC493B287464BB32590D1CBAA523C6E /* variant in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E7F9526151AB4F4B54EE0BA2DDC8F5DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "libc++";
+			target = 9337F17DF9B0DE7F5FCB5360CCD65E95 /* libc++ */;
+			targetProxy = 81050103331F845533FFAD95B9A763DA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		329E843E3109FCD57A75B83C32E8296A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20766E4BB01B1D55F37422D6E57AB9B9 /* libc++.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/libc++/libc++-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = libc_;
+				PRODUCT_NAME = "libc++";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+			};
+			name = Release;
+		};
+		4DF72A1B5D144F07C95C93B676642113 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D5B83DF53133C1DCA38E33142D3E0DB /* Pods-DnD - App.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		58928C8298AE6FC130343A17DB8BF872 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		A9D2B3AB682A3B702D2AE321F877BA5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		C7BF893AE6ABDE6AE57CED0A916B86C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46CD2FE1AEF67F81F6AF913ABFE2A7AD /* Pods-DnD - App.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		D4AC3098D3E565684864F4F938DF5A71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20766E4BB01B1D55F37422D6E57AB9B9 /* libc++.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/libc++/libc++-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = libc_;
+				PRODUCT_NAME = "libc++";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58928C8298AE6FC130343A17DB8BF872 /* Debug */,
+				A9D2B3AB682A3B702D2AE321F877BA5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5FCD9D4373B978FAEE0B42B9B8BE0DCB /* Build configuration list for PBXNativeTarget "Pods-DnD - App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DF72A1B5D144F07C95C93B676642113 /* Debug */,
+				C7BF893AE6ABDE6AE57CED0A916B86C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CD2AFDD1F7538EBA8B17EADDA9E533E /* Build configuration list for PBXNativeTarget "libc++" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4AC3098D3E565684864F4F938DF5A71 /* Debug */,
+				329E843E3109FCD57A75B83C32E8296A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

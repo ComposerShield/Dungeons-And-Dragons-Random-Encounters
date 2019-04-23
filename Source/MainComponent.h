@@ -26,8 +26,10 @@ public:
     
     CharacterSheet(){}
     
+    CharacterSheet(const CharacterSheet &input){}
+    
 private:
-
+    
 };
 
 
@@ -42,6 +44,18 @@ public:
     
 private:
     Image logo;
+};
+
+
+class CharacterSheetWindow : public Component{
+public:
+    void paint (Graphics&) override;
+    void resized() override;
+    void processCharacterSheets();
+    
+    CharacterSheetWindow();
+    
+    Array<CharacterSheet> characterSheets;
 };
 
 
@@ -60,14 +74,15 @@ public:
     void paint (Graphics&) override;
     void resized() override;
     
-    Array<CharacterSheet> characterSheets;
     void fillCharacterSheet();
+    
 
 private:
     CharacterSheet test;
     HeaderControls headerControls;
+    CharacterSheetWindow characterSheetWindow;
     void buttonClicked (Button* button) override;
-    
+    Viewport viewport;
     
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)
 };
