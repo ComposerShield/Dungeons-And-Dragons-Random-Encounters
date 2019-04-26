@@ -14,16 +14,15 @@ MainComponent::MainComponent()
     setSize (800, 600);
     
     addAndMakeVisible(&headerControls);
-    //addAndMakeVisible(&characterSheetWindow);
     addAndMakeVisible(&viewport);
     headerControls.generateButton.addListener(this);
     
     viewport.setViewedComponent(&characterSheetWindow, false);
     viewport.setScrollBarThickness(20);
-    //viewport.getHorizontalScrollBar().setVisible(false);
     viewport.setScrollBarsShown(true, false);
     
     resized();
+    
 }
 
 MainComponent::~MainComponent()
@@ -46,6 +45,7 @@ void MainComponent::resized()
     headerControls.setBounds(bounds.removeFromTop(80));
     viewport.setBounds(bounds);
     characterSheetWindow.setBounds(bounds.expanded(0, 400));
+    viewport.setViewPositionProportionately(0.0, 0.0);
     
 }
 
@@ -63,14 +63,19 @@ void MainComponent::buttonClicked(Button * button){
         return Monsters::Goblin();
     }();
     
-    Array<NPC> outputMonsters;
-    for(auto i=0;i<numOfMonsters;++i)
-        outputMonsters.add(monster);
+    //Array<std::unique_ptr<NPC>> outputMonsters;
+    //for(auto i=0;i<numOfMonsters;++i)
+        //outputMonsters.add(std::make_unique<NPC>(monster));
     
-    characterSheetWindow.characterSheets.clearQuick();
-    for(auto& monster : outputMonsters)
-        characterSheetWindow.characterSheets.add(CharacterSheet());
+    characterSheetWindow.characterSheets.clearQuick(true);
+    //for(auto& monster : outputMonsters.removeAndReturn(0))
     
+    for(auto i=0;i<numOfMonsters;++i){
+        auto newMonster = std::make_unique<NPC>(monster);
+        auto newMonsterSheet = CharacterSheet(std::move(newMonster));
+        characterSheetWindow.characterSheets.add(&newMonsterSheet);
+        //characterSheetWindow.characterSheets.add(CharacterSheet(std::make_unique<NPC>(monster)));
+    }
     characterSheetWindow.processCharacterSheets();
     
     resized();
@@ -95,6 +100,30 @@ void CharacterSheet::paint(Graphics &g){
     
     g.setColour(Colour(221, 217, 205));
     g.fillRoundedRectangle(boundsFloat, 10);
+    
+    Array<String> textArray{String("Race ")   + static_cast<String>(character->race),
+                            String("HP ")    + static_cast<String>(character->hp) +
+                            String(" AC ")   + static_cast<String>(character->ac),
+                            String("Str ")   + static_cast<String>(character->strength) +
+                            String("  Dex ") + static_cast<String>(character->dexterity) +
+                            String("  Con ") + static_cast<String>(character->constitution),
+                            String("Int ")   + static_cast<String>(character->intelligence) +
+                            String("  Wis ") + static_cast<String>(character->wisdom) +
+                            String("  Cha ") + static_cast<String>(character->charisma),
+                            String("Fort ")  + static_cast<String>(character->fort),
+                            String(" Ref ")  + static_cast<String>(character->ref),
+                            String(" Will ") + static_cast<String>(character->will),
+        
+                            };
+    
+    auto [width, height] = std::pair{bounds.getWidth()-20, bounds.getHeight()};
+    
+    g.setColour(Colours::black);
+    for(auto& text : textArray){
+        g.drawText(text, bounds.getX()+10, bounds.removeFromTop(20).getY(), width-20, getHeight()*0.1, Justification::left);
+    }
+    
+    
 
 }
 
@@ -141,7 +170,7 @@ void HeaderControls::resized(){
 //============================CharacterSheetWindow=================================
 
 CharacterSheetWindow::CharacterSheetWindow(){
-    characterSheets.ensureStorageAllocated(16);
+    //characterSheets.ensureStorageAllocated(16);
 }
 
 
@@ -157,7 +186,7 @@ void CharacterSheetWindow::resized(){
     
     
     for(auto& characterSheet : characterSheets)
-        itemArray.add(FlexItem(240, 240, characterSheet));
+        itemArray.add(FlexItem(240, 240, *characterSheet));
     
     flexbox.flexDirection = FlexBox::Direction::row;
     flexbox.flexWrap = FlexBox::Wrap::wrap;
