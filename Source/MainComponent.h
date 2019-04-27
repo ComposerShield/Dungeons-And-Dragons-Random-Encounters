@@ -25,11 +25,12 @@ class CharacterSheet : public Component{
 public:
     void paint (Graphics&) override;
     void resized() override;
-    const std::unique_ptr<Character>& character;
+    const std::shared_ptr<Character> character;
     
-    CharacterSheet(const std::unique_ptr<Character>& input) : character(input){}
+    CharacterSheet(const std::shared_ptr<Character> input) : character(input){}
     
-    //CharacterSheet(const CharacterSheet &input) : character(input.character){}
+    CharacterSheet(const CharacterSheet &input) = default;
+    CharacterSheet() = default;
     
 private:
     
@@ -58,7 +59,7 @@ public:
     
     CharacterSheetWindow();
     
-    OwnedArray<CharacterSheet> characterSheets;
+    Array<std::shared_ptr<CharacterSheet>> characterSheets;
 };
 
 
@@ -85,7 +86,7 @@ private:
     CharacterSheetWindow characterSheetWindow;
     void buttonClicked (Button* button) override;
     Viewport viewport;
-    
+    Array<std::shared_ptr<NPC>> monsters;
     
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)
 };

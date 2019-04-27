@@ -20,7 +20,7 @@ namespace Monsters {
     //inline NPC frank({11,13,12,10,9,6});
     struct Goblin : public NPC{
         Goblin() : NPC({11,13,12,10,9,6}, 1, 1, 4){
-            race = "Goblin";
+            race = "goblin";
             sizeMod = 1;
             cr = 0.33;
             commonWeapons = { Weapons::javelin,
@@ -39,8 +39,8 @@ namespace Monsters {
     
     
     inline std::map<String, NPC> monsters = {
-        //{"Goblin", Goblin},
-        //{"Orc", Orc}
+        {"goblin", Goblin()},
+        {"orc", Orc()}
     };
 }
 
