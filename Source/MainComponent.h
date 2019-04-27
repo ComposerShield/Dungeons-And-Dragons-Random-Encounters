@@ -33,7 +33,7 @@ public:
     CharacterSheet() = default;
     
 private:
-    
+    Array<String> fillCharacterSheet(const std::shared_ptr<Character> input);
 };
 
 
@@ -77,8 +77,6 @@ public:
 
     void paint (Graphics&) override;
     void resized() override;
-    
-    void fillCharacterSheet();
     
 
 private:

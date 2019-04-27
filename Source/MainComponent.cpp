@@ -49,35 +49,18 @@ void MainComponent::resized()
     
 }
 
-void MainComponent::fillCharacterSheet(){
-    
-}
-
 void MainComponent::buttonClicked(Button * button){
     String monsterType = headerControls.monsterType.getText();
     int numOfMonsters  = headerControls.numOfMonsters.getSelectedItemIndex() + 1;
-    
-//    auto monster = [monsterType]()->NPC{
-//        for(auto [name,thisMonster] : Monsters::monsters)
-//            if (name==monsterType) return thisMonster;
-//        return Monsters::Goblin();
-//    }();
-    
 
     monsters.clearQuick();
     characterSheetWindow.characterSheets.clearQuick();
-
     
     for(auto i=0;i<numOfMonsters;++i){
         auto newMonster = ( [monsterType]()->std::shared_ptr<NPC>{
-                for(auto [name,thisMonster] : Monsters::monsters)
-                    if (name==monsterType) return std::make_shared<NPC>(thisMonster);
-                //return Monsters::Goblin();//TODO
-            
-                DBG(monsterType);
-                DBG(monsterType);
-                DBG(monsterType);
-                jassertfalse;
+            for(auto [name,thisMonster] : Monsters::monsters)
+                if (name==monsterType) return std::make_shared<NPC>(thisMonster);
+            jassertfalse;
             }()
         );
         monsters.add(newMonster);
@@ -85,13 +68,8 @@ void MainComponent::buttonClicked(Button * button){
         
         
         auto newSheet = std::make_shared<CharacterSheet>(newMonster);
-
-        //std::shared_ptr<CharacterSheet> newSheet{newMonster};
-        //newSheet->character = newMonster;
         characterSheetWindow.characterSheets.add(newSheet);
         
-//        auto newMonsterSheet = CharacterSheet(newMonster);
-//        characterSheetWindow.characterSheets.add(&newMonsterSheet);
     }
     
    
@@ -121,20 +99,7 @@ void CharacterSheet::paint(Graphics &g){
     g.setColour(Colour(221, 217, 205));
     g.fillRoundedRectangle(boundsFloat, 10);
     
-    Array<String> textArray{String("Race ")   + static_cast<String>(character->race),
-                            String("HP ")    + static_cast<String>(character->hp) +
-                            String(" AC ")   + static_cast<String>(character->ac),
-                            String("Str ")   + static_cast<String>(character->strength) +
-                            String("  Dex ") + static_cast<String>(character->dexterity) +
-                            String("  Con ") + static_cast<String>(character->constitution),
-                            String("Int ")   + static_cast<String>(character->intelligence) +
-                            String("  Wis ") + static_cast<String>(character->wisdom) +
-                            String("  Cha ") + static_cast<String>(character->charisma),
-                            String("Fort ")  + static_cast<String>(character->fort),
-                            String(" Ref ")  + static_cast<String>(character->ref),
-                            String(" Will ") + static_cast<String>(character->will),
-        
-                            };
+    auto textArray = fillCharacterSheet(character);
     
     auto [width, height] = std::pair{bounds.getWidth()-20, bounds.getHeight()};
     
@@ -149,6 +114,23 @@ void CharacterSheet::paint(Graphics &g){
 
 void CharacterSheet::resized(){
     
+}
+
+Array<String> CharacterSheet::fillCharacterSheet(const std::shared_ptr<Character> input){
+    return {String("Race ")  + static_cast<String>(character->race),
+            String("HP ")    + static_cast<String>(character->hp) +
+            String(" AC ")   + static_cast<String>(character->ac),
+            String("Str ")   + static_cast<String>(character->strength) +
+            String("  Dex ") + static_cast<String>(character->dexterity) +
+            String("  Con ") + static_cast<String>(character->constitution),
+            String("Int ")   + static_cast<String>(character->intelligence) +
+            String("  Wis ") + static_cast<String>(character->wisdom) +
+            String("  Cha ") + static_cast<String>(character->charisma),
+            String("Fort ")  + static_cast<String>(character->fort),
+            String(" Ref ")  + static_cast<String>(character->ref),
+            String(" Will ") + static_cast<String>(character->will),
+        
+    };
 }
 
 

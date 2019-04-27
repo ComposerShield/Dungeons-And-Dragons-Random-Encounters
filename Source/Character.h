@@ -59,7 +59,6 @@ public:
     Array<Weapons::Weapon> weaponProficiencies;
     Die HD = D8; //default
     
-    void evaluateCharacterSheet();
     Skill& getSkill(String skill);
     
 private:
@@ -72,7 +71,9 @@ private:
     constexpr int rollForInitiative()  {return initiative + random.nextInt(2) + 1;};
     void randomize();
     void populateSkills(Array<std::pair<Skill, int>> skillList);
-    
+ 
+protected:
+    void evaluateCharacterSheet();
     Random random;
 };
 
@@ -84,6 +85,8 @@ public:
     Array<Armors::Armor>  commonArmor;
     double cr;
     
+private:
+    Weapons::Weapon randomWeapon();
 };
 
 class PC : public Character{

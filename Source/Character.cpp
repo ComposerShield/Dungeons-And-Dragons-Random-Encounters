@@ -59,3 +59,10 @@ void Character::randomize(){
     
 }
 
+
+
+//========================NPC==============================
+
+Weapons::Weapon NPC::randomWeapon(){
+    return commonWeapons[random.nextInt(commonWeapons.size())];
+}
