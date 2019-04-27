@@ -39,9 +39,9 @@ namespace Monsters {
     
     
     
-    inline std::map<String, NPC> monsters = {
-        {"goblin", Goblin()},
-        {"orc", Orc()}
+    inline std::map<String, NPC*> monsters = {
+        {"goblin", new Goblin()},
+        {"orc", new Orc()}
     };
 }
 

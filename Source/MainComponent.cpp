@@ -57,12 +57,14 @@ void MainComponent::buttonClicked(Button * button){
     characterSheetWindow.characterSheets.clearQuick();
     
     for(auto i=0;i<numOfMonsters;++i){
-        auto newMonster = ( [monsterType]()->std::shared_ptr<NPC>{
+        auto newMonsterPtr = ( [monsterType]()->NPC*{
             for(auto [name,thisMonster] : Monsters::monsters)
-                if (name==monsterType) return std::make_shared<NPC>(thisMonster);
+                if (name==monsterType) return new Monsters::Goblin; //PLACEHOLDER TODO
             jassertfalse;
             }()
         );
+        std::shared_ptr<NPC> newMonster(newMonsterPtr);
+        
         newMonster->evaluateCharacterSheet();
         monsters.add(newMonster);
         
