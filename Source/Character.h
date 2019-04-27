@@ -38,6 +38,7 @@ public:
     Array<int*> abilityList{&strength, &dexterity, &constitution, &intelligence, &wisdom, &charisma};
     
     Character(Array<int> abilities, int baseAttack, int init, int HP);
+    virtual ~Character(){};
     
     String race;
     Array<Class> classes;
@@ -63,12 +64,14 @@ public:
     
 private:
     constexpr int abilityMod(int input) const {return static_cast<int>((input-10)/2);}
-    constexpr int getFortitude() const {return baseFort + abilityMod(constitution) + miscFort;}
-    constexpr int getReflex()    const {return baseRef  + abilityMod(dexterity)    + miscRef ;}
-    constexpr int getWill()      const {return baseWill + abilityMod(wisdom)       + miscWill;}
-    constexpr int getAC()        const {return equippedArmor.addArmor() + abilityMod(dexterity) + sizeMod; }
-    constexpr int getTouchAC()   const {return abilityMod(dexterity) + sizeMod;}
-    constexpr int rollForInitiative()  {return initiative + random.nextInt(2) + 1;};
+    constexpr int getFortitude()  const {return baseFort + abilityMod(constitution) + miscFort;}
+    constexpr int getReflex()     const {return baseRef  + abilityMod(dexterity)    + miscRef ;}
+    constexpr int getWill()       const {return baseWill + abilityMod(wisdom)       + miscWill;}
+    constexpr int getHP()         const {return baseHP + miscHP + abilityMod(constitution);    }
+    constexpr int getAC()         const {return equippedArmor.addArmor() + abilityMod(dexterity) + sizeMod; }
+    constexpr int getTouchAC()    const {return abilityMod(dexterity) + sizeMod;}
+    constexpr int getInitiative() const {return baseInitiative + initMiscMod;}
+    constexpr int rollForInitiative()   {return initiative + random.nextInt(2) + 1;};
     void randomize();
     void populateSkills(Array<std::pair<Skill, int>> skillList);
  
@@ -81,16 +84,21 @@ protected:
 class NPC : public Character{
 public:
     NPC(Array<int> abilities, int baseAttack, int init, int HP) : Character(abilities, baseAttack, init, HP){}
+    virtual ~NPC(){};
     Array<Weapons::Weapon> commonWeapons;
     Array<Armors::Armor>  commonArmor;
     double cr;
     
 private:
     Weapons::Weapon randomWeapon();
+    
+protected:
+    void finalizeNPC();
 };
 
 class PC : public Character{
     PC (Array<int> abilities, int baseAttack, int init, int HP) : Character(abilities, baseAttack, init, HP){}
+    virtual ~PC(){};
 };
 
 

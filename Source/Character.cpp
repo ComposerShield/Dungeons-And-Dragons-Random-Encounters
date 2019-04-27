@@ -27,12 +27,20 @@ void Character::evaluateCharacterSheet(){
     Array<int*> resetList{&miscHP, &miscWill, &miscRef, &miscFort, &initMiscMod, &meleeMiscBonus, &rangedMiscBonus};
     for(auto * val : resetList) *val=0;
     
+    
     randomize();
     //for(auto& skill : skills) skill.
     
-    initiative = baseInitiative + initMiscMod;
     
     
+    
+    hp = getHP();
+    ac = getAC();
+    initiative = getInitiative();
+    
+    fort = getFortitude();
+    ref = getReflex();
+    will = getWill();
     
 }
 
@@ -62,6 +70,10 @@ void Character::randomize(){
 
 
 //========================NPC==============================
+
+void NPC::finalizeNPC(){
+    equippedWeapons.add(randomWeapon());
+}
 
 Weapons::Weapon NPC::randomWeapon(){
     return commonWeapons[random.nextInt(commonWeapons.size())];
