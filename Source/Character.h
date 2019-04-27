@@ -72,6 +72,7 @@ private:
     constexpr int getTouchAC()    const {return abilityMod(dexterity) + sizeMod;}
     constexpr int getInitiative() const {return baseInitiative + initMiscMod;}
     constexpr int rollForInitiative()   {return initiative + random.nextInt(2) + 1;};
+    Array<int> abilitiesAsArray() const {return {strength, dexterity, constitution, intelligence, wisdom, charisma};};
     void randomize();
     void populateSkills(Array<std::pair<Skill, int>> skillList);
  

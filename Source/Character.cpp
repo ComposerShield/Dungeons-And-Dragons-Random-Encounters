@@ -29,9 +29,12 @@ void Character::evaluateCharacterSheet(){
     
     
     randomize();
-    //for(auto& skill : skills) skill.
-    
-    
+    for(auto& feat : feats) feat.function;
+    for(auto& skill : skills){
+        skill.calculateKeyAbilityMod(skill.abilityFromArray(abilitiesAsArray()));
+        //String abilityName = skill.abilityFromArray(abilitiesAsArray());
+        //skill.keyAbilityMod = skill.calculateKeyAbilityMod(<#int abilityVal#>)
+    }
     
     
     hp = getHP();

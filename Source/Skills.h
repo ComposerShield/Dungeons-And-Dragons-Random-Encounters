@@ -27,7 +27,7 @@ struct Skill{
     int miscMod;
     int keyAbilityMod;
     
-    int abilityFromArray(Array<int>& abilities){
+    int abilityFromArray(const Array<int>& abilities){
         switch(keyAbility){
             case STR: return abilities[0];
             case DEX: return abilities[1];
@@ -37,7 +37,7 @@ struct Skill{
             case CHA: return abilities[5];
         }
     }
-    void calculateKeyAbilityMod(int abilityVal){
+    void calculateKeyAbilityMod(const int abilityVal){
         keyAbilityMod = abilityMod(abilityVal);
     }
     constexpr int abilityMod(int input) const {return static_cast<int>((input-10)/2);}
