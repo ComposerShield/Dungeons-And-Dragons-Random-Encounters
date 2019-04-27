@@ -22,6 +22,7 @@ namespace Monsters {
         Goblin() : NPC({11,13,12,10,9,6}, 1, 1, 4){
             race = "goblin";
             sizeMod = 1;
+            HD = {D8, 1};
             cr = 0.33;
             commonWeapons = { Weapons::javelin,
                               Weapons::morningstar };

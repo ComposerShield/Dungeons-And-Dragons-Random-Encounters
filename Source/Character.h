@@ -35,7 +35,7 @@ public:
         return sum;
     }
     std::optional<int> casterLevel;
-    Array<int*> abilityList{&strength, &dexterity, &constitution, &intelligence, &wisdom, &charisma};
+    Array<int*> abilityList;
     
     Character(Array<int> abilities, int baseAttack, int init, int HP);
     virtual ~Character(){};
@@ -58,9 +58,10 @@ public:
     Array<Skill> skills = Skills::skillList;
     Array<Feat>  feats;
     Array<Weapons::Weapon> weaponProficiencies;
-    Die HD = D8; //default
+    std::pair<Die, int> HD{D8,1}; //default
     
     Skill& getSkill(String skill);
+    void evaluateCharacterSheet();
     
 private:
     constexpr int abilityMod(int input) const {return static_cast<int>((input-10)/2);}
@@ -72,13 +73,13 @@ private:
     constexpr int getTouchAC()    const {return abilityMod(dexterity) + sizeMod;}
     constexpr int getInitiative() const {return baseInitiative + initMiscMod;}
     constexpr int rollForInitiative()   {return initiative + random.nextInt(2) + 1;};
+    int rollHD() const;
     Array<int> abilitiesAsArray() const {return {strength, dexterity, constitution, intelligence, wisdom, charisma};};
     void randomize();
     void populateSkills(Array<std::pair<Skill, int>> skillList);
  
 protected:
-    void evaluateCharacterSheet();
-    Random random;
+    mutable Random random;
 };
 
 

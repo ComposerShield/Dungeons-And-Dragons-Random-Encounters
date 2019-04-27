@@ -21,9 +21,11 @@ Character::Character(Array<int> abilities, int baseAttack, int init, int HP){
     baseAttackBonus = baseAttack;
     baseInitiative = init;
     hp = HP;
+    
 }
 
 void Character::evaluateCharacterSheet(){
+    abilityList = {&strength, &dexterity, &constitution, &intelligence, &wisdom, &charisma};
     Array<int*> resetList{&miscHP, &miscWill, &miscRef, &miscFort, &initMiscMod, &meleeMiscBonus, &rangedMiscBonus};
     for(auto * val : resetList) *val=0;
     
@@ -62,15 +64,20 @@ void Character::populateSkills(Array<std::pair<Skill, int>> skillList){
 }
 
 void Character::randomize(){
-    for(auto* ability : abilityList){
-        if(random.nextBool()){
-            *ability += random.nextInt(*ability/5) - 2;
-        }
-    }
-    
+    //ABILITIES
+    for(auto* ability : abilityList)
+        *ability += random.nextInt((*ability)/5 + 1);
+    //HP
+    hp = rollHD();
 }
 
-
+int Character::rollHD() const{
+    auto [hitDie, numOfRolls] = HD;
+    auto total=0;
+    for (auto i=0;i<numOfRolls;i++)
+        total+= random.nextInt(dieToNum(hitDie)) + abilityMod(constitution);
+    return total;
+}
 
 //========================NPC==============================
 

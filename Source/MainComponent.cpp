@@ -63,6 +63,7 @@ void MainComponent::buttonClicked(Button * button){
             jassertfalse;
             }()
         );
+        newMonster->evaluateCharacterSheet();
         monsters.add(newMonster);
         
         

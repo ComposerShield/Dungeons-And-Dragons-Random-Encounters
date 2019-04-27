@@ -21,6 +21,19 @@ enum Die{
     none
 };
 
+constexpr int dieToNum(Die& die){
+    switch(die){
+        case D2:  return 2;
+        case D3:  return 3;
+        case D4:  return 4;
+        case D6:  return 6;
+        case D8:  return 8;
+        case D10: return 10;
+        case D20: return 20;
+        case none: jassertfalse; return 8;
+    }
+}
+
 enum Critical{
     x2,
     x3,
