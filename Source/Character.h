@@ -44,7 +44,7 @@ public:
     Array<Class> classes;
     Array<String> description;
     struct EquippedWeapons : Array<Weapons::Weapon>{};
-    ;
+    
     struct EquippedArmor   : Array<Armors::Armor>{
         constexpr int addArmor()     const {
             int output=0;

@@ -24,8 +24,18 @@ namespace Monsters {
             sizeMod = 1;
             HD = {D8, 1};
             cr = 0.33;
+            baseFort=2;
+            baseRef=0;
+            baseWill=-1;
             commonWeapons = { Weapons::javelin,
-                              Weapons::morningstar };
+                              Weapons::morningstar,
+                              Weapons::unarmed,
+                              Weapons::dagger,
+                              Weapons::daggerPunching,
+                              Weapons::maceLight
+            };
+            
+            finalizeNPC();
         }
     };
     

@@ -67,10 +67,18 @@ void Character::randomize(){
         *ability += random.nextInt((*ability)/5 + 1);
     //HP
     hp = rollHD();
+
 }
 
 int Character::rollHD() const{
-    auto [hitDie, numOfRolls] = HD;
+//    Die foo = HD.first;
+//    int foo2 = dieToNum(foo);
+//    DBG(foo2);
+//    DBG(HD.second);
+//    Die hitDie = HD.first;
+//    int numOfRolls = HD.second;
+    
+    auto [hitDie, numOfRolls] = std::pair{HD.first,HD.second};
     auto total=miscHP;
     for (auto i=0;i<numOfRolls;i++)
         total+= random.nextInt(dieToNum(hitDie)) + abilityMod(constitution);

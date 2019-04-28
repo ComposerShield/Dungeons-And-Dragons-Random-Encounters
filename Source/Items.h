@@ -30,7 +30,7 @@ constexpr int dieToNum(Die& die){
         case D8:  return 8;
         case D10: return 10;
         case D20: return 20;
-        case none: jassertfalse; return 8;
+        case none: return 8;
     }
 }
 
