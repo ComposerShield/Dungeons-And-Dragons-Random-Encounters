@@ -19,7 +19,7 @@ namespace Monsters {
     //inline auto greg = std::array<int, 6>{11,13,12,10,9,6};
     //inline NPC frank({11,13,12,10,9,6});
     struct Goblin : public NPC{
-        Goblin() : NPC({11,13,12,10,9,6}, 1, 1, 4){
+        Goblin() : NPC({11,13,12,10,9,6}, 1, 1){
             race = "goblin";
             sizeMod = 1;
             HD = {D8, 1};
@@ -30,7 +30,7 @@ namespace Monsters {
     };
     
     struct Orc : public NPC{
-        Orc() : NPC({11,13,12,10,9,6}, 1, 1, 4){ //TODO, copied from Goblin
+        Orc() : NPC({11,13,12,10,9,6}, 1, 1){ //TODO, copied from Goblin
             
         }
     };

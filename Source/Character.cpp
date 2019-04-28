@@ -10,7 +10,7 @@
 
 #include "Character.h"
 
-Character::Character(Array<int> abilities, int baseAttack, int init, int HP){
+Character::Character(Array<int> abilities, int baseAttack, int init){
     strength =      abilities[0];
     dexterity =     abilities[1];
     constitution =  abilities[2];
@@ -20,7 +20,6 @@ Character::Character(Array<int> abilities, int baseAttack, int init, int HP){
     
     baseAttackBonus = baseAttack;
     baseInitiative = init;
-    hp = HP;
     
 }
 
@@ -39,7 +38,6 @@ void Character::evaluateCharacterSheet(){
     }
     
     
-    hp = getHP();
     ac = getAC();
     initiative = getInitiative();
     
@@ -73,7 +71,7 @@ void Character::randomize(){
 
 int Character::rollHD() const{
     auto [hitDie, numOfRolls] = HD;
-    auto total=0;
+    auto total=miscHP;
     for (auto i=0;i<numOfRolls;i++)
         total+= random.nextInt(dieToNum(hitDie)) + abilityMod(constitution);
     return total;

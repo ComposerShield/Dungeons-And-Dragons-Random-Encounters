@@ -25,7 +25,7 @@ public:
     int strength, dexterity, constitution, intelligence, wisdom, charisma,
         baseFort, baseRef, baseWill, miscFort, miscRef, miscWill, sizeMod,
         baseAttackBonus, initiative, initMiscMod, hp, touchAC, touchACMisc,
-        currentHP, meleeMiscBonus, rangedMiscBonus, baseHP, miscHP, ac,
+        currentHP, meleeMiscBonus, rangedMiscBonus, miscHP, ac,
         baseInitiative, characterLevel, fort, ref, will;
     
     constexpr int getLevel(){
@@ -37,7 +37,7 @@ public:
     std::optional<int> casterLevel;
     Array<int*> abilityList;
     
-    Character(Array<int> abilities, int baseAttack, int init, int HP);
+    Character(Array<int> abilities, int baseAttack, int init);
     virtual ~Character(){};
     
     String race;
@@ -68,7 +68,6 @@ private:
     constexpr int getFortitude()  const {return baseFort + abilityMod(constitution) + miscFort;}
     constexpr int getReflex()     const {return baseRef  + abilityMod(dexterity)    + miscRef ;}
     constexpr int getWill()       const {return baseWill + abilityMod(wisdom)       + miscWill;}
-    constexpr int getHP()         const {return baseHP + miscHP + abilityMod(constitution);    }
     constexpr int getAC()         const {return equippedArmor.addArmor() + abilityMod(dexterity) + sizeMod; }
     constexpr int getTouchAC()    const {return abilityMod(dexterity) + sizeMod;}
     constexpr int getInitiative() const {return baseInitiative + initMiscMod;}
@@ -85,7 +84,7 @@ protected:
 
 class NPC : public Character{
 public:
-    NPC(Array<int> abilities, int baseAttack, int init, int HP) : Character(abilities, baseAttack, init, HP){}
+    NPC(Array<int> abilities, int baseAttack, int init) : Character(abilities, baseAttack, init){}
     virtual ~NPC(){};
     Array<Weapons::Weapon> commonWeapons;
     Array<Armors::Armor>  commonArmor;
@@ -99,7 +98,7 @@ protected:
 };
 
 class PC : public Character{
-    PC (Array<int> abilities, int baseAttack, int init, int HP) : Character(abilities, baseAttack, init, HP){}
+    PC (Array<int> abilities, int baseAttack, int init) : Character(abilities, baseAttack, init){}
     virtual ~PC(){};
 };
 
