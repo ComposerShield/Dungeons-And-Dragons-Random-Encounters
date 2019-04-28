@@ -11,7 +11,6 @@
 #pragma once
 
 #include "Skills.h"
-//#include "Feats.h"
 #include "Items.h"
 #include "Classes.h"
 #include "array"
@@ -59,9 +58,13 @@ public:
     Array<Feat>  feats;
     Array<Weapons::Weapon> weaponProficiencies;
     std::pair<Die, int> HD{D8,1}; //default
+    std::pair<void*, int> characterImageData;
+    Image characterImage;
     
     Skill& getSkill(String skill);
     void evaluateCharacterSheet();
+    
+    virtual Image getImage() = 0;
     
 private:
     constexpr int abilityMod(int input) const {return static_cast<int>((input-10)/2);}

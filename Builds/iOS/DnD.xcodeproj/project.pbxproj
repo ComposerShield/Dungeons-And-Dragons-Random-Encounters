@@ -379,6 +379,13 @@
 			path = ../../Source/Skills.h;
 			sourceTree = "SOURCE_ROOT";
 		};
+		93E345CBF7D01A0B5C20DA9D = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.png;
+			name = goblin.png;
+			path = ../../Assets/goblin.png;
+			sourceTree = "SOURCE_ROOT";
+		};
 		99ECB6B7640676B1CADF4F5F = {
 			isa = PBXFileReference;
 			lastKnownFileType = wrapper.framework;
@@ -557,6 +564,7 @@
 		C6D3190905E39CEEF3AAED1A = {
 			isa = PBXGroup;
 			children = (
+				93E345CBF7D01A0B5C20DA9D,
 				8DA8D49FC96BAF1DC1C09892,
 			);
 			name = Assets;

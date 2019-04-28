@@ -30,6 +30,7 @@ add_library( ${BINARY_NAME}
 
     SHARED
 
+    "../../../Assets/goblin.png"
     "../../../Assets/dnd_logo.png"
     "../../../Source/Main.cpp"
     "../../../Source/MainComponent.cpp"
@@ -1345,6 +1346,7 @@ add_library( ${BINARY_NAME}
     "../../../JuceLibraryCode/JuceHeader.h"
 )
 
+set_source_files_properties("../../../Assets/goblin.png" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties("../../../Assets/dnd_logo.png" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties("../../../Source/MainComponent.h" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties("../../../Source/Character.h" PROPERTIES HEADER_FILE_ONLY TRUE)

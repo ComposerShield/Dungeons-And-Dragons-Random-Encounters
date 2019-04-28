@@ -34,15 +34,20 @@ namespace Monsters {
                               Weapons::daggerPunching,
                               Weapons::maceLight
             };
+            //characterImageData.first = BinaryData::goblin_png;
+            //{BinaryData::goblin_png, 319005};
+            //characterImage = ImageCache::getFromMemory(BinaryData::goblin_png, 319005);
             
             finalizeNPC();
         }
+        Image getImage() override {return ImageCache::getFromMemory(BinaryData::goblin_png, 319005);}
     };
     
     struct Orc : public NPC{
         Orc() : NPC({11,13,12,10,9,6}, 1, 1){ //TODO, copied from Goblin
             
         }
+        Image getImage() override {return ImageCache::getFromMemory(BinaryData::goblin_png, 319005);}
     };
     
     

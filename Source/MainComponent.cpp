@@ -1,7 +1,7 @@
 /*
   ==============================================================================
 
-    This file was auto-generated!
+    
 
   ==============================================================================
 */
@@ -104,14 +104,15 @@ void CharacterSheet::paint(Graphics &g){
     
     auto textArray = fillCharacterSheet(character);
     
-    auto [width, height] = std::pair{bounds.getWidth()-20, bounds.getHeight()};
+    auto [width, height] = std::pair{bounds.getWidth(), bounds.getHeight()};
     
     g.setColour(Colours::black);
     for(auto& text : textArray){
-        g.drawText(text, bounds.getX()+10, bounds.removeFromTop(20).getY(), width-20, getHeight()*0.1, Justification::left);
+        g.drawText(text, bounds.getX()+10, bounds.removeFromTop(20).getY(), width-40, getHeight()*0.1, Justification::left);
     }
     
-    
+    auto rect = Rectangle<float>(width * 0.75f, 0.05f, width*0.25f, height * 0.25);
+    g.drawImage(characterImage, rect);
 
 }
 

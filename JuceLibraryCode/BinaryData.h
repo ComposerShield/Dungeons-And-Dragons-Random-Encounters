@@ -8,11 +8,14 @@
 
 namespace BinaryData
 {
+    extern const char*   goblin_png;
+    const int            goblin_pngSize = 249079;
+
     extern const char*   dnd_logo_png;
     const int            dnd_logo_pngSize = 426629;
 
     // Number of elements in the namedResourceList and originalFileNames arrays.
-    const int namedResourceListSize = 1;
+    const int namedResourceListSize = 2;
 
     // Points to the start of a list of resource names.
     extern const char* namedResourceList[];
