@@ -11,6 +11,7 @@
 #include "../JuceLibraryCode/JuceHeader.h"
 #include "Skills.h"
 #include "Character.h"
+#include "Common.h"
 
 namespace Feats {
     auto nullFunc = [](Array<Skill>& skillList){};

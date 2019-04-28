@@ -130,12 +130,27 @@ Array<String> CharacterSheet::fillCharacterSheet(const std::shared_ptr<Character
             String("Int ")   + static_cast<String>(character->intelligence) +
             String("  Wis ") + static_cast<String>(character->wisdom) +
             String("  Cha ") + static_cast<String>(character->charisma),
-            String("Fort ")  + static_cast<String>(character->fort),
-            String(" Ref ")  + static_cast<String>(character->ref),
+            String("Fort ")  + static_cast<String>(character->fort) +
+            String(" Ref ")  + static_cast<String>(character->ref) +
             String(" Will ") + static_cast<String>(character->will),
-            String("Weapon: ") + character->equippedWeapons[0].name
+            String("Weapon: ") + character->equippedWeapons[0].name,
+            String("             ") + getWeaponDetails(character)
         
     };
+}
+
+String CharacterSheet::getWeaponDetails(std::shared_ptr<Character> character){
+    auto weapon = character->equippedWeapons[0];
+    bool isMelee = weapon.melee != none;
+    
+    String attack = "(+" + static_cast<String>(character->baseAttackBonus + character->sizeMod + ((isMelee) ? abilityMod(character->strength) : abilityMod(character->dexterity))) + ")";
+    
+    String damage = " d" + static_cast<String>(dieToNum(weapon.melee)) + "+" +
+        static_cast<String>(abilityMod((isMelee) ? character->strength : character->dexterity));
+    
+    String crit = Weapons::critToString.at(weapon.crit);
+    
+    return attack + "  " + damage + "  " + crit;
 }
 
 

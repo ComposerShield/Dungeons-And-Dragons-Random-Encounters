@@ -16,6 +16,7 @@
 #include "array"
 #include "optional"
 #include "variant"
+#include "Common.h"
 
 struct Feat;
 
@@ -67,7 +68,6 @@ public:
     virtual Image getImage() = 0;
     
 private:
-    constexpr int abilityMod(int input) const {return static_cast<int>((input-10)/2);}
     constexpr int getFortitude()  const {return baseFort + abilityMod(constitution) + miscFort;}
     constexpr int getReflex()     const {return baseRef  + abilityMod(dexterity)    + miscRef ;}
     constexpr int getWill()       const {return baseWill + abilityMod(wisdom)       + miscWill;}

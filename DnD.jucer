@@ -19,6 +19,7 @@
       <FILE id="HWa0G6" name="Items.h" compile="0" resource="0" file="Source/Items.h"/>
       <FILE id="WjeUDI" name="Monsters.h" compile="0" resource="0" file="Source/Monsters.h"/>
       <FILE id="afA7Pn" name="Classes.h" compile="0" resource="0" file="Source/Classes.h"/>
+      <FILE id="O1d2M9" name="Common.h" compile="0" resource="0" file="Source/Common.h"/>
     </GROUP>
   </MAINGROUP>
   <EXPORTFORMATS>

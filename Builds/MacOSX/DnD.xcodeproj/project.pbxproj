@@ -420,6 +420,13 @@
 			path = "../../JuceLibraryCode/include_juce_audio_processors.mm";
 			sourceTree = "SOURCE_ROOT";
 		};
+		C1B79E896B5E11904FA7437F = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = Common.h;
+			path = ../../Source/Common.h;
+			sourceTree = "SOURCE_ROOT";
+		};
 		C3362A5CC2B232984658714E = {
 			isa = PBXFileReference;
 			lastKnownFileType = file;
@@ -562,6 +569,7 @@
 				46435298148F03FAE88078AF,
 				370D25D7C3E717E791399E4D,
 				54B95C47816CCD6C54C9939E,
+				C1B79E896B5E11904FA7437F,
 			);
 			name = Source;
 			sourceTree = "<group>";

@@ -9,30 +9,8 @@
 */
 
 #pragma once
-
-enum Die{
-    D2,
-    D3,
-    D4,
-    D6,
-    D8,
-    D10,
-    D20,
-    none
-};
-
-constexpr int dieToNum(Die& die){
-    switch(die){
-        case D2:  return 2;
-        case D3:  return 3;
-        case D4:  return 4;
-        case D6:  return 6;
-        case D8:  return 8;
-        case D10: return 10;
-        case D20: return 20;
-        case none: return 8;
-    }
-}
+#include "Common.h"
+#include <map>
 
 enum Critical{
     x2,
@@ -91,7 +69,7 @@ namespace Weapons {
                             morningstar     {"morningstar",     D6, none, x2,       SIMPLE, ONE},
                             shortspear      {"shortspear",      D6, none, x2,       SIMPLE, ONE},
                             longspear       {"longspear",       D8, none, x3,       SIMPLE, ONE},
-                            quarterstaff    {"quarterstaff",    D6, D6, x2,         SIMPLE, ONE},
+                            quarterstaff    {"quarterstaff",    D6, D6, x2,         SIMPLE, TWO},
                             spear           {"spear",           D8, none, x3,       SIMPLE, ONE},
     
     javelin     {"javelin",     D6, none, x2,       SIMPLE, ONE},
@@ -148,6 +126,16 @@ namespace Weapons {
         Random random;
         return exotic[random.nextInt(exotic.size())];
     }();
+    
+    
+    inline const std::map<Critical, String> critToString{
+        {x2, "x2"},
+        {x3, "x3"},
+        {x4, "x4"},
+        {_18_20x2, "(18-20)x2"},
+        {_19_20x2, "(19-20)x2"}
+    };
+    
     
 }
 
