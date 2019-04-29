@@ -74,19 +74,23 @@ namespace Weapons {
     
     javelin     {"javelin",     D6, none, x2,       SIMPLE, ONE},
     
+    shortsword     {"shortsword",     D6, none, x2,       SIMPLE, ONE},
     
+    axeThrowing {"throwing axe",     D6, none, x2,       SIMPLE, ONE},
+    
+    rapier {"rapier",     D6, none, x2,       SIMPLE, ONE},
     
     //Exotic STATS TODO
-    kama     {"javelin",     D6, none, x2,       EXOTIC, ONE},
+    kama     {"kama",     D6, none, x2,       EXOTIC, ONE},
     nunchaku     {"javelin",     D6, none, x2,       EXOTIC, ONE},
     sai     {"javelin",     D6, none, x2,       EXOTIC, ONE},
     siangham     {"javelin",     D6, none, x2,       EXOTIC, ONE},
     swordBastard     {"javelin",     D6, none, x2,       EXOTIC, ONE},
     waraxeDrawven     {"javelin",     D6, none, x2,       EXOTIC, ONE},
-    whip     {"javelin",     D6, none, x2,       EXOTIC, ONE},
-    axeOrcDouble     {"javelin",     D6, none, x2,       EXOTIC, TWO},
-    chainSpiked     {"javelin",     D6, none, x2,       EXOTIC, TWO},
-    flailDire     {"javelin",     D6, none, x2,       EXOTIC, TWO},
+    whip     {"whip",     D6, none, x2,       EXOTIC, ONE},
+    axeOrcDouble     {"axeOrcDouble",     D6, none, x2,       EXOTIC, TWO},
+    chainSpiked     {"chainSpiked",     D6, none, x2,       EXOTIC, TWO},
+    flailDire     {"flailDire",     D6, none, x2,       EXOTIC, TWO},
     hammerGnomeHooked     {"javelin",     D6, none, x2,       EXOTIC, TWO},
     swordTwoBladed     {"javelin",     D6, none, x2,       EXOTIC, TWO},
     urgoshDwarven     {"javelin",     D6, none, x2,       EXOTIC, TWO},

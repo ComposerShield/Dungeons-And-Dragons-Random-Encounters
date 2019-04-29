@@ -28,7 +28,7 @@ void Character::evaluateCharacterSheet(){
     Array<int*> resetList{&miscHP, &miscWill, &miscRef, &miscFort, &initMiscMod, &meleeMiscBonus, &rangedMiscBonus};
     for(auto * val : resetList) *val=0;
     
-    
+    DBG(race);
     randomize();
     for(auto& feat : feats) feat.function;
     for(auto& skill : skills){
@@ -71,14 +71,12 @@ void Character::randomize(){
 }
 
 int Character::rollHD() const{
-//    Die foo = HD.first;
-//    int foo2 = dieToNum(foo);
-//    DBG(foo2);
-//    DBG(HD.second);
+    Die foo = HD.first;
+    int foo2 = dieToNum(foo);
 //    Die hitDie = HD.first;
 //    int numOfRolls = HD.second;
     
-    auto [hitDie, numOfRolls] = std::pair{HD.first,HD.second};
+    auto [hitDie, numOfRolls] = HD;
     auto total=miscHP;
     for (auto i=0;i<numOfRolls;i++)
         total+= random.nextInt(dieToNum(hitDie)) + abilityMod(constitution);

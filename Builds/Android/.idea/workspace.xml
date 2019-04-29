@@ -2,12 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d49f4f16-8505-4002-8775-94506f249e04" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Android.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DnD.jucer" beforeDir="false" afterPath="$PROJECT_DIR$/../../DnD.jucer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Source/MainComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Source/MainComponent.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Source/MainComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../Source/MainComponent.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MacOSX/DnD.xcodeproj/project.xcworkspace/xcuserdata/adamshieldcomposer.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../MacOSX/DnD.xcodeproj/project.xcworkspace/xcuserdata/adamshieldcomposer.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MacOSX/DnD.xcodeproj/xcuserdata/adamshieldcomposer.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" beforeDir="false" afterPath="$PROJECT_DIR$/../MacOSX/DnD.xcodeproj/xcuserdata/adamshieldcomposer.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MacOSX/build/Debug/DnD.app/Contents/MacOS/DnD" beforeDir="false" afterPath="$PROJECT_DIR$/../MacOSX/build/Debug/DnD.app/Contents/MacOS/DnD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iOS/DnD.xcodeproj/project.xcworkspace/xcuserdata/adamshieldcomposer.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../iOS/DnD.xcodeproj/project.xcworkspace/xcuserdata/adamshieldcomposer.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iOS/DnD.xcodeproj/xcuserdata/adamshieldcomposer.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" beforeDir="false" afterPath="$PROJECT_DIR$/../iOS/DnD.xcodeproj/xcuserdata/adamshieldcomposer.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iOS/build/Debug/DnD.app/DnD" beforeDir="false" afterPath="$PROJECT_DIR$/../iOS/build/Debug/DnD.app/DnD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iOS/build/Debug/DnD.app/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../iOS/build/Debug/DnD.app/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iOS/build/Debug/DnD.app/_CodeSignature/CodeResources" beforeDir="false" afterPath="$PROJECT_DIR$/../iOS/build/Debug/DnD.app/_CodeSignature/CodeResources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Source/Character.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Source/Character.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Source/Character.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../Source/Character.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Source/Monsters.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../Source/Monsters.h" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,10 +36,11 @@
     <session id="-631481498">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -101,7 +107,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="134" />
-    <option name="y" value="23" />
+    <option name="y" value="54" />
     <option name="width" value="1271" />
     <option name="height" value="804" />
   </component>
@@ -111,8 +117,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -133,7 +137,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -275,31 +281,31 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="134" y="23" width="1271" height="804" extended-state="0" />
+    <frame x="134" y="54" width="1271" height="804" extended-state="0" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.3295362" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.3295362" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
       <window_info id="Image Layers" order="5" />
       <window_info id="Designer" order="6" />
       <window_info id="Capture Tool" order="7" />
-      <window_info anchor="bottom" id="Run" />
-      <window_info anchor="bottom" id="Debug" />
       <window_info anchor="bottom" id="Version Control" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Logcat" order="1" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Terminal" order="3" />
       <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Build" order="5" visible="true" weight="0.3286517" />
+      <window_info anchor="bottom" id="Build" order="5" visible="true" weight="0.3286517" />
       <window_info anchor="bottom" id="Android Profiler" order="6" show_stripe_button="false" />
-      <window_info anchor="right" id="Assistant" weight="0.3295362" />
+      <window_info anchor="bottom" id="Run" order="7" />
+      <window_info anchor="bottom" id="Debug" order="8" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="right" id="Assistant" order="5" weight="0.3295362" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">

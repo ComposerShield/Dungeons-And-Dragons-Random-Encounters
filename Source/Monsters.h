@@ -16,8 +16,7 @@
 #include "map"
 
 namespace Monsters {
-    //inline auto greg = std::array<int, 6>{11,13,12,10,9,6};
-    //inline NPC frank({11,13,12,10,9,6});
+
     struct Goblin : public NPC{
         Goblin() : NPC({11,13,12,10,9,6}, 1, 1){
             race = "goblin";
@@ -34,10 +33,13 @@ namespace Monsters {
                               Weapons::daggerPunching,
                               Weapons::maceLight
             };
-            //characterImageData.first = BinaryData::goblin_png;
-            //{BinaryData::goblin_png, 319005};
-            //characterImage = ImageCache::getFromMemory(BinaryData::goblin_png, 319005);
             
+            preferredWeapons = {
+                {Weapons::javelin, Weapons::morningstar, Weapons::shortspear, Weapons::dagger},
+                {Weapons::unarmed, Weapons::daggerPunching, Weapons::maceLight, Weapons::shortsword, Weapons::axeThrowing},
+                {Weapons::club, Weapons::sickle, Weapons::crossbowHand, Weapons::chainSpiked, Weapons::whip, Weapons::rapier}
+            };
+
             finalizeNPC();
         }
         Image getImage() override {return ImageCache::getFromMemory(BinaryData::goblin_png, 319005);}

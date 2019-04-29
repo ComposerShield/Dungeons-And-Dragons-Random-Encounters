@@ -25,7 +25,7 @@ public:
     int strength, dexterity, constitution, intelligence, wisdom, charisma,
         baseFort, baseRef, baseWill, miscFort, miscRef, miscWill, sizeMod,
         baseAttackBonus, initiative, initMiscMod, hp, touchAC, touchACMisc,
-        currentHP, meleeMiscBonus, rangedMiscBonus, miscHP, ac,
+        currentHP, meleeMiscBonus, rangedMiscBonus, miscHP{0}, ac, grapple,
         baseInitiative, characterLevel, fort, ref, will;
     
     constexpr int getLevel(){
@@ -74,6 +74,7 @@ private:
     constexpr int getAC()         const {return equippedArmor.addArmor() + abilityMod(dexterity) + sizeMod; }
     constexpr int getTouchAC()    const {return abilityMod(dexterity) + sizeMod;}
     constexpr int getInitiative() const {return baseInitiative + initMiscMod;}
+    constexpr int getGrapple()    const {return baseAttackBonus + abilityMod(strength) + sizeMod;}
     constexpr int rollForInitiative()   {return initiative + random.nextInt(2) + 1;};
     int rollHD() const;
     Array<int> abilitiesAsArray() const {return {strength, dexterity, constitution, intelligence, wisdom, charisma};};
@@ -86,12 +87,20 @@ protected:
 
 
 class NPC : public Character{
+protected:
+    struct PreferredWeapons{
+        Array<Weapons::Weapon> highChance;
+        Array<Weapons::Weapon> mediumChance;
+        Array<Weapons::Weapon> lowChance;
+    };
+    
 public:
     NPC(Array<int> abilities, int baseAttack, int init) : Character(abilities, baseAttack, init){}
     virtual ~NPC(){};
     Array<Weapons::Weapon> commonWeapons;
     Array<Armors::Armor>  commonArmor;
     double cr;
+    PreferredWeapons preferredWeapons;
     
 private:
     Weapons::Weapon randomWeapon();
