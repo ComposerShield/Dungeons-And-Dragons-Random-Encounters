@@ -71,11 +71,6 @@ void Character::randomize(){
 }
 
 int Character::rollHD() const{
-    Die foo = HD.first;
-    int foo2 = dieToNum(foo);
-//    Die hitDie = HD.first;
-//    int numOfRolls = HD.second;
-    
     auto [hitDie, numOfRolls] = HD;
     auto total=miscHP;
     for (auto i=0;i<numOfRolls;i++)
@@ -90,5 +85,7 @@ void NPC::finalizeNPC(){
 }
 
 Weapons::Weapon NPC::randomWeapon(){
-    return commonWeapons[random.nextInt(commonWeapons.size())];
+    return (random.nextBool()) ? preferredWeapons.highChance[random.nextInt(preferredWeapons.highChance.size())] //50 percent
+     : (random.nextInt(50)<35) ? preferredWeapons.mediumChance[random.nextInt(preferredWeapons.mediumChance.size())] //35 percent
+                               : preferredWeapons.lowChance[random.nextInt(preferredWeapons.lowChance.size())]; //15 percent
 }

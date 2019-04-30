@@ -5,6 +5,7 @@
   <MAINGROUP id="TV0qGq" name="DnD">
     <GROUP id="{8FF29A55-BEE8-3342-4F07-5752919E8C8A}" name="Source">
       <GROUP id="{2405B3F5-959C-F729-06DF-808CDA112D37}" name="Assets">
+        <FILE id="jM5QZ2" name="orc.png" compile="0" resource="1" file="Assets/orc.png"/>
         <FILE id="iCAqpa" name="goblin.png" compile="0" resource="1" file="Assets/goblin.png"/>
         <FILE id="Af1Txd" name="dnd_logo.png" compile="0" resource="1" file="Assets/dnd_logo.png"/>
       </GROUP>

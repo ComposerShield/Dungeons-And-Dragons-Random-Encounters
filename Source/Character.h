@@ -97,10 +97,9 @@ protected:
 public:
     NPC(Array<int> abilities, int baseAttack, int init) : Character(abilities, baseAttack, init){}
     virtual ~NPC(){};
-    Array<Weapons::Weapon> commonWeapons;
+    PreferredWeapons preferredWeapons;
     Array<Armors::Armor>  commonArmor;
     double cr;
-    PreferredWeapons preferredWeapons;
     
 private:
     Weapons::Weapon randomWeapon();

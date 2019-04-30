@@ -26,13 +26,6 @@ namespace Monsters {
             baseFort=2;
             baseRef=0;
             baseWill=-1;
-            commonWeapons = { Weapons::javelin,
-                              Weapons::morningstar,
-                              Weapons::unarmed,
-                              Weapons::dagger,
-                              Weapons::daggerPunching,
-                              Weapons::maceLight
-            };
             
             preferredWeapons = {
                 {Weapons::javelin, Weapons::morningstar, Weapons::shortspear, Weapons::dagger},
@@ -49,7 +42,7 @@ namespace Monsters {
         Orc() : NPC({11,13,12,10,9,6}, 1, 1){ //TODO, copied from Goblin
             
         }
-        Image getImage() override {return ImageCache::getFromMemory(BinaryData::goblin_png, 319005);}
+        Image getImage() override {return ImageCache::getFromMemory(BinaryData::orc_png, 319005);}
     };
     
     

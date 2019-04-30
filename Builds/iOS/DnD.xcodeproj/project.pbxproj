@@ -330,6 +330,13 @@
 			path = "../../JuceLibraryCode/include_juce_core.mm";
 			sourceTree = "SOURCE_ROOT";
 		};
+		6623E59D77C82D5356F2347B = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.png;
+			name = orc.png;
+			path = ../../Assets/orc.png;
+			sourceTree = "SOURCE_ROOT";
+		};
 		6722EC0233DE7580441D8158 = {
 			isa = PBXFileReference;
 			lastKnownFileType = file;
@@ -571,6 +578,7 @@
 		C6D3190905E39CEEF3AAED1A = {
 			isa = PBXGroup;
 			children = (
+				6623E59D77C82D5356F2347B,
 				93E345CBF7D01A0B5C20DA9D,
 				8DA8D49FC96BAF1DC1C09892,
 			);
