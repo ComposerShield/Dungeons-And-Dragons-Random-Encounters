@@ -104,15 +104,16 @@ private:
     
 protected:
     struct PreferredWeapons : public Preferred<Weapons::Weapon>{};
-    struct PreferredArmor : public Preferred<Armors::Armor>{};
-    struct PreferredSkill : public Preferred<Skill>{};
+    struct PreferredArmor   : public Preferred<Armors::Armor>{};
+    struct PreferredSkills  : public Preferred<Skill>{};
+    struct PreferredFeats   : public Preferred<Feat>{};
     
 public:
     NPC(Array<int> abilities, int baseAttack, int init) : Character(abilities, baseAttack, init){}
     virtual ~NPC(){};
     PreferredWeapons preferredWeapons;
     PreferredArmor  preferredArmor;
-    PreferredSkill preferredSkills;
+    PreferredSkills preferredSkills;
     double cr;
     Preferred<int> foo{{1,2,3},{1,2},{3,2}};
     

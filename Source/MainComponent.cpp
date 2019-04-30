@@ -59,7 +59,7 @@ void MainComponent::buttonClicked(Button * button){
     for(auto i=0;i<numOfMonsters;++i){
         auto newMonsterPtr = ( [monsterType]()->NPC*{
             for(auto [name,thisMonster] : Monsters::monsters)
-                if (name==monsterType) return new Monsters::Goblin; //PLACEHOLDER TODO
+                if (name==monsterType) return Monsters::monsters[monsterType]; //PLACEHOLDER TODO
             jassertfalse;
             }()
         );

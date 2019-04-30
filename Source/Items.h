@@ -152,6 +152,7 @@ namespace Weapons {
 
 namespace Armors {
     enum ArmorType{
+        NONE,
         LIGHT,
         MEDIUM,
         HEAVY,
@@ -182,8 +183,9 @@ namespace Armors {
                         shieldLS{   "shield, light steel",  1,NA,-1,LIGHT, ONE},
                         shieldHW{   "shield, heavy wooden", 2,NA,-2,LIGHT, ONE},
                         shieldHS{   "shield, heavy steel",  2,NA,-2,LIGHT, ONE},
-                        shieldTower{    "tower shield",     4,2,-10,LIGHT, TWO};
+                        shieldTower{    "tower shield",     4,2,-10,LIGHT, TWO},
     
+                        none{           "(none)",           0,NA,0, NONE, ZERO};
     
 }
 
