@@ -75,12 +75,12 @@ namespace Skills {
                         sense_motive    {"sense motive", WIS},
                         slight_of_hand  {"slight of hand", DEX},
                         spellcraft      {"spellcraft", INT},
-                        spot            {"spot", INT},
-                        survival        {"survival", INT},
-                        swim            {"swim", INT},
-                        tumble          {"tumble", INT},
-                        use_magic_dev   {"use magic device", INT},
-                        use_rope        {"use rope", INT};
+                        spot            {"spot", WIS},
+                        survival        {"survival", WIS},
+                        swim            {"swim", STR},
+                        tumble          {"tumble", DEX},
+                        use_magic_dev   {"use magic device", CHA},
+                        use_rope        {"use rope", DEX};
     
     
     inline Array<Skill> skillList = {

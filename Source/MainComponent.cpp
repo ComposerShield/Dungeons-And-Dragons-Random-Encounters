@@ -134,8 +134,8 @@ Array<String> CharacterSheet::fillCharacterSheet(const std::shared_ptr<Character
             String(" Ref ")  + static_cast<String>(character->ref) +
             String(" Will ") + static_cast<String>(character->will),
             String("Weapon: ") + character->equippedWeapons[0].name,
-            String("              ") + getWeaponDetails(character)
-        
+            String("              ") + getWeaponDetails(character),
+            String("Armor: ") + character->equippedArmor[0].name
     };
 }
 

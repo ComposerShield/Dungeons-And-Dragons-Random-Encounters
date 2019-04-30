@@ -27,11 +27,19 @@ namespace Monsters {
             baseRef=0;
             baseWill=-1;
             
-            preferredWeapons = {
+            preferredWeapons.fill(
                 {Weapons::javelin, Weapons::morningstar, Weapons::shortspear, Weapons::dagger},
                 {Weapons::unarmed, Weapons::daggerPunching, Weapons::maceLight, Weapons::shortsword, Weapons::axeThrowing},
                 {Weapons::club, Weapons::sickle, Weapons::crossbowHand, Weapons::chainSpiked, Weapons::whip, Weapons::rapier}
-            };
+            );
+            
+            preferredArmor.fill(
+            {},
+            {},
+            {}
+            );
+            
+            
 
             finalizeNPC();
         }

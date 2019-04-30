@@ -87,19 +87,34 @@ protected:
 
 
 class NPC : public Character{
-protected:
-    struct PreferredWeapons{
-        Array<Weapons::Weapon> highChance;
-        Array<Weapons::Weapon> mediumChance;
-        Array<Weapons::Weapon> lowChance;
+private:
+    template<typename t>
+    struct Preferred{
+        Array<t> highChance;
+        Array<t> mediumChance;
+        Array<t> lowChance;
+        
+        Preferred() = default;
+        void fill(Array<t> high,Array<t> med,Array<t> low){
+            highChance = high;
+            mediumChance = med;
+            lowChance = low;
+        }
     };
+    
+protected:
+    struct PreferredWeapons : public Preferred<Weapons::Weapon>{};
+    struct PreferredArmor : public Preferred<Armors::Armor>{};
+    struct PreferredSkill : public Preferred<Skill>{};
     
 public:
     NPC(Array<int> abilities, int baseAttack, int init) : Character(abilities, baseAttack, init){}
     virtual ~NPC(){};
     PreferredWeapons preferredWeapons;
-    Array<Armors::Armor>  commonArmor;
+    PreferredArmor  preferredArmor;
+    PreferredSkill preferredSkills;
     double cr;
+    Preferred<int> foo{{1,2,3},{1,2},{3,2}};
     
 private:
     Weapons::Weapon randomWeapon();

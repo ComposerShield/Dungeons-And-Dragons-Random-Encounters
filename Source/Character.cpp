@@ -28,7 +28,6 @@ void Character::evaluateCharacterSheet(){
     Array<int*> resetList{&miscHP, &miscWill, &miscRef, &miscFort, &initMiscMod, &meleeMiscBonus, &rangedMiscBonus};
     for(auto * val : resetList) *val=0;
     
-    DBG(race);
     randomize();
     for(auto& feat : feats) feat.function;
     for(auto& skill : skills){
@@ -78,7 +77,7 @@ int Character::rollHD() const{
     return total;
 }
 
-//========================NPC==============================
+//========================NPC=============================//
 
 void NPC::finalizeNPC(){
     equippedWeapons.add(randomWeapon());

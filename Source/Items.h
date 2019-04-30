@@ -22,6 +22,16 @@ enum Critical{
 
 static inline std::function<void()> nullFunc = []()->void{};
 
+enum NumOfHands{
+    ZERO,
+    ONE,
+    TWO
+};
+
+struct Item{
+    
+};
+
 namespace Weapons {
     static inline String criticalToString(Critical crit){
         switch(crit){
@@ -40,11 +50,6 @@ namespace Weapons {
         MARTIAL_TWO_HANDED_MELEE,
         MARTIAL_RANGED,
         EXOTIC
-    };
-    
-    enum NumOfHands{
-        ONE,
-        TWO
     };
     
     struct Weapon{
@@ -71,12 +76,14 @@ namespace Weapons {
                             longspear       {"longspear",       D8, none, x3,       SIMPLE, ONE},
                             quarterstaff    {"quarterstaff",    D6, D6, x2,         SIMPLE, TWO},
                             spear           {"spear",           D8, none, x3,       SIMPLE, ONE},
+                            crossbowHeavy   {"heavy crossbow",  none, D10, _19_20x2,SIMPLE, TWO},
+                            crossbowLight   {"light crossbow",  none, D8, _19_20x2, SIMPLE, TWO},
+                            dart            {"dart",            none, D4, x2,       SIMPLE, TWO},
+                            javelin         {"javelin",         none, D6, x2,       SIMPLE, ONE},
+                            sling           {"sling",           none, D4, x2,       SIMPLE, TWO},
     
-    javelin     {"javelin",     D6, none, x2,       SIMPLE, ONE},
-    
-    shortsword     {"shortsword",     D6, none, x2,       SIMPLE, ONE},
-    
-    axeThrowing {"throwing axe",     D6, none, x2,       SIMPLE, ONE},
+                            axeThrowing     {"throwing axe",    D6, none, x2,       MARTIAL_LIGHT_MELEE, ONE},
+                            shortsword      {"shortsword",      D6, none, _19_20x2, MARTIAL_LIGHT_MELEE, ONE},
     
     rapier {"rapier",     D6, none, x2,       SIMPLE, ONE},
     
@@ -105,7 +112,7 @@ namespace Weapons {
     inline const Array<Weapon> allWeapons{gauntlet, unarmed, dagger, daggerPunching, gauntletSpiked,
         maceLight, sickle, club, maceHeavy, morningstar, shortspear, longspear, quarterstaff, spear,
         
-        kama, nunchaku, sai, siangham, swordBastard, waraxeDrawven, whip, axeOrcDouble, chainSpiked, flailDire,
+        kama, nunchaku, sai, siangham, swordBastard, waraxeDwarven, whip, axeOrcDouble, chainSpiked, flailDire,
         hammerGnomeHooked, swordTwoBladed, urgoshDwarven, bolash, crossbowHand, crossbowHeavyRepeating,
         crossbowLightRepeating, net, shuriken
     };
@@ -144,8 +151,39 @@ namespace Weapons {
 }
 
 namespace Armors {
+    enum ArmorType{
+        LIGHT,
+        MEDIUM,
+        HEAVY,
+        SHIELD
+    };
+    
     struct Armor{
         String name;
         int ac;
+        std::optional<int> maxDex;
+        int armorCheckPenalty;
+        ArmorType armorType;
+        NumOfHands numOfHands;
+        
+
     };
+    
+    
+    static inline Armor padded{         "padded",           1,8,0, LIGHT, ZERO},
+                        leather{        "leather",          2,6,0, LIGHT, ZERO},
+                        studdedLeather{ "studded leather",  3,5,-1,LIGHT, ZERO},
+                        chainShirt{     "chain shirt",      4,4,-2,LIGHT, ZERO},
+    
+    
+    
+                        buckler{        "buckler",          1,NA,-1,LIGHT, ONE},
+                        shieldLW{   "shield, light wooden", 1,NA,-1,LIGHT, ONE},
+                        shieldLS{   "shield, light steel",  1,NA,-1,LIGHT, ONE},
+                        shieldHW{   "shield, heavy wooden", 2,NA,-2,LIGHT, ONE},
+                        shieldHS{   "shield, heavy steel",  2,NA,-2,LIGHT, ONE},
+                        shieldTower{    "tower shield",     4,2,-10,LIGHT, TWO};
+    
+    
 }
+
