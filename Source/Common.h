@@ -13,9 +13,9 @@
 #define for_indexed(...) for_indexed_v(i, __VA_ARGS__)
 #define for_indexed_v(v, ...) for(bool _i_ = true, _break_ = false; _i_;) for(size_t v = 0; _i_; _i_ = false) for(__VA_ARGS__) if(_break_) break; else for(bool _j_ = true; _j_;) for(_break_ = true; _j_; _j_ = false) for(bool _k_ = true; _k_; v++, _k_ = false, _break_ = false)
 
+#include <optional>
 
-
-enum Die{
+enum DieType{
     D2,
     D3,
     D4,
@@ -26,7 +26,26 @@ enum Die{
     none
 };
 
-constexpr int dieToNum(Die& die){
+struct Die{
+    int numOfDice;
+    DieType dieType;
+    
+    Die(const DieType& die){
+        numOfDice=0;
+        dieType = die;
+    }
+    
+    Die(int num, const DieType& die){
+        numOfDice=num;
+        dieType = die;
+    }
+    
+    Die() = default;
+    
+};
+
+
+constexpr int dieToNum(DieType& die){
     switch(die){
         case D2:  return 2;
         case D3:  return 3;

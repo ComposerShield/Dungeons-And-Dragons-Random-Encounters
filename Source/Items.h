@@ -11,6 +11,7 @@
 #pragma once
 #include "Common.h"
 #include <map>
+#include <variant>
 
 enum Critical{
     x2,
@@ -59,6 +60,8 @@ namespace Weapons {
         Critical crit;
         WeaponType type;
         NumOfHands numOfHands;
+        
+        Weapon() = default;
     };
     
     
@@ -83,13 +86,26 @@ namespace Weapons {
                             sling           {"sling",           none, D4, x2,       SIMPLE, TWO},
     
                             axeThrowing     {"throwing axe",    D6, none, x2,       MARTIAL_LIGHT_MELEE, ONE},
-                            shortsword      {"shortsword",      D6, none, _19_20x2, MARTIAL_LIGHT_MELEE, ONE},
+                            hammerLight     {"hammer, light",   D4, none, x2,       MARTIAL_LIGHT_MELEE, ONE},
+                            handaxe         {"handaxe",         D6, none, x3,       MARTIAL_LIGHT_MELEE, ONE},
+                            kukri           {"kukri",           D4, none, _18_20x2, MARTIAL_LIGHT_MELEE, ONE},
+                            pickLight       {"pick, light",     D4, none, x4,       MARTIAL_LIGHT_MELEE, ONE},
+    //TODO
+    shortsword      {"shortsword",      D6, none, _19_20x2, MARTIAL_LIGHT_MELEE, ONE},
     
-    rapier {"rapier",     D6, none, x2,       SIMPLE, ONE},
+                            battleaxe       {"battleaxe",       D8, none, x3,       MARTIAL_ONE_HANDED_MELEE, ONE},
+                            flail           {"flail",           D8, none, x2,       MARTIAL_ONE_HANDED_MELEE, ONE},
+                            longsword       {"longsword",       D8, none, x2,       MARTIAL_ONE_HANDED_MELEE, ONE},
+                            pickHeavy       {"pick, heavy",     D8, none, x2,       MARTIAL_ONE_HANDED_MELEE, ONE},
+                            rapier          {"rapier",          D6, none, x4,       MARTIAL_ONE_HANDED_MELEE, ONE},
+                            scimitar        {"scimitar",        D6, none, _18_20x2, MARTIAL_ONE_HANDED_MELEE, ONE},
+    //TODO
+    falchion        {"falchion",        {2, D4}, none, _18_20x2, MARTIAL_ONE_HANDED_MELEE, ONE},
+    
     
     //Exotic STATS TODO
     kama     {"kama",     D6, none, x2,       EXOTIC, ONE},
-    nunchaku     {"javelin",     D6, none, x2,       EXOTIC, ONE},
+    nunchaku     {"nunchaku",     D6, none, x2,       EXOTIC, ONE},
     sai     {"sai",     D6, none, x2,       EXOTIC, ONE},
     siangham     {"siangham",     D6, none, x2,       EXOTIC, ONE},
     swordBastard     {"bastard sword",     D6, none, x2,       EXOTIC, ONE},

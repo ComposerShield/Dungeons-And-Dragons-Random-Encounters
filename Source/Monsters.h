@@ -54,16 +54,16 @@ namespace Monsters {
             baseRef=0;
             baseWill=-1;
             
-            preferredWeapons.fill(
-                                  {Weapons::javelin, Weapons::morningstar, Weapons::shortspear, Weapons::dagger},
-                                  {Weapons::unarmed, Weapons::daggerPunching, Weapons::maceLight, Weapons::shortsword, Weapons::axeThrowing},
-                                  {Weapons::club, Weapons::sickle, Weapons::crossbowHand, Weapons::chainSpiked, Weapons::whip, Weapons::rapier}
+            preferredWeapons.fill(//TODO
+                           {Weapons::javelin, Weapons::falchion, Weapons::battleaxe},
+                           {Weapons::maceHeavy, Weapons::maceLight, Weapons::shortsword, Weapons::longsword},
+                           {Weapons::dagger, Weapons::spear, Weapons::crossbowHand, Weapons::chainSpiked}
                                   );
             
             preferredArmor.fill(
                                 {Armors::studdedLeather, Armors::leather},
                                 {Armors::none, Armors::padded},
-                                {}
+                                {Armors::buckler}
                                 );
             
             preferredSkills.fill({Skills::listen, Skills::spot},

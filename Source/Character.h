@@ -58,7 +58,8 @@ public:
     Array<Skill> skills = Skills::skillList;
     Array<Feat>  feats;
     Array<Weapons::Weapon> weaponProficiencies;
-    std::pair<Die, int> HD{D8,1}; //default
+    std::pair<DieType, int> HD{D8,1}; //default
+    
     std::pair<void*, int> characterImageData;
     Image characterImage;
     

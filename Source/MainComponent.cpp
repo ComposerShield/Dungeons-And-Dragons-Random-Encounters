@@ -141,11 +141,11 @@ Array<String> CharacterSheet::fillCharacterSheet(const std::shared_ptr<Character
 
 String CharacterSheet::getWeaponDetails(std::shared_ptr<Character> character){
     auto weapon = character->equippedWeapons[0];
-    bool isMelee = weapon.melee != none;
+    bool isMelee = weapon.melee.dieType != none;
     
     String attack = "(+" + static_cast<String>(character->baseAttackBonus + character->sizeMod + ((isMelee) ? abilityMod(character->strength) : abilityMod(character->dexterity))) + ")";
     
-    String damage = " d" + static_cast<String>(dieToNum(weapon.melee)) + "+" +
+    String damage = " d" + static_cast<String>(dieToNum(weapon.melee.dieType)) + "+" +
         static_cast<String>(abilityMod((isMelee) ? character->strength : character->dexterity));
     
     String crit = Weapons::critToString.at(weapon.crit);

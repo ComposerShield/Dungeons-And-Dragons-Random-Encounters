@@ -15,6 +15,7 @@ struct Class{
     int level;
     
     
+    
 };
 
 
