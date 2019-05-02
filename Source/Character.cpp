@@ -70,7 +70,7 @@ void Character::randomize(){
 }
 
 int Character::rollHD() const{
-    auto [hitDie, numOfRolls] = HD;
+    auto [numOfRolls, hitDie] = HD;
     auto total=miscHP;
     for (auto i=0;i<numOfRolls;i++)
         total+= random.nextInt(dieToNum(hitDie)) + abilityMod(constitution);
@@ -87,4 +87,10 @@ Weapons::Weapon NPC::randomWeapon(){
     return (random.nextBool()) ? preferredWeapons.highChance[random.nextInt(preferredWeapons.highChance.size())] //50 percent
      : (random.nextInt(50)<35) ? preferredWeapons.mediumChance[random.nextInt(preferredWeapons.mediumChance.size())] //35 percent
                                : preferredWeapons.lowChance[random.nextInt(preferredWeapons.lowChance.size())]; //15 percent
+}
+
+Armors::Armor NPC::randomArmor(){
+    return (random.nextBool()) ? preferredArmor.highChance[random.nextInt(preferredArmor.highChance.size())] //50 percent
+     : (random.nextInt(50)<35) ? preferredArmor.mediumChance[random.nextInt(preferredArmor.mediumChance.size())] //35 percent
+                               : preferredArmor.lowChance[random.nextInt(preferredArmor.lowChance.size())]; //15 percent
 }

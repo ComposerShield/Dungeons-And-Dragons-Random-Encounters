@@ -18,7 +18,7 @@ namespace Feats {
     
     template<Weapons::WeaponType weaponType>
     auto weaponProfFunc = [](Character& character){
-        for(auto& weapon : Weapons::martial)
+        for(auto& weapon : Weapons::martialAllList)
             if(weapon.type == weaponType)
                 character.weaponProficiencies.add(weapon);
     };

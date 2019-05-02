@@ -58,7 +58,8 @@ public:
     Array<Skill> skills = Skills::skillList;
     Array<Feat>  feats;
     Array<Weapons::Weapon> weaponProficiencies;
-    std::pair<DieType, int> HD{D8,1}; //default
+    Die HD{1, D8}; //default
+    
     
     std::pair<void*, int> characterImageData;
     Image characterImage;
@@ -120,6 +121,7 @@ public:
     
 private:
     Weapons::Weapon randomWeapon();
+    Armors::Armor   randomArmor();
     
 protected:
     void finalizeNPC();

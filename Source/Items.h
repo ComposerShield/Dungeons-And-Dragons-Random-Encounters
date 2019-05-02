@@ -30,10 +30,11 @@ enum NumOfHands{
 };
 
 struct Item{
-    
+    String name;
+    NumOfHands numOfHands;
 };
 
-namespace Weapons {
+namespace Weapons{
     static inline String criticalToString(Critical crit){
         switch(crit){
             case x2: return "x2";
@@ -53,15 +54,20 @@ namespace Weapons {
         EXOTIC
     };
     
-    struct Weapon{
-        String name;
+    struct Weapon : public Item{
         Die melee;
         Die ranged;
         Critical crit;
         WeaponType type;
-        NumOfHands numOfHands;
         
         Weapon() = default;
+        
+        Weapon(String Name, Die Melee, Die Ranged, Critical Crit, WeaponType Type, NumOfHands Hands) :
+        melee(Melee), ranged(Ranged), crit(Crit), type(Type)
+        {
+            name = Name;
+            numOfHands = Hands;
+        }
     };
     
     
@@ -127,6 +133,8 @@ namespace Weapons {
 
     inline const Array<Weapon> allWeapons{gauntlet, unarmed, dagger, daggerPunching, gauntletSpiked,
         maceLight, sickle, club, maceHeavy, morningstar, shortspear, longspear, quarterstaff, spear,
+        crossbowHeavy,crossbowLight, dart, javelin, sling, axeThrowing, hammerLight, handaxe, kukri,
+        pickLight,
         
         kama, nunchaku, sai, siangham, swordBastard, waraxeDwarven, whip, axeOrcDouble, chainSpiked, flailDire,
         hammerGnomeHooked, swordTwoBladed, urgoshDwarven, bolash, crossbowHand, crossbowHeavyRepeating,
@@ -141,17 +149,24 @@ namespace Weapons {
         return output;
     };
     
-    inline const Array<Weapon> simple{gauntlet, unarmed, dagger, daggerPunching, gauntletSpiked,
-        maceLight, sickle, club, maceHeavy, morningstar, shortspear, longspear, quarterstaff, spear
-    };
-    
-    inline const Array<Weapon> martial = getWeaponList(EXOTIC);//TODO!
-    
-    inline const Array<Weapon> exotic = getWeaponList(EXOTIC);
+    inline const Array<Weapon> simpleList = getWeaponList(SIMPLE);
+    inline const Array<Weapon> martialLightList = getWeaponList(MARTIAL_LIGHT_MELEE);
+    inline const Array<Weapon> martialOneHandedMeleeList = getWeaponList(MARTIAL_ONE_HANDED_MELEE);
+    inline const Array<Weapon> martialTwoHandedMeleeList = getWeaponList(MARTIAL_TWO_HANDED_MELEE);
+    inline const Array<Weapon> martialRanged = getWeaponList(MARTIAL_RANGED);
+    inline const Array<Weapon> exoticList = getWeaponList(EXOTIC);
+    inline const Array<Weapon> martialAllList = []{
+        Array<Weapon> output;
+        output.addArray(martialLightList);
+        output.addArray(martialOneHandedMeleeList);
+        output.addArray(martialTwoHandedMeleeList);
+        output.addArray(martialRanged);
+        return output;
+    }();
     
     inline Weapon getRandomExoticWeapon = []()->Weapon{
         Random random;
-        return exotic[random.nextInt(exotic.size())];
+        return exoticList[random.nextInt(exoticList.size())];
     }();
     
     
