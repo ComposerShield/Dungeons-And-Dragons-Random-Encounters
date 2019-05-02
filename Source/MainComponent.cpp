@@ -102,19 +102,37 @@ void CharacterSheet::paint(Graphics &g){
     g.setColour(Colour(221, 217, 205));
     g.fillRoundedRectangle(boundsFloat, 10);
     
-    auto textArray = (mode==STATS) ? fillCharacterSheetStats (character)
-                                   : fillCharacterSheetSkills(character);
+    const auto textArray = (mode==STATS) ? fillCharacterSheetStats (character)
+                                         : fillCharacterSheetSkills(character);
+    
+    Array<String> skillNums;
+    if(mode != STATS){
+        for(auto skill : character->skills){
+            skillNums.add(static_cast<String>(skill.total())       + "    " +
+                          static_cast<String>(skill.ranks)         + "  "   +
+                          static_cast<String>(skill.keyAbilityMod) + "  "   +
+                          static_cast<String>(skill.miscMod));
+        }
+    }
     
     auto [width, height] = std::pair{bounds.getWidth(), bounds.getHeight()};
     
     g.setColour(Colours::black);
-    for(auto& text : textArray){
+    for_indexed(auto& text : textArray){
+        if(i==1 && mode!=STATS)
+            g.drawLine(bounds.getX(), bounds.getY(), bounds.getWidth(), bounds.getY());
+        
+        //Write line of text.
         g.drawText(text, bounds.getX()+10, bounds.removeFromTop(20).getY(), width-40, getHeight()*0.1, Justification::left);
+        
+        //Write skill numbers.
+        if (mode!=STATS){
+            g.drawText(skillNums[i], bounds.getX()+110, bounds.getY(), width-40, getHeight()*0.1, Justification::left);
+        }
     }
     
     auto rect = Rectangle<float>(width * 0.75f, 0.05f, width*0.25f, height * 0.25);
     g.drawImage(characterImage, rect);
-
 }
 
 void CharacterSheet::resized(){
@@ -141,7 +159,7 @@ Array<String> CharacterSheet::fillCharacterSheetStats(const std::shared_ptr<Char
 }
 
 Array<String> CharacterSheet::fillCharacterSheetSkills(const std::shared_ptr<Character> input){
-    Array<String> output = {"Skill Name      Total   Ranks   Abil    Misc"};
+    Array<String> output = {"Skill Name      Total  r  a  m"};
     
     int start;
     switch(mode){
