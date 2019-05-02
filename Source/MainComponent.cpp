@@ -102,7 +102,8 @@ void CharacterSheet::paint(Graphics &g){
     g.setColour(Colour(221, 217, 205));
     g.fillRoundedRectangle(boundsFloat, 10);
     
-    auto textArray = fillCharacterSheet(character);
+    auto textArray = (mode==STATS) ? fillCharacterSheetStats (character)
+                                   : fillCharacterSheetSkills(character);
     
     auto [width, height] = std::pair{bounds.getWidth(), bounds.getHeight()};
     
@@ -117,10 +118,10 @@ void CharacterSheet::paint(Graphics &g){
 }
 
 void CharacterSheet::resized(){
-    
+    modeSwitch.setBoundsRelative(0.75f, 0.85f, 0.2f, 0.1f);
 }
 
-Array<String> CharacterSheet::fillCharacterSheet(const std::shared_ptr<Character> input){
+Array<String> CharacterSheet::fillCharacterSheetStats(const std::shared_ptr<Character> input){
     return {String("Race ")  + static_cast<String>(character->race),
             String("HP ")    + static_cast<String>(character->hp) +
             String(" AC ")   + static_cast<String>(character->ac),
@@ -139,6 +140,25 @@ Array<String> CharacterSheet::fillCharacterSheet(const std::shared_ptr<Character
     };
 }
 
+Array<String> CharacterSheet::fillCharacterSheetSkills(const std::shared_ptr<Character> input){
+    Array<String> output = {"Skill Name      Total   Ranks   Abil    Misc"};
+    
+    int start;
+    switch(mode){
+        case SKILLS_1: start =0; break;
+        case SKILLS_2: start =9; break;
+        case SKILLS_3: start =18; break;
+        case SKILLS_4: start =27; break;
+        case STATS: jassertfalse; break;
+    }
+    auto end= std::clamp(start+9, 0, character->skills.size());
+    
+    for(auto i=start; i<end; ++i)
+        output.add(character->skills.getReference(i).name);
+    
+    return output;
+}
+
 String CharacterSheet::getWeaponDetails(std::shared_ptr<Character> character){
     auto weapon = character->equippedWeapons[0];
     bool isMelee = weapon.melee.dieType != none;
@@ -153,7 +173,32 @@ String CharacterSheet::getWeaponDetails(std::shared_ptr<Character> character){
     return attack + "  " + damage + "  " + crit;
 }
 
-
+void CharacterSheet::buttonClicked(Button* button){
+    switch(mode){
+        case STATS:
+            mode=SKILLS_1;
+            modeSwitch.setButtonText("Skills");
+            break;
+        case SKILLS_1:
+            mode=SKILLS_2;
+            modeSwitch.setButtonText("Skills 2");
+            break;
+        case SKILLS_2:
+            mode=SKILLS_3;
+            modeSwitch.setButtonText("Skills 3");
+            break;
+        case SKILLS_3:
+            mode=SKILLS_4;
+            modeSwitch.setButtonText("Skills 4");
+            break;
+        case SKILLS_4:
+            mode=STATS;
+            modeSwitch.setButtonText("Stats");
+            break;
+    }
+    
+    repaint();
+}
 
 
 

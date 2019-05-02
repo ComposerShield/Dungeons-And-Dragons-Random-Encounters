@@ -55,7 +55,7 @@ public:
     
     EquippedWeapons equippedWeapons;
     EquippedArmor   equippedArmor;
-    Array<Skill> skills = Skills::skillList;
+    const Array<Skill> skills = Skills::skillList;
     Array<Feat>  feats;
     Array<Weapons::Weapon> weaponProficiencies;
     Die HD{1, D8}; //default

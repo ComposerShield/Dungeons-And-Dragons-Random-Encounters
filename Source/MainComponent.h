@@ -8,29 +8,41 @@
 
 #pragma once
 
-#include "../JuceLibraryCode/JuceHeader.h"
 #include "Character.h"
 #include "Monsters.h"
 #include "Common.h"
 
 
-class CharacterSheet : public Component{
+class CharacterSheet : public Component,
+                       public Button::Listener
+{
 public:
-    void paint (Graphics&) override;
-    void resized() override;
+    enum DisplayMode{STATS, SKILLS_1, SKILLS_2, SKILLS_3, SKILLS_4};
+
     const std::shared_ptr<Character> character;
     
     CharacterSheet(const std::shared_ptr<Character> input) : character(input){
         characterImage = character->getImage();
+        addAndMakeVisible(modeSwitch);
+        modeSwitch.addListener(this);
     }
     
     CharacterSheet(const CharacterSheet &input) = default;
     CharacterSheet() = default;
     
 private:
-    Array<String> fillCharacterSheet(const std::shared_ptr<Character> input);
+    void paint (Graphics&) override;
+    void resized() override;
+    void buttonClicked (Button* button) override;
+    
+    Array<String> fillCharacterSheetStats (const std::shared_ptr<Character> input);
+    Array<String> fillCharacterSheetSkills(const std::shared_ptr<Character> input);
     Image characterImage;
     String getWeaponDetails(std::shared_ptr<Character> character);
+    
+    TextButton modeSwitch{"Skills"};
+    DisplayMode mode{STATS};
+    
 };
 
 

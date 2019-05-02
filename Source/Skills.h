@@ -9,7 +9,7 @@
 */
 
 #pragma once
-#include "../JuceLibraryCode/JuceHeader.h"
+#include "Common.h"
 
 enum Ability{
     STR,
@@ -79,7 +79,7 @@ namespace Skills {
                         survival        {"survival", WIS},
                         swim            {"swim", STR},
                         tumble          {"tumble", DEX},
-                        use_magic_dev   {"use magic device", CHA},
+                        use_magic_dev   {"use magic dev", CHA},
                         use_rope        {"use rope", DEX};
     
     

@@ -77,6 +77,10 @@
 			isa = PBXBuildFile;
 			fileRef = 67E55333045F6B914A9E23C0;
 		};
+		151BD286027CDA5BB6C13682 = {
+			isa = PBXBuildFile;
+			fileRef = E55CB783C9414932A255C171;
+		};
 		719375437153D0ED08B8FD2D = {
 			isa = PBXBuildFile;
 			fileRef = F5B4B70D5249229EBA7A7AC7;
@@ -294,6 +298,13 @@
 			path = "../../JuceLibraryCode/include_juce_gui_basics.mm";
 			sourceTree = "SOURCE_ROOT";
 		};
+		516B60E4904BF5689892C167 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = "Skills_GUI.h";
+			path = "../../Source/Skills_GUI.h";
+			sourceTree = "SOURCE_ROOT";
+		};
 		54B95C47816CCD6C54C9939E = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.c.h;
@@ -483,6 +494,13 @@
 			path = "../../JuceLibraryCode/include_juce_opengl.mm";
 			sourceTree = "SOURCE_ROOT";
 		};
+		E55CB783C9414932A255C171 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = "Skills_GUI.cpp";
+			path = "../../Source/Skills_GUI.cpp";
+			sourceTree = "SOURCE_ROOT";
+		};
 		EC3F5A53B0F1298DFCBD0765 = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.c.h;
@@ -573,6 +591,8 @@
 				67E55333045F6B914A9E23C0,
 				EC3F5A53B0F1298DFCBD0765,
 				9008E3CAC556BBFD91D27B1F,
+				E55CB783C9414932A255C171,
+				516B60E4904BF5689892C167,
 				166380F294B635DCA8D513E3,
 				46435298148F03FAE88078AF,
 				370D25D7C3E717E791399E4D,
@@ -897,6 +917,7 @@
 				7B72F90B7147A51A1C2FED62,
 				88687ED2C760EBA1B37AE19B,
 				274CA68AA6ACBCDE104B5B97,
+				151BD286027CDA5BB6C13682,
 				719375437153D0ED08B8FD2D,
 				D6A7450441C4220BDC221E43,
 				EC2906B1640A387B71CC3A54,

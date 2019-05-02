@@ -16,6 +16,8 @@
       <FILE id="JqmPPL" name="Character.cpp" compile="1" resource="0" file="Source/Character.cpp"/>
       <FILE id="Jau3PR" name="Character.h" compile="0" resource="0" file="Source/Character.h"/>
       <FILE id="LpEaTO" name="Skills.h" compile="0" resource="0" file="Source/Skills.h"/>
+      <FILE id="jK59gI" name="Skills_GUI.cpp" compile="1" resource="0" file="Source/Skills_GUI.cpp"/>
+      <FILE id="bw20HP" name="Skills_GUI.h" compile="0" resource="0" file="Source/Skills_GUI.h"/>
       <FILE id="fMXxb3" name="Feats.h" compile="0" resource="0" file="Source/Feats.h"/>
       <FILE id="HWa0G6" name="Items.h" compile="0" resource="0" file="Source/Items.h"/>
       <FILE id="WjeUDI" name="Monsters.h" compile="0" resource="0" file="Source/Monsters.h"/>

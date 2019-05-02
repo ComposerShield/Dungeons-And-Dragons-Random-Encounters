@@ -9,6 +9,7 @@
 */
 
 #pragma once
+#include "Common.h"
 
 struct Class{
     String name;

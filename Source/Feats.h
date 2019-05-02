@@ -8,7 +8,6 @@
   ==============================================================================
 */
 #pragma once
-#include "../JuceLibraryCode/JuceHeader.h"
 #include "Skills.h"
 #include "Character.h"
 #include "Common.h"

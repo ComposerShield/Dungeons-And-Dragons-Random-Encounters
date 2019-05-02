@@ -39,6 +39,8 @@ add_library( ${BINARY_NAME}
     "../../../Source/Character.cpp"
     "../../../Source/Character.h"
     "../../../Source/Skills.h"
+    "../../../Source/Skills_GUI.cpp"
+    "../../../Source/Skills_GUI.h"
     "../../../Source/Feats.h"
     "../../../Source/Items.h"
     "../../../Source/Monsters.h"
@@ -1354,6 +1356,7 @@ set_source_files_properties("../../../Assets/dnd_logo.png" PROPERTIES HEADER_FIL
 set_source_files_properties("../../../Source/MainComponent.h" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties("../../../Source/Character.h" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties("../../../Source/Skills.h" PROPERTIES HEADER_FILE_ONLY TRUE)
+set_source_files_properties("../../../Source/Skills_GUI.h" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties("../../../Source/Feats.h" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties("../../../Source/Items.h" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties("../../../Source/Monsters.h" PROPERTIES HEADER_FILE_ONLY TRUE)

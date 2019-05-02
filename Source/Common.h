@@ -13,7 +13,9 @@
 #define for_indexed(...) for_indexed_v(i, __VA_ARGS__)
 #define for_indexed_v(v, ...) for(bool _i_ = true, _break_ = false; _i_;) for(size_t v = 0; _i_; _i_ = false) for(__VA_ARGS__) if(_break_) break; else for(bool _j_ = true; _j_;) for(_break_ = true; _j_; _j_ = false) for(bool _k_ = true; _k_; v++, _k_ = false, _break_ = false)
 
+#include "../JuceLibraryCode/JuceHeader.h"
 #include <optional>
+
 
 enum DieType{
     D2,
