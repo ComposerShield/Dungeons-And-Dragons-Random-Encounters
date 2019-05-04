@@ -12,6 +12,7 @@
 MainComponent::MainComponent()
 {
     setSize (800, 600);
+    LookAndFeel::getDefaultLookAndFeel().setDefaultSansSerifTypefaceName("Avenir Next");
     
     addAndMakeVisible(&headerControls);
     addAndMakeVisible(&viewport);
@@ -92,6 +93,9 @@ void CharacterSheet::paint(Graphics &g){
     bounds.removeFromBottom(5);
     bounds.removeFromLeft(5);
     bounds.removeFromRight(5);
+    
+    //g.setFont(MyFonts::getBaskerville());
+    //DBG(g.getCurrentFont().getTypefaceName());
 
     Rectangle<float> boundsFloat = {static_cast<float>(bounds.getX()),
                                     static_cast<float>(bounds.getY()),
@@ -102,16 +106,16 @@ void CharacterSheet::paint(Graphics &g){
     g.setColour(Colour(221, 217, 205));
     g.fillRoundedRectangle(boundsFloat, 10);
     
-    const auto textArray = (mode==STATS) ? fillCharacterSheetStats (character)
-                                         : fillCharacterSheetSkills(character);
+    const auto textArray = (mode==STATS) ? fillCharacterSheetStats ()
+                                         : fillCharacterSheetSkills();
     
     Array<String> skillNums;
     if(mode != STATS){
         for(auto skill : character->skills){
-            skillNums.add(static_cast<String>(skill.total())       + "    " +
-                          static_cast<String>(skill.ranks)         + "  "   +
-                          static_cast<String>(skill.keyAbilityMod) + "  "   +
-                          static_cast<String>(skill.miscMod));
+            skillNums.add((checkForNegative(skill.total()))       + "    " +
+                          (checkForNegative(skill.ranks))         + "  "   +
+                          (checkForNegative(skill.keyAbilityMod)) + "  "   +
+                          (checkForNegative(skill.miscMod)));
         }
     }
     
@@ -125,10 +129,14 @@ void CharacterSheet::paint(Graphics &g){
         //Write line of text.
         g.drawText(text, bounds.getX()+10, bounds.removeFromTop(20).getY(), width-40, getHeight()*0.1, Justification::left);
         
+        
         //Write skill numbers.
         if (mode!=STATS){
-            g.drawText(skillNums[i], bounds.getX()+110, bounds.getY(), width-40, getHeight()*0.1, Justification::left);
+            //g.setFont(MyFonts::getCourierNew());
+            g.drawText(skillNums[i], bounds.getX()+105, bounds.getY(), width-40, getHeight()*0.1, Justification::left);
+            //g.setFont(getLookAndFeel().defaultSans);
         }
+        //g.setFont();
     }
     
     auto rect = Rectangle<float>(width * 0.75f, 0.05f, width*0.25f, height * 0.25);
@@ -139,7 +147,7 @@ void CharacterSheet::resized(){
     modeSwitch.setBoundsRelative(0.75f, 0.85f, 0.2f, 0.1f);
 }
 
-Array<String> CharacterSheet::fillCharacterSheetStats(const std::shared_ptr<Character> input){
+Array<String> CharacterSheet::fillCharacterSheetStats() const{
     return {String("Race ")  + static_cast<String>(character->race),
             String("HP ")    + static_cast<String>(character->hp) +
             String(" AC ")   + static_cast<String>(character->ac),
@@ -153,13 +161,13 @@ Array<String> CharacterSheet::fillCharacterSheetStats(const std::shared_ptr<Char
             String(" Ref ")  + static_cast<String>(character->ref) +
             String(" Will ") + static_cast<String>(character->will),
             String("Weapon: ") + character->equippedWeapons[0].name,
-            String("              ") + getWeaponDetails(character),
+            String("              ") + getWeaponDetails(),
             String("Armor: ") + character->equippedArmor[0].name
     };
 }
 
-Array<String> CharacterSheet::fillCharacterSheetSkills(const std::shared_ptr<Character> input){
-    Array<String> output = {"Skill Name      Total  r  a  m"};
+Array<String> CharacterSheet::fillCharacterSheetSkills() const{
+    Array<String> output = {"Skill Name               Total   r   a   m"};
     
     int start;
     switch(mode){
@@ -177,7 +185,7 @@ Array<String> CharacterSheet::fillCharacterSheetSkills(const std::shared_ptr<Cha
     return output;
 }
 
-String CharacterSheet::getWeaponDetails(std::shared_ptr<Character> character){
+String CharacterSheet::getWeaponDetails() const{
     auto weapon = character->equippedWeapons[0];
     bool isMelee = weapon.melee.dieType != none;
     
@@ -218,6 +226,9 @@ void CharacterSheet::buttonClicked(Button* button){
     repaint();
 }
 
+String CharacterSheet::checkForNegative(const int input) const{
+    return (input<0) ? static_cast<String>(input) : " " + static_cast<String>(input);
+}
 
 
 //=============================HEADER_CONTROLS==================================

@@ -61,3 +61,19 @@ constexpr int dieToNum(DieType& die){
 }
 
 constexpr int abilityMod(int input) {return static_cast<int>((input-10)/2);}
+
+
+
+namespace MyFonts {
+    
+    static const Font& getCourierNew(){
+        return (Font (Typeface::createSystemTypefaceFor (BinaryData::Courier_New_ttf,
+                                                                         BinaryData::Courier_New_ttfSize)));
+    }
+    
+    static const Font& getBaskerville(){
+        return (Font (Typeface::createSystemTypefaceFor (BinaryData::Baskerville_ttc,
+                                                         BinaryData::Baskerville_ttcSize)));
+    }
+    
+}

@@ -8,6 +8,12 @@
 
 namespace BinaryData
 {
+    extern const char*   Baskerville_ttc;
+    const int            Baskerville_ttcSize = 1371312;
+
+    extern const char*   Courier_New_ttf;
+    const int            Courier_New_ttfSize = 684624;
+
     extern const char*   orc_png;
     const int            orc_pngSize = 299549;
 
@@ -18,7 +24,7 @@ namespace BinaryData
     const int            dnd_logo_pngSize = 426629;
 
     // Number of elements in the namedResourceList and originalFileNames arrays.
-    const int namedResourceListSize = 3;
+    const int namedResourceListSize = 5;
 
     // Points to the start of a list of resource names.
     extern const char* namedResourceList[];

@@ -73,6 +73,10 @@
 			isa = PBXBuildFile;
 			fileRef = A377A2F2AC08282D4CEDBF95;
 		};
+		EA7ED0665AA8FBCAAAFECF12 = {
+			isa = PBXBuildFile;
+			fileRef = 20EF7E6A1D25C6CE3D70DC99;
+		};
 		7B72F90B7147A51A1C2FED62 = {
 			isa = PBXBuildFile;
 			fileRef = 475A30E7BBD87865669DEE42;
@@ -201,6 +205,13 @@
 			path = "../../JuceLibraryCode/include_juce_data_structures.mm";
 			sourceTree = "SOURCE_ROOT";
 		};
+		20EF7E6A1D25C6CE3D70DC99 = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.storyboard;
+			name = LaunchScreen.storyboard;
+			path = LaunchScreen.storyboard;
+			sourceTree = "SOURCE_ROOT";
+		};
 		256FA93A1779AEA7087FF1E4 = {
 			isa = PBXFileReference;
 			lastKnownFileType = wrapper.framework;
@@ -311,6 +322,20 @@
 			lastKnownFileType = sourcecode.c.h;
 			name = Classes.h;
 			path = ../../Source/Classes.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		56388E1C45B0ED6BA929E09E = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.ttc;
+			name = Baskerville.ttc;
+			path = ../../../../../../../Library/Fonts/Baskerville.ttc;
+			sourceTree = "SOURCE_ROOT";
+		};
+		5B637348EB620561A72338DC = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.ttf;
+			name = "Courier New.ttf";
+			path = "../../../../../../../Library/Fonts/Courier New.ttf";
 			sourceTree = "SOURCE_ROOT";
 		};
 		5BC1ADC8938387DC06C01BFB = {
@@ -596,6 +621,8 @@
 		C6D3190905E39CEEF3AAED1A = {
 			isa = PBXGroup;
 			children = (
+				56388E1C45B0ED6BA929E09E,
+				5B637348EB620561A72338DC,
 				6623E59D77C82D5356F2347B,
 				93E345CBF7D01A0B5C20DA9D,
 				8DA8D49FC96BAF1DC1C09892,
@@ -681,6 +708,7 @@
 			children = (
 				6D6F88E0947FAD082AEC8B29,
 				A377A2F2AC08282D4CEDBF95,
+				20EF7E6A1D25C6CE3D70DC99,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -841,7 +869,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = c11;
@@ -863,7 +891,7 @@
 				PRODUCT_NAME = "DnD";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				WARNING_CFLAGS = -Wreorder;
+				WARNING_CFLAGS = "-Wreorder";
 				ZERO_LINK = NO;
 			};
 			name = Debug;
@@ -891,7 +919,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
@@ -911,7 +939,7 @@
 				PRODUCT_NAME = "DnD";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				WARNING_CFLAGS = -Wreorder;
+				WARNING_CFLAGS = "-Wreorder";
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -943,6 +971,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AB6AA460DE608D9733DA86B,
+				EA7ED0665AA8FBCAAAFECF12,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1011,13 +1040,14 @@
 		44AEB4FF70225716C470CE55 = {
 			isa = PBXProject;
 			buildConfigurationList = 1522B9C5FB7766CE4DB47938;
-			attributes = { LastUpgradeCheck = 0930; ORGANIZATIONNAME = ""; TargetAttributes = { A6D8DBC44530F077A4E6EC21 = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; }; }; }; };
+			attributes = { LastUpgradeCheck = 1010; ORGANIZATIONNAME = ""; TargetAttributes = { A6D8DBC44530F077A4E6EC21 = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; com.apple.HardenedRuntime = { enabled = 0; }; }; }; }; };
 			compatibilityVersion = "Xcode 3.2";
 			hasScannedForEncodings = 0;
 			mainGroup = B2AD90AE975BE91A7788732E;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (A6D8DBC44530F077A4E6EC21);
+			knownRegions = (en, Base);
 		};
 	};
 	rootObject = 44AEB4FF70225716C470CE55;

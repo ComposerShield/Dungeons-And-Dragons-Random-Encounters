@@ -13,6 +13,7 @@
 #include "Common.h"
 
 
+
 class CharacterSheet : public Component,
                        public Button::Listener
 {
@@ -34,14 +35,14 @@ private:
     void paint (Graphics&) override;
     void resized() override;
     void buttonClicked (Button* button) override;
-    
-    Array<String> fillCharacterSheetStats (const std::shared_ptr<Character> input);
-    Array<String> fillCharacterSheetSkills(const std::shared_ptr<Character> input);
     Image characterImage;
-    String getWeaponDetails(std::shared_ptr<Character> character);
-    
     TextButton modeSwitch{"Skills"};
     DisplayMode mode{STATS};
+    
+    Array<String> fillCharacterSheetStats () const;
+    Array<String> fillCharacterSheetSkills() const;
+    String getWeaponDetails() const;
+    String checkForNegative(const int input) const;
     
 };
 
@@ -97,3 +98,7 @@ private:
     
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)
 };
+
+
+
+
