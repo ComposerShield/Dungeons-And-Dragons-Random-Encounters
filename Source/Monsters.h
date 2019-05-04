@@ -27,6 +27,7 @@ namespace Monsters {
             baseFort=2;
             baseRef=0;
             baseWill=-1;
+            startingSkillRanks = 15;
             
             weaponProficiencies.addArray(Weapons::simpleList);
             

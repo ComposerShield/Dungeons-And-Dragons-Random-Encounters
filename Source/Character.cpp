@@ -21,6 +21,8 @@ Character::Character(Array<int> abilities, int baseAttack, int init){
     baseAttackBonus = baseAttack;
     baseInitiative = init;
     
+    populateSkillMap();
+    
 }
 
 void Character::evaluateCharacterSheet(){
@@ -46,14 +48,14 @@ void Character::evaluateCharacterSheet(){
     
 }
 
-Skill& Character::getSkill(String skillName){
+Skill& Character::getSkill(String skillName) const{
     for(auto& skill : skills)
         if(skill.name==skillName)
             return skill;
     return Skills::jump;
 }
 
-void Character::populateSkills(Array<std::pair<Skill, int>> skillList){
+void Character::populateSkillMods(Array<std::pair<Skill, int>> skillList) const{
     for(auto [skillToEdit, val] : skillList){
         Skill& skill = getSkill(skillToEdit.name);
         skill.ranks = val;
@@ -81,6 +83,7 @@ int Character::rollHD() const{
 
 void NPC::finalizeNPC(){
     equippedWeapons.add(getRandomFromPref(preferredWeapons));
+    populateSkillRanks();
 }
 
 template<typename t>
@@ -100,8 +103,21 @@ t NPC::grabFromPrefList(Array<t> list){
             return grabFromPrefList(defaultWeapons);
     }
     
-    
-    
-    return list[random.nextInt(list.size())];
+    else return list[random.nextInt(list.size())];
     
 };
+
+void NPC::populateSkillRanks(){
+    setSkillRankCap();
+    int numOfSkillRanks = startingSkillRanks;
+    
+    for(int i = startingSkillRanks; i>0 ; --i){
+        Skill  skill;
+        do{
+            skill = getRandomFromPref(preferredSkills);
+        }while(skill.ranks >= skillRankCap);
+            
+        Skill* skillPtr = skillMap[skill.name];
+        skillPtr->incrementRank();
+    }
+}

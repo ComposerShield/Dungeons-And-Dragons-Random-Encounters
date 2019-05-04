@@ -56,7 +56,7 @@ public:
     EquippedWeapons equippedWeapons;
     EquippedArmor   equippedArmor;
     const Array<Skill> skills = Skills::skillList;
-    std::map<String, Skill&> skillMap;
+    std::map<String, Skill*> skillMap;
     Array<Feat>  feats;
     Array<Weapons::Weapon> weaponProficiencies;
     Die HD{1, D8}; //default
@@ -65,7 +65,7 @@ public:
     std::pair<void*, int> characterImageData;
     Image characterImage;
     
-    Skill& getSkill(String skill);
+    Skill& getSkill(String skill) const;
     void evaluateCharacterSheet();
     
     virtual Image getImage() = 0;
@@ -78,19 +78,19 @@ private:
     constexpr int getTouchAC()    const {return abilityMod(dexterity) + sizeMod;}
     constexpr int getInitiative() const {return baseInitiative + initMiscMod;}
     constexpr int getGrapple()    const {return baseAttackBonus + abilityMod(strength) + sizeMod;}
-    constexpr int rollForInitiative()   {return initiative + random.nextInt(2) + 1;};
+    constexpr int rollForInitiative() const {return initiative + random.nextInt(2) + 1;};
     
     int rollHD() const;
     Array<int> abilitiesAsArray() const {return {strength, dexterity, constitution, intelligence, wisdom, charisma};};
     void randomize();
-    void populateSkills(Array<std::pair<Skill, int>> skillList);
-    void populateSkillMap(){for(auto& skill : skills) skillMap.insert({skill.name, skill});}
+    void populateSkillMods(Array<std::pair<Skill, int>> skillList) const;
+    void populateSkillMap(){for(auto& skill : skills) skillMap.insert({skill.name, &skill});}
     virtual void setSkillRankCap(){skillRankCap = 4 + characterLevel-1;};
  
 protected:
     mutable Random random;
-    Skill& randomSkill(){return skills.getReference(0);}
-    Array<Weapons::Weapon> defaultWeapons{Weapons::gauntlet, Weapons::unarmed, Weapons::dagger};
+    Skill& randomSkill() const{return skills.getReference(random.nextInt(skills.size()));}
+    const Array<Weapons::Weapon> defaultWeapons{Weapons::gauntlet, Weapons::unarmed, Weapons::dagger};
 };
 
 
@@ -103,12 +103,12 @@ private:
         Array<t> lowChance;
         
         Preferred() = default;
-        void fill(Array<t> high,Array<t> med,Array<t> low){
+        constexpr void fill(Array<t> high,Array<t> med,Array<t> low){
             highChance = high;
             mediumChance = med;
             lowChance = low;
         }
-        void singlePrefArray(Array<t> high){
+        constexpr void singlePrefArray(Array<t> high){
             highChance = high;
         }
     };
@@ -118,6 +118,11 @@ protected:
     struct PreferredArmor   : public Preferred<Armors::Armor>{};
     struct PreferredFeats   : public Preferred<Feat>{};
     struct PreferredSkills  : public Preferred<Skill>{};
+    
+    void finalizeNPC();
+    void populateSkillRanks();
+    
+    int startingSkillRanks;
     
 public:
     NPC(Array<int> abilities, int baseAttack, int init) : Character(abilities, baseAttack, init){}
@@ -138,8 +143,6 @@ private:
     
     void setSkillRankCap() override {skillRankCap = 4 + static_cast<int>(cr);};
     
-protected:
-    void finalizeNPC();
 };
 
 class PC : public Character{

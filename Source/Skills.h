@@ -42,7 +42,9 @@ struct Skill{
     }
     constexpr int abilityMod(int input) const {return static_cast<int>((input-10)/2);}
     constexpr int total(){return ranks+miscMod+keyAbilityMod;}
+    constexpr void incrementRank(){ranks+=1;}
     Skill(String Name, Ability KeyAbility){name=Name; keyAbility = KeyAbility;}
+    Skill() = default;
 };
 
 namespace Skills {
