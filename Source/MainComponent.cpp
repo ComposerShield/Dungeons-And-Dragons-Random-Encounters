@@ -131,10 +131,10 @@ void CharacterSheet::paint(Graphics &g){
         
         
         //Write skill numbers.
-        if (mode!=STATS){
-            //g.setFont(MyFonts::getCourierNew());
-            g.drawText(skillNums[i], bounds.getX()+105, bounds.getY(), width-40, getHeight()*0.1, Justification::left);
-            //g.setFont(getLookAndFeel().defaultSans);
+        
+        if (mode!=STATS && (i<skillStart()+9)){
+            g.drawText(skillNums[i + skillStart()], bounds.getX()+105, bounds.getY(), width-40, getHeight()*0.1, Justification::left);
+            
         }
         //g.setFont();
     }
@@ -169,15 +169,8 @@ Array<String> CharacterSheet::fillCharacterSheetStats() const{
 Array<String> CharacterSheet::fillCharacterSheetSkills() const{
     Array<String> output = {"Skill Name               Total   r   a   m"};
     
-    int start;
-    switch(mode){
-        case SKILLS_1: start =0; break;
-        case SKILLS_2: start =9; break;
-        case SKILLS_3: start =18; break;
-        case SKILLS_4: start =27; break;
-        case STATS: jassertfalse; break;
-    }
-    auto end= std::clamp(start+9, 0, character->skills.size());
+    const int start = skillStart();
+    const auto end= std::clamp(start+9, 0, character->skills.size());
     
     for(auto i=start; i<end; ++i)
         output.add(character->skills.getReference(i).name);

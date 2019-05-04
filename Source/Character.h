@@ -56,6 +56,7 @@ public:
     EquippedWeapons equippedWeapons;
     EquippedArmor   equippedArmor;
     const Array<Skill> skills = Skills::skillList;
+    std::map<String, Skill&> skillMap;
     Array<Feat>  feats;
     Array<Weapons::Weapon> weaponProficiencies;
     Die HD{1, D8}; //default
@@ -82,9 +83,12 @@ private:
     Array<int> abilitiesAsArray() const {return {strength, dexterity, constitution, intelligence, wisdom, charisma};};
     void randomize();
     void populateSkills(Array<std::pair<Skill, int>> skillList);
+    void populateSkillMap(){for(auto& skill : skills) skillMap.insert({skill.name, skill});}
  
 protected:
     mutable Random random;
+    Skill& randomSkill(){return skills.getReference(0);}
+    Array<Weapons::Weapon> defaultWeapons{Weapons::gauntlet, Weapons::unarmed, Weapons::dagger};
 };
 
 
@@ -102,13 +106,16 @@ private:
             mediumChance = med;
             lowChance = low;
         }
+        void singlePrefArray(Array<t> high){
+            highChance = high;
+        }
     };
     
 protected:
     struct PreferredWeapons : public Preferred<Weapons::Weapon>{};
     struct PreferredArmor   : public Preferred<Armors::Armor>{};
-    struct PreferredSkills  : public Preferred<Skill>{};
     struct PreferredFeats   : public Preferred<Feat>{};
+    struct PreferredSkills  : public Preferred<Skill>{};
     
 public:
     NPC(Array<int> abilities, int baseAttack, int init) : Character(abilities, baseAttack, init){}
@@ -117,11 +124,14 @@ public:
     PreferredArmor  preferredArmor;
     PreferredSkills preferredSkills;
     double cr;
-    Preferred<int> foo{{1,2,3},{1,2},{3,2}};
     
 private:
-    Weapons::Weapon randomWeapon();
-    Armors::Armor   randomArmor();
+    
+    template<typename t>
+    t getRandomFromPref(const Preferred<t>&);
+    
+    template<typename t>
+    t grabFromPrefList(Array<t> list);
     
 protected:
     void finalizeNPC();

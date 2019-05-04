@@ -43,6 +43,15 @@ private:
     Array<String> fillCharacterSheetSkills() const;
     String getWeaponDetails() const;
     String checkForNegative(const int input) const;
+    constexpr int skillStart() const{
+        switch(mode){
+            case SKILLS_1: return 0; break;
+            case SKILLS_2: return 9; break;
+            case SKILLS_3: return 18; break;
+            case SKILLS_4: return 27; break;
+            case STATS:    return 0; break;
+        }
+    }
     
 };
 

@@ -80,17 +80,28 @@ int Character::rollHD() const{
 //========================NPC=============================//
 
 void NPC::finalizeNPC(){
-    equippedWeapons.add(randomWeapon());
+    equippedWeapons.add(getRandomFromPref(preferredWeapons));
 }
 
-Weapons::Weapon NPC::randomWeapon(){
-    return (random.nextBool()) ? preferredWeapons.highChance[random.nextInt(preferredWeapons.highChance.size())] //50 percent
-     : (random.nextInt(50)<35) ? preferredWeapons.mediumChance[random.nextInt(preferredWeapons.mediumChance.size())] //35 percent
-                               : preferredWeapons.lowChance[random.nextInt(preferredWeapons.lowChance.size())]; //15 percent
+template<typename t>
+t NPC::getRandomFromPref(const Preferred<t>& pref){
+    
+    return grabFromPrefList(  (random.nextBool()) ?     pref.highChance //50 percent
+                            : (random.nextInt(50)<35) ? pref.mediumChance //35 percent
+                                                      : pref.lowChance ); //15 percent
 }
 
-Armors::Armor NPC::randomArmor(){
-    return (random.nextBool()) ? preferredArmor.highChance[random.nextInt(preferredArmor.highChance.size())] //50 percent
-     : (random.nextInt(50)<35) ? preferredArmor.mediumChance[random.nextInt(preferredArmor.mediumChance.size())] //35 percent
-                               : preferredArmor.lowChance[random.nextInt(preferredArmor.lowChance.size())]; //15 percent
-}
+template<typename t>
+t NPC::grabFromPrefList(Array<t> list){
+    if(list.size()==0){
+        if constexpr (std::is_same_v<t, Skill>)
+            return randomSkill();
+        else if constexpr (std::is_same_v<t, Weapons::Weapon>)
+            return grabFromPrefList(defaultWeapons);
+    }
+    
+    
+    
+    return list[random.nextInt(list.size())];
+    
+};

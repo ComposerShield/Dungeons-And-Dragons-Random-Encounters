@@ -34,13 +34,17 @@ namespace Monsters {
                 {Weapons::javelin, Weapons::morningstar, Weapons::shortspear, Weapons::dagger},
                 {Weapons::unarmed, Weapons::daggerPunching, Weapons::maceLight, Weapons::shortsword, Weapons::axeThrowing},
                 {Weapons::club, Weapons::sickle, Weapons::crossbowHand, Weapons::chainSpiked, Weapons::whip, Weapons::rapier}
-            );
+                                  );
             
             preferredArmor.fill(
                 {Armors::none, Armors::leather, Armors::shieldLW},
                 {Armors::padded, Armors::shieldLS},
                 {Armors::buckler, Armors::chainShirt}
             );
+            
+            preferredSkills.fill({Skills::hide, Skills::listen, Skills::move_silently, Skills::ride, Skills::spot},
+                                 {},
+                                 {});
 
             finalizeNPC();
         }
