@@ -63,7 +63,7 @@ void Character::populateSkills(Array<std::pair<Skill, int>> skillList){
 void Character::randomize(){
     //ABILITIES
     for(auto* ability : abilityList)
-        *ability += random.nextInt((*ability)/5 + 1);
+        *ability += random.nextInt((*ability)/6 + 1) * ( random.nextBool() ? 1 : -1 );
     //HP
     hp = rollHD();
 

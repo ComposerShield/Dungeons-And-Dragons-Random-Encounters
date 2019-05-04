@@ -26,7 +26,7 @@ public:
         baseFort, baseRef, baseWill, miscFort, miscRef, miscWill, sizeMod,
         baseAttackBonus, initiative, initMiscMod, hp, touchAC, touchACMisc,
         currentHP, meleeMiscBonus, rangedMiscBonus, miscHP{0}, ac, grapple,
-        baseInitiative, characterLevel, fort, ref, will;
+    baseInitiative, characterLevel{1}, fort, ref, will, skillRankCap;
     
     constexpr int getLevel(){
         int sum{0};
@@ -79,11 +79,13 @@ private:
     constexpr int getInitiative() const {return baseInitiative + initMiscMod;}
     constexpr int getGrapple()    const {return baseAttackBonus + abilityMod(strength) + sizeMod;}
     constexpr int rollForInitiative()   {return initiative + random.nextInt(2) + 1;};
+    
     int rollHD() const;
     Array<int> abilitiesAsArray() const {return {strength, dexterity, constitution, intelligence, wisdom, charisma};};
     void randomize();
     void populateSkills(Array<std::pair<Skill, int>> skillList);
     void populateSkillMap(){for(auto& skill : skills) skillMap.insert({skill.name, skill});}
+    virtual void setSkillRankCap(){skillRankCap = 4 + characterLevel-1;};
  
 protected:
     mutable Random random;
@@ -123,6 +125,7 @@ public:
     PreferredWeapons preferredWeapons;
     PreferredArmor  preferredArmor;
     PreferredSkills preferredSkills;
+    PreferredFeats  preferredFeats;
     double cr;
     
 private:
@@ -132,6 +135,8 @@ private:
     
     template<typename t>
     t grabFromPrefList(Array<t> list);
+    
+    void setSkillRankCap() override {skillRankCap = 4 + static_cast<int>(cr);};
     
 protected:
     void finalizeNPC();

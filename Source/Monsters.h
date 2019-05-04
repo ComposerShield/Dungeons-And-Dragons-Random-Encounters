@@ -43,8 +43,12 @@ namespace Monsters {
             );
             
             preferredSkills.fill({Skills::hide, Skills::listen, Skills::move_silently, Skills::ride, Skills::spot},
-                                 {},
+                                 {Skills::hide, Skills::listen, Skills::move_silently, Skills::ride, Skills::spot},
                                  {});
+            
+            preferredFeats.fill({Feats::alertness},
+                                {Feats::alertness},
+                                {});
 
             finalizeNPC();
         }
