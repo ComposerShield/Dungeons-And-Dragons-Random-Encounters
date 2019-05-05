@@ -162,7 +162,8 @@ Array<String> CharacterSheet::fillCharacterSheetStats() const{
             String(" Will ") + static_cast<String>(character->will),
             String("Weapon: ") + character->equippedWeapons[0].name,
             String("              ") + getWeaponDetails(),
-            String("Armor: ") + character->equippedArmor[0].name
+            String("Armor: ") + character->equippedArmor[0].name,
+            String("Feats: ") 
     };
 }
 

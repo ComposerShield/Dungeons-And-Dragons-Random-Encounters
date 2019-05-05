@@ -46,7 +46,7 @@ public:
     struct EquippedWeapons : Array<Weapons::Weapon>{};
     
     struct EquippedArmor   : Array<Armors::Armor>{
-        constexpr int addArmor()     const {
+        constexpr int addArmor() const{
             int output=0;
             for (auto& armor : *this) output+=armor.ac;
             return output;
@@ -122,7 +122,7 @@ protected:
     void finalizeNPC();
     void populateSkillRanks();
     
-    int startingSkillRanks;
+    int startingSkillRanks, startingFeatRanks;
     
 public:
     NPC(Array<int> abilities, int baseAttack, int init) : Character(abilities, baseAttack, init){}

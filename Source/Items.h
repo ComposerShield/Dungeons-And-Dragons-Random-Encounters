@@ -102,7 +102,7 @@ namespace Weapons{
                             battleaxe       {"battleaxe",       D8, none, x3,       MARTIAL_ONE_HANDED_MELEE, ONE},
                             flail           {"flail",           D8, none, x2,       MARTIAL_ONE_HANDED_MELEE, ONE},
                             longsword       {"longsword",       D8, none, x2,       MARTIAL_ONE_HANDED_MELEE, ONE},
-                            pickHeavy       {"pick, heavy",     D8, none, x2,       MARTIAL_ONE_HANDED_MELEE, ONE},
+                            pickHeavy       {"pick (heavy)",     D8, none, x2,      MARTIAL_ONE_HANDED_MELEE, ONE},
                             rapier          {"rapier",          D6, none, x4,       MARTIAL_ONE_HANDED_MELEE, ONE},
                             scimitar        {"scimitar",        D6, none, _18_20x2, MARTIAL_ONE_HANDED_MELEE, ONE},
     //TODO
@@ -210,10 +210,10 @@ namespace Armors {
     
     
                         buckler{        "buckler",          1,NA,-1,LIGHT, ONE},
-                        shieldLW{   "shield, light wooden", 1,NA,-1,LIGHT, ONE},
-                        shieldLS{   "shield, light steel",  1,NA,-1,LIGHT, ONE},
-                        shieldHW{   "shield, heavy wooden", 2,NA,-2,LIGHT, ONE},
-                        shieldHS{   "shield, heavy steel",  2,NA,-2,LIGHT, ONE},
+                        shieldLW{   "shield (light wooden)", 1,NA,-1,LIGHT, ONE},
+                        shieldLS{   "shield (light steel)",  1,NA,-1,LIGHT, ONE},
+                        shieldHW{   "shield (heavy wooden)", 2,NA,-2,LIGHT, ONE},
+                        shieldHS{   "shield (heavy steel)",  2,NA,-2,LIGHT, ONE},
                         shieldTower{    "tower shield",     4,2,-10,LIGHT, TWO},
     
                         none{           "(none)",           0,NA,0, NONE, ZERO};

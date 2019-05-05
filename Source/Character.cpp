@@ -34,8 +34,6 @@ void Character::evaluateCharacterSheet(){
     for(auto& feat : feats) feat.function;
     for(auto& skill : skills){
         skill.calculateKeyAbilityMod(skill.abilityFromArray(abilitiesAsArray()));
-        //String abilityName = skill.abilityFromArray(abilitiesAsArray());
-        //skill.keyAbilityMod = skill.calculateKeyAbilityMod(<#int abilityVal#>)
     }
     
     
@@ -83,6 +81,7 @@ int Character::rollHD() const{
 
 void NPC::finalizeNPC(){
     equippedWeapons.add(getRandomFromPref(preferredWeapons));
+    equippedArmor.add(getRandomFromPref(preferredArmor));
     populateSkillRanks();
 }
 
