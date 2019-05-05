@@ -11,7 +11,7 @@
 #include "Character.h"
 #include "Feats.h"
 
-Character::Character(Array<int> abilities, int baseAttack, int init) : featList(Feats::featList){
+Character::Character(Array<unsigned int> abilities, unsigned int baseAttack, int init) : featList(Feats::featList){
     strength =      abilities[0];
     dexterity =     abilities[1];
     constitution =  abilities[2];
@@ -28,8 +28,19 @@ Character::Character(Array<int> abilities, int baseAttack, int init) : featList(
 
 void Character::evaluateCharacterSheet(){
     abilityList = {&strength, &dexterity, &constitution, &intelligence, &wisdom, &charisma};
-    Array<int*> resetList{&miscHP, &miscWill, &miscRef, &miscFort, &initMiscMod, &meleeMiscBonus, &rangedMiscBonus};
-    for(auto * val : resetList) *val=0;
+//    Array<std::variant<int*, unsigned int*>> resetList{&miscHP, &miscWill, &miscRef, &miscFort, &initMiscMod, &meleeMiscBonus, &rangedMiscBonus};
+//    for(std::variant<int*, unsigned int*> val : resetList){
+//        std::visit(
+//            [](auto arg) { std::cout << arg << ' '; }
+//
+//        , val);
+    
+//        if constexpr (std::is_same_v<decltype(val), int*>){
+//            int* foo = std::get<int*>>(val);
+//        }else{
+//
+//        }
+//    }
     
     randomize();
     for(auto& feat : feats) feat.function;
@@ -55,7 +66,7 @@ Skill& Character::getSkill(String skillName) const{
 }
 
 void Character::populateSkillMods(Array<std::pair<Skill, int>> skillList) const{
-    for(auto [skillToEdit, val] : skillList){
+    for(auto& [skillToEdit, val] : skillList){
         Skill& skill = getSkill(skillToEdit.name);
         skill.ranks = val;
     }
@@ -70,8 +81,8 @@ void Character::randomize(){
 
 }
 
-int Character::rollHD() const{
-    auto [numOfRolls, hitDie] = HD;
+constexpr int Character::rollHD() const{
+    const auto [numOfRolls, hitDie] = HD;
     auto total=miscHP;
     for (auto i=0;i<numOfRolls;i++)
         total+= random.nextInt(dieToNum(hitDie)) + abilityMod(constitution);
@@ -83,16 +94,13 @@ int Character::rollHD() const{
 void NPC::finalizeNPC(){
     equippedWeapons.add(getRandomFromPref(preferredWeapons));
     equippedArmor.add(getRandomFromPref(preferredArmor));
-    for(auto i=0; i<startingFeatRanks;++i){
-        Feat foo = getRandomFromPref(preferredFeats);
-        feats.add(foo);
-        
-    };
+    for(auto i=0; i<startingFeatRanks;++i)
+        feats.add(getRandomFromPref(preferredFeats));
     populateSkillRanks();
 }
 
 template<typename t>
-t NPC::getRandomFromPref(const Preferred<t>& pref){
+t NPC::getRandomFromPref(const Preferred<t>& pref) const{
     
     return grabFromPrefList(  (random.nextBool()) ?     pref.highChance //50 percent
                             : (random.nextInt(50)<35) ? pref.mediumChance //35 percent
@@ -100,14 +108,18 @@ t NPC::getRandomFromPref(const Preferred<t>& pref){
 }
 
 template<typename t>
-t NPC::grabFromPrefList(Array<t> list){
+t NPC::grabFromPrefList(Array<t> list) const{
     if(list.size()==0){
         if constexpr (std::is_same_v<t, Skill>)
             return randomSkill();
         else if constexpr (std::is_same_v<t, Weapons::Weapon>)
             return grabFromPrefList(defaultWeapons);
-        if constexpr (std::is_same_v<t, Feat>)
+        else if constexpr (std::is_same_v<t, Feat>)
             return grabFromPrefList(featList);
+        else{
+            jassertfalse;
+            return t();
+        }
     }
     
     else return list[random.nextInt(list.size())];
@@ -118,10 +130,11 @@ t NPC::grabFromPrefList(Array<t> list){
 
 void NPC::populateSkillRanks(){
     setSkillRankCap();
-    int numOfSkillRanks = startingSkillRanks;
     
     for(int i = startingSkillRanks; i>0 ; --i){
         Skill  skill;
+        
+        //Prevent from going over skillcap.
         do{
             skill = getRandomFromPref(preferredSkills);
         }while(skill.ranks >= skillRankCap);

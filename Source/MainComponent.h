@@ -44,7 +44,7 @@ private:
     String getWeaponDetails() const;
     String checkForNegative(const int input) const;
     String getFeatNames() const;
-    constexpr int skillStart() const{
+    constexpr int skillStart() const noexcept{
         switch(mode){
             case SKILLS_1: return 0; break;
             case SKILLS_2: return 9; break;
@@ -80,6 +80,7 @@ public:
     CharacterSheetWindow();
     
     Array<std::shared_ptr<CharacterSheet>> characterSheets;
+
 };
 
 

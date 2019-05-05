@@ -22,5 +22,5 @@ struct Class{
 
 namespace Classes{
     
-    inline Class fighter{"Fighter", 1};
+    //inline Class fighter{"Fighter", 1};
 }

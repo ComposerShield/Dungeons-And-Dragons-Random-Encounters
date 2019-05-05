@@ -32,22 +32,20 @@ struct Die{
     int numOfDice;
     DieType dieType;
     
-    Die(const DieType& die){
-        numOfDice=0;
-        dieType = die;
+    constexpr Die(const DieType& die) : numOfDice(0), dieType(die){
+
     }
     
-    Die(int num, const DieType& die){
-        numOfDice=num;
-        dieType = die;
+    constexpr Die(int num, const DieType& die) : numOfDice(num), dieType(die){
+
     }
     
     Die() = default;
-    
+    ~Die()= default;
 };
 
 
-constexpr int dieToNum(DieType& die){
+constexpr int dieToNum(const DieType& die) noexcept {
     switch(die){
         case D2:  return 2;
         case D3:  return 3;
@@ -60,7 +58,7 @@ constexpr int dieToNum(DieType& die){
     }
 }
 
-constexpr int abilityMod(int input) {return static_cast<int>((input-10)/2);}
+constexpr int abilityMod(int input) noexcept {return static_cast<int>((input-10)/2);}
 
 
 

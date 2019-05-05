@@ -22,22 +22,23 @@ struct Feat;
 
 class Character{
 public:
-    int strength, dexterity, constitution, intelligence, wisdom, charisma,
-        baseFort, baseRef, baseWill, miscFort, miscRef, miscWill, sizeMod,
-        baseAttackBonus, initiative, initMiscMod, hp, touchAC, touchACMisc,
-        currentHP, meleeMiscBonus, rangedMiscBonus, miscHP{0}, ac, grapple,
-    baseInitiative, characterLevel{1}, fort, ref, will, skillRankCap;
+    unsigned int strength, dexterity, constitution, intelligence, wisdom, charisma,
+                 miscFort, miscRef, miscWill, baseAttackBonus, initiative, hp,
+                 touchACMisc, miscHP{0}, baseInitiative, characterLevel{1}, skillRankCap;
     
-    constexpr int getLevel(){
+    int currentHP, touchAC, ac, sizeMod, grapple, fort, ref, will, initMiscMod,
+        baseFort, baseRef, baseWill, meleeMiscBonus, rangedMiscBonus;
+    
+    constexpr unsigned int getLevel(){
         int sum{0};
         for(auto& thisClass : classes)
             sum += thisClass.level;
         return sum;
     }
-    std::optional<int> casterLevel;
-    Array<int*> abilityList;
+    std::optional<unsigned int> casterLevel;
+    Array<unsigned int*> abilityList;
     
-    Character(Array<int> abilities, int baseAttack, int init);
+    Character(Array<unsigned int> abilities, unsigned int baseAttack, int init);
     virtual ~Character(){};
     
     String race;
@@ -81,11 +82,11 @@ private:
     constexpr int getGrapple()    const {return baseAttackBonus + abilityMod(strength) + sizeMod;}
     constexpr int rollForInitiative() const {return initiative + random.nextInt(2) + 1;};
     
-    int rollHD() const;
+    constexpr int rollHD() const;
     Array<int> abilitiesAsArray() const {return {strength, dexterity, constitution, intelligence, wisdom, charisma};};
     void randomize();
     void populateSkillMods(Array<std::pair<Skill, int>> skillList) const;
-    void populateSkillMap(){for(auto& skill : skills) skillMap.insert({skill.name, &skill});}
+    constexpr void populateSkillMap(){for(auto& skill : skills) skillMap.insert({skill.name, &skill});}
     virtual void setSkillRankCap(){skillRankCap = 4 + characterLevel-1;};
  
 protected:
@@ -104,12 +105,12 @@ private:
         Array<t> lowChance;
         
         Preferred() = default;
-        constexpr void fill(Array<t> high,Array<t> med,Array<t> low){
+        constexpr void fill(const Array<t>& high,const Array<t>& med,const Array<t>& low){
             highChance = high;
             mediumChance = med;
             lowChance = low;
         }
-        constexpr void singlePrefArray(Array<t> high){
+        constexpr void singlePrefArray(const Array<t>& high){
             highChance = high;
         }
     };
@@ -126,7 +127,7 @@ protected:
     int startingSkillRanks, startingFeatRanks;
     
 public:
-    NPC(Array<int> abilities, int baseAttack, int init) : Character(abilities, baseAttack, init){}
+    NPC(Array<unsigned int> abilities, unsigned int baseAttack, int init) : Character(abilities, baseAttack, init){}
     virtual ~NPC(){};
     PreferredWeapons preferredWeapons;
     PreferredArmor  preferredArmor;
@@ -137,17 +138,17 @@ public:
 private:
     
     template<typename t>
-    t getRandomFromPref(const Preferred<t>&);
+    t getRandomFromPref(const Preferred<t>&) const;
     
     template<typename t>
-    t grabFromPrefList(Array<t> list);
+    t grabFromPrefList(Array<t> list) const;
     
     void setSkillRankCap() override {skillRankCap = 4 + static_cast<int>(cr);};
     
 };
 
 class PC : public Character{
-    PC (Array<int> abilities, int baseAttack, int init) : Character(abilities, baseAttack, init){}
+    PC (Array<unsigned int> abilities, unsigned int baseAttack, int init) : Character(abilities, baseAttack, init){}
     virtual ~PC(){};
 };
 
