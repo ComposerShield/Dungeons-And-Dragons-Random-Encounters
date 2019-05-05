@@ -163,7 +163,7 @@ Array<String> CharacterSheet::fillCharacterSheetStats() const{
             String("Weapon: ") + character->equippedWeapons[0].name,
             String("              ") + getWeaponDetails(),
             String("Armor: ") + character->equippedArmor[0].name,
-            String("Feats: ") 
+            String("Feats: ") + getFeatNames()
     };
 }
 
@@ -191,6 +191,17 @@ String CharacterSheet::getWeaponDetails() const{
     String crit = Weapons::critToString.at(weapon.crit);
     
     return attack + "  " + damage + "  " + crit;
+}
+
+String CharacterSheet::getFeatNames() const{
+    String output = "";
+    for_indexed(auto& feat : character->feats){
+        DBG("Feat found! ");
+        DBG(feat.name);
+        output += feat.name;
+        if(i != character->feats.size()-1) output += ", ";
+    }
+    return output;
 }
 
 void CharacterSheet::buttonClicked(Button* button){

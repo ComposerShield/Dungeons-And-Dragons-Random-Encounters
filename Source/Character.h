@@ -56,6 +56,7 @@ public:
     EquippedWeapons equippedWeapons;
     EquippedArmor   equippedArmor;
     const Array<Skill> skills = Skills::skillList;
+    const Array<Feat> featList;
     std::map<String, Skill*> skillMap;
     Array<Feat>  feats;
     Array<Weapons::Weapon> weaponProficiencies;
@@ -156,6 +157,10 @@ struct Feat{
     std::function<void(Character& character)> function;
     std::optional<String> prerequisiteFeat;
     std::optional<std::pair<Ability, int>> prerequisiteAbility;
+    
+    Feat() = default;
+    
+    Feat(const Feat& input) = default;
     
     Feat(String Name, std::function<void(Character& character)> Function){
         name = Name;

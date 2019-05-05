@@ -160,7 +160,11 @@ namespace Feats {
                                 }, {DEX, 15}};
     
     
-    inline const Array<Feat> featList{acrobatic, agile, alertness, animalAffinity, exoticProf<Weapons::getRandomExoticWeapon>, improvedInitiative};
+    inline const Array<Feat> featList{acrobatic, agile, alertness, animalAffinity, athletic, combatReflexes,
+        improvedInitiative, exoticProf<Weapons::getRandomExoticWeapon>, greatCleave, greatFortitude,
+        improvedInitiative, investigator, ironWill, martialProf_lightMelee, pointBlankShot, farShot,
+        martialProf_oneHandedMelee, martialProf_twoHandedMelee, martialProf_ranged, preciseShot,
+        stealthy, toughness, track, twoWeaponFighting};
     
     
 }

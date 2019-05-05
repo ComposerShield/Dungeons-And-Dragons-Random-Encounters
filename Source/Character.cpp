@@ -9,8 +9,9 @@
 */
 
 #include "Character.h"
+#include "Feats.h"
 
-Character::Character(Array<int> abilities, int baseAttack, int init){
+Character::Character(Array<int> abilities, int baseAttack, int init) : featList(Feats::featList){
     strength =      abilities[0];
     dexterity =     abilities[1];
     constitution =  abilities[2];
@@ -82,6 +83,11 @@ int Character::rollHD() const{
 void NPC::finalizeNPC(){
     equippedWeapons.add(getRandomFromPref(preferredWeapons));
     equippedArmor.add(getRandomFromPref(preferredArmor));
+    for(auto i=0; i<startingFeatRanks;++i){
+        Feat foo = getRandomFromPref(preferredFeats);
+        feats.add(foo);
+        
+    };
     populateSkillRanks();
 }
 
@@ -100,11 +106,15 @@ t NPC::grabFromPrefList(Array<t> list){
             return randomSkill();
         else if constexpr (std::is_same_v<t, Weapons::Weapon>)
             return grabFromPrefList(defaultWeapons);
+        if constexpr (std::is_same_v<t, Feat>)
+            return grabFromPrefList(featList);
     }
     
     else return list[random.nextInt(list.size())];
     
 };
+
+
 
 void NPC::populateSkillRanks(){
     setSkillRankCap();

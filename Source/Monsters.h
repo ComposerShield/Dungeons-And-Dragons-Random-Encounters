@@ -49,7 +49,7 @@ namespace Monsters {
                                  {});
             
             preferredFeats.fill({Feats::alertness},
-                                {Feats::alertness},
+                                {Feats::alertness, Feats::agile, Feats::athletic, Feats::combatReflexes},
                                 {});
 
             finalizeNPC();

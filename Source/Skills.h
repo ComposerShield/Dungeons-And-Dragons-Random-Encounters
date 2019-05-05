@@ -85,7 +85,7 @@ namespace Skills {
                         use_rope        {"use rope", DEX};
     
     
-    inline Array<Skill> skillList = {
+    const inline Array<Skill> skillList = {
         appraise,
         balance,
         bluff,
