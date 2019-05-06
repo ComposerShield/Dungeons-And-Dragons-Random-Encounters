@@ -23,7 +23,7 @@ struct Feat;
 class Character{
 public:
     unsigned int strength, dexterity, constitution, intelligence, wisdom, charisma,
-                 miscFort, miscRef, miscWill, baseAttackBonus, initiative, hp,
+                 miscFort, miscRef, miscWill, baseAttackBonus, initiative, hp, miscAC,
                  touchACMisc, miscHP{0}, baseInitiative, characterLevel{1}, skillRankCap;
     
     int currentHP, touchAC, ac, sizeMod, grapple, fort, ref, will, initMiscMod,
@@ -45,7 +45,6 @@ public:
     Array<Class> classes;
     Array<String> description;
     struct EquippedWeapons : Array<Weapons::Weapon>{};
-    
     struct EquippedArmor   : Array<Armors::Armor>{
         constexpr int addArmor() const{
             int output=0;
@@ -76,7 +75,7 @@ private:
     constexpr int getFortitude()  const {return baseFort + abilityMod(constitution) + miscFort;}
     constexpr int getReflex()     const {return baseRef  + abilityMod(dexterity)    + miscRef ;}
     constexpr int getWill()       const {return baseWill + abilityMod(wisdom)       + miscWill;}
-    constexpr int getAC()         const {return equippedArmor.addArmor() + abilityMod(dexterity) + sizeMod; }
+    constexpr int getAC()         const {return equippedArmor.addArmor() + abilityMod(dexterity) + sizeMod + miscAC; }
     constexpr int getTouchAC()    const {return abilityMod(dexterity) + sizeMod;}
     constexpr int getInitiative() const {return baseInitiative + initMiscMod;}
     constexpr int getGrapple()    const {return baseAttackBonus + abilityMod(strength) + sizeMod;}

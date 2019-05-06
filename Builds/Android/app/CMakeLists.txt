@@ -33,6 +33,7 @@ add_library( ${BINARY_NAME}
     "../../../../../../../../Library/Fonts/Baskerville.ttc"
     "../../../../../../../../Library/Fonts/Courier New.ttf"
     "../../../Assets/orc.png"
+    "../../../Assets/gnoll.png"
     "../../../Assets/goblin.png"
     "../../../Assets/dnd_logo.png"
     "../../../Source/Main.cpp"
@@ -1355,6 +1356,7 @@ add_library( ${BINARY_NAME}
 set_source_files_properties("../../../../../../../../Library/Fonts/Baskerville.ttc" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties("../../../../../../../../Library/Fonts/Courier New.ttf" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties("../../../Assets/orc.png" PROPERTIES HEADER_FILE_ONLY TRUE)
+set_source_files_properties("../../../Assets/gnoll.png" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties("../../../Assets/goblin.png" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties("../../../Assets/dnd_logo.png" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties("../../../Source/MainComponent.h" PROPERTIES HEADER_FILE_ONLY TRUE)

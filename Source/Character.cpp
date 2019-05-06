@@ -85,7 +85,7 @@ constexpr int Character::rollHD() const{
     const auto [numOfRolls, hitDie] = HD;
     auto total=miscHP;
     for (auto i=0;i<numOfRolls;i++)
-        total+= random.nextInt(dieToNum(hitDie)) + abilityMod(constitution);
+        total+= random.nextInt(dieToNum(hitDie))+1 + abilityMod(constitution);
     return total;
 }
 

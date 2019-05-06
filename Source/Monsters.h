@@ -29,6 +29,7 @@ namespace Monsters {
             baseWill=-1;
             startingSkillRanks = 15;
             startingFeatRanks = 1;
+            description.add("darkvision (60 feet)");
             
             weaponProficiencies.addArray(Weapons::simpleList);
             
@@ -58,7 +59,7 @@ namespace Monsters {
     };
     
     struct Orc : public NPC{
-        Orc() : NPC({17,11,12,8,7,6}, 1, 0){ //TODO, copied from Goblin
+        Orc() : NPC({17,11,12,8,7,6}, 1, 0){
             race = "orc";
             sizeMod = 0;
             HD = {1, D8};
@@ -66,6 +67,9 @@ namespace Monsters {
             baseFort=2;
             baseRef=0;
             baseWill=-1;
+            startingSkillRanks = 2;
+            startingFeatRanks = 1;
+            description.add("light sensitivity");
             
             weaponProficiencies.addArray(Weapons::simpleList);
             weaponProficiencies.add(Weapons::falchion);
@@ -83,20 +87,69 @@ namespace Monsters {
                                 );
             
             preferredSkills.fill({Skills::listen, Skills::spot},
-                                 {Skills::climb, Skills::survival, Skills::swim, Skills::intimidate, Skills::handle_animal},
+                                 {},
                                  {}
                                  );
+            
+            preferredFeats.fill({Feats::alertness},
+                                {Feats::improvedUnarmedStrike, Feats::combatExpertise, Feats::athletic, Feats::combatReflexes},
+                                {});
             
             finalizeNPC();
         }
         Image getImage() override {return ImageCache::getFromMemory(BinaryData::orc_png, 319005);}
     };
     
+    struct Gnoll : public NPC{
+        Gnoll() : NPC({15,10,13,8,11,8}, 1, 0){
+            race = "gnoll";
+            sizeMod = 0;
+            HD = {2, D8};
+            cr = 1;
+            baseFort=3;
+            baseRef=0;
+            baseWill=1;
+            startingSkillRanks = 5;
+            startingFeatRanks = 1;
+            miscAC += 1;//natual armor
+            description.add("darkvision (60 feet)");
+            
+            
+            weaponProficiencies.addArray(Weapons::simpleList);
+            weaponProficiencies.add(Weapons::falchion);
+            
+            preferredWeapons.fill(//TODO
+                                  {Weapons::battleaxe, Weapons::shortbow},
+                                  {Weapons::handaxe, Weapons::maceLight, Weapons::shortsword, Weapons::longsword},
+                                  {Weapons::dagger, Weapons::spear, Weapons::longbow, Weapons::flailHeavy}
+                                  );
+            
+            preferredArmor.fill(
+                                {Armors::shieldHS, Armors::leather},
+                                {Armors::none, Armors::padded, Armors::shieldLS},
+                                {Armors::buckler}
+                                );
+            
+            preferredSkills.fill({Skills::listen, Skills::spot},
+                                 {Skills::climb, Skills::survival, Skills::swim, Skills::move_silently, Skills::spot},
+                                 {}
+                                 );
+            
+            preferredFeats.fill({Feats::alertness},
+                                {Feats::improvedUnarmedStrike, Feats::combatExpertise, Feats::athletic, Feats::combatReflexes},
+                                {});
+            
+            finalizeNPC();
+        }
+        Image getImage() override {return ImageCache::getFromMemory(BinaryData::gnoll_png, BinaryData::gnoll_pngSize);}
+    };
+    
     
     
     inline std::map<String, std::function<NPC*()>> monsters = {
-        {"goblin", []{return new Goblin;}},
-        {"orc", []{return new Orc;}}
+        {"goblin",  []{return new Goblin;}},
+        {"orc",     []{return new Orc;}},
+        {"gnoll",   []{return new Gnoll;}}
     };
     
 

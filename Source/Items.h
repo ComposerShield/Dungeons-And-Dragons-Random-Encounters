@@ -107,7 +107,13 @@ namespace Weapons{
                                 scimitar        {"scimitar",        D6, none, _18_20x2, MARTIAL_ONE_HANDED_MELEE, ONE},
                                 trident         {"scimitar",        D6, none, _18_20x2, MARTIAL_ONE_HANDED_MELEE, ONE},
                                 warhammer       {"scimitar",        D6, none, _18_20x2, MARTIAL_ONE_HANDED_MELEE, ONE},
-                                falchion        {"falchion",    {2, D4},none, _18_20x2, MARTIAL_ONE_HANDED_MELEE, ONE},
+    
+                                falchion        {"falchion",    {2, D4},none, _18_20x2, MARTIAL_TWO_HANDED_MELEE, TWO},
+                                flailHeavy      {"flail (heavy)",   D10,none, _19_20x2, MARTIAL_TWO_HANDED_MELEE, TWO},
+    //todo last of two handed melee
+                                longbow         {"longbow",         D8, none, x3,       MARTIAL_TWO_HANDED_MELEE, TWO},
+                                shortbow        {"shortbow",        D6, none, x3,       MARTIAL_TWO_HANDED_MELEE, TWO},
+    
     
                                 kama            {"kama",            D6, none, x2,       EXOTIC, ONE},
                                 nunchaku        {"nunchaku",        D6, none, x2,       EXOTIC, ONE},
