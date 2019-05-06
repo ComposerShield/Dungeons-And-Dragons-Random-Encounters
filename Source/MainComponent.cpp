@@ -93,9 +93,6 @@ void CharacterSheet::paint(Graphics &g){
     bounds.removeFromBottom(5);
     bounds.removeFromLeft(5);
     bounds.removeFromRight(5);
-    
-    //g.setFont(MyFonts::getBaskerville());
-    //DBG(g.getCurrentFont().getTypefaceName());
 
     Rectangle<float> boundsFloat = {static_cast<float>(bounds.getX()),
                                     static_cast<float>(bounds.getY()),
@@ -133,10 +130,10 @@ void CharacterSheet::paint(Graphics &g){
         //Write skill numbers.
         
         if (mode!=STATS && (i<skillStart()+9)){
-            g.drawText(skillNums[i + skillStart()], bounds.getX()+105, bounds.getY(), width-40, getHeight()*0.1, Justification::left);
+            g.drawText(skillNums[static_cast<int>(i) + skillStart()], bounds.getX()+105, bounds.getY(), width-40, getHeight()*0.1, Justification::left);
             
         }
-        //g.setFont();
+        
     }
     
     auto rect = Rectangle<float>(width * 0.75f, 0.05f, width*0.25f, height * 0.25);
@@ -196,8 +193,6 @@ String CharacterSheet::getWeaponDetails() const{
 String CharacterSheet::getFeatNames() const{
     String output = "";
     for_indexed(auto& feat : character->feats){
-        DBG("Feat found! ");
-        DBG(feat.name);
         output += feat.name;
         if(i != character->feats.size()-1) output += ", ";
     }

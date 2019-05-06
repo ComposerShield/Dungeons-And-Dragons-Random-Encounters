@@ -11,7 +11,7 @@
 #include "Character.h"
 #include "Feats.h"
 
-Character::Character(Array<unsigned int> abilities, unsigned int baseAttack, int init) : featList(Feats::featList){
+Character::Character(Array<uint8> abilities, uint8 baseAttack, int init) : featList(Feats::featList){
     strength =      abilities[0];
     dexterity =     abilities[1];
     constitution =  abilities[2];
@@ -28,19 +28,11 @@ Character::Character(Array<unsigned int> abilities, unsigned int baseAttack, int
 
 void Character::evaluateCharacterSheet(){
     abilityList = {&strength, &dexterity, &constitution, &intelligence, &wisdom, &charisma};
-//    Array<std::variant<int*, unsigned int*>> resetList{&miscHP, &miscWill, &miscRef, &miscFort, &initMiscMod, &meleeMiscBonus, &rangedMiscBonus};
-//    for(std::variant<int*, unsigned int*> val : resetList){
-//        std::visit(
-//            [](auto arg) { std::cout << arg << ' '; }
-//
-//        , val);
-    
-//        if constexpr (std::is_same_v<decltype(val), int*>){
-//            int* foo = std::get<int*>>(val);
-//        }else{
-//
-//        }
-//    }
+
+    for(auto val : {&miscHP, &miscWill, &miscRef, &miscFort})
+        resetVal(val);
+    for(auto val : {&initMiscMod, &meleeMiscBonus, &rangedMiscBonus})
+        resetVal(val);
     
     randomize();
     for(auto& feat : feats) feat.function;

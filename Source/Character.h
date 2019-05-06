@@ -22,23 +22,23 @@ struct Feat;
 
 class Character{
 public:
-    unsigned int strength, dexterity, constitution, intelligence, wisdom, charisma,
+    uint8        strength, dexterity, constitution, intelligence, wisdom, charisma,
                  miscFort, miscRef, miscWill, baseAttackBonus, initiative, hp, miscAC,
                  touchACMisc, miscHP{0}, baseInitiative, characterLevel{1}, skillRankCap;
     
     int currentHP, touchAC, ac, sizeMod, grapple, fort, ref, will, initMiscMod,
         baseFort, baseRef, baseWill, meleeMiscBonus, rangedMiscBonus;
     
-    constexpr unsigned int getLevel(){
+    constexpr uint8 getLevel(){
         int sum{0};
         for(auto& thisClass : classes)
             sum += thisClass.level;
         return sum;
     }
-    std::optional<unsigned int> casterLevel;
-    Array<unsigned int*> abilityList;
+    std::optional<uint8> casterLevel;
+    Array<uint8*> abilityList;
     
-    Character(Array<unsigned int> abilities, unsigned int baseAttack, int init);
+    Character(Array<uint8> abilities, uint8 baseAttack, int init);
     virtual ~Character(){};
     
     String race;
@@ -79,7 +79,9 @@ private:
     constexpr int getTouchAC()    const {return abilityMod(dexterity) + sizeMod;}
     constexpr int getInitiative() const {return baseInitiative + initMiscMod;}
     constexpr int getGrapple()    const {return baseAttackBonus + abilityMod(strength) + sizeMod;}
-    constexpr int rollForInitiative() const {return initiative + random.nextInt(2) + 1;};
+    constexpr int rollForInitiative()  const {return initiative + random.nextInt(2) + 1;};
+    constexpr void resetVal(int* val)  const {*val=0;}
+    constexpr void resetVal(uint8* val)const {*val=0;}
     
     constexpr int rollHD() const;
     Array<int> abilitiesAsArray() const {return {strength, dexterity, constitution, intelligence, wisdom, charisma};};
@@ -126,7 +128,7 @@ protected:
     int startingSkillRanks, startingFeatRanks;
     
 public:
-    NPC(Array<unsigned int> abilities, unsigned int baseAttack, int init) : Character(abilities, baseAttack, init){}
+    NPC(Array<uint8> abilities, uint8 baseAttack, int init) : Character(abilities, baseAttack, init){}
     virtual ~NPC(){};
     PreferredWeapons preferredWeapons;
     PreferredArmor  preferredArmor;
@@ -147,7 +149,7 @@ private:
 };
 
 class PC : public Character{
-    PC (Array<unsigned int> abilities, unsigned int baseAttack, int init) : Character(abilities, baseAttack, init){}
+    PC (Array<uint8> abilities, uint8 baseAttack, int init) : Character(abilities, baseAttack, init){}
     virtual ~PC(){};
 };
 
