@@ -48,6 +48,7 @@ void Character::evaluateCharacterSheet(){
     ref = getReflex();
     will = getWill();
     
+    activateFeats();
 }
 
 Skill& Character::getSkill(String skillName) const{
@@ -62,6 +63,11 @@ void Character::populateSkillMods(Array<std::pair<Skill, int>> skillList) const{
         Skill& skill = getSkill(skillToEdit.name);
         skill.ranks = val;
     }
+}
+
+void Character::activateFeats(){
+    for(auto feat : feats)
+        feat.function(this);
 }
 
 void Character::randomize(){
@@ -89,6 +95,7 @@ void NPC::finalizeNPC(){
     for(auto i=0; i<startingFeatRanks;++i)
         feats.add(getRandomFromPref(preferredFeats));
     populateSkillRanks();
+    
 }
 
 template<typename t>

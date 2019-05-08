@@ -82,6 +82,7 @@ private:
     constexpr int rollForInitiative()  const {return initiative + random.nextInt(2) + 1;};
     constexpr void resetVal(int* val)  const {*val=0;}
     constexpr void resetVal(uint8* val)const {*val=0;}
+    void activateFeats();
     
     constexpr int rollHD() const;
     Array<int> abilitiesAsArray() const {return {strength, dexterity, constitution, intelligence, wisdom, charisma};};
@@ -156,7 +157,7 @@ class PC : public Character{
 
 struct Feat{
     String name;
-    std::function<void(Character& character)> function;
+    std::function<void(Character* character)> function;
     std::optional<String> prerequisiteFeat;
     std::optional<std::pair<Ability, int>> prerequisiteAbility;
     
@@ -164,21 +165,23 @@ struct Feat{
     
     Feat(const Feat& input) = default;
     
-    Feat(String Name, std::function<void(Character& character)> Function){
+    Feat(String Name, std::function<void(Character* character)> Function){
         name = Name;
         function = Function;
     }
     
-    Feat(String Name, std::function<void(Character& character)> Function, Feat prereqFeat){
+    Feat(String Name, std::function<void(Character* character)> Function, Feat prereqFeat){
         name = Name;
         function = Function;
         prerequisiteFeat = prereqFeat.name;
     }
     
-    Feat(String Name, std::function<void(Character& character)> Function, std::pair<Ability, int> prereqAbility){
+    Feat(String Name, std::function<void(Character* character)> Function, std::pair<Ability, int> prereqAbility){
         name = Name;
         function = Function;
         prerequisiteAbility = prereqAbility;
     }
+private:
+    
 };
 
