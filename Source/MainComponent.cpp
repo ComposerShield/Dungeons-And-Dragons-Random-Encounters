@@ -160,7 +160,8 @@ Array<String> CharacterSheet::fillCharacterSheetStats() const{
             String("Weapon: ") + character->equippedWeapons[0].name,
             String("              ") + getWeaponDetails(),
             String("Armor: ") + character->equippedArmor[0].name,
-            String("Feats: ") + getFeatNames()
+            String("Feats: ") + getFeatNames(),
+            String("Description: ") + getDescription()
     };
 }
 
@@ -196,6 +197,13 @@ String CharacterSheet::getFeatNames() const{
         output += feat.name;
         if(i != character->feats.size()-1) output += ", ";
     }
+    return output;
+}
+
+String CharacterSheet::getDescription() const{
+    String output = "";
+    for_indexed(auto d : character->description)
+        output += (i!=character->description.size()-1) ? (d + " ") : d ;
     return output;
 }
 
