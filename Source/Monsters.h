@@ -29,7 +29,7 @@ namespace Monsters {
             baseWill=-1;
             startingSkillRanks = 15;
             startingFeatRanks = 1;
-            description.add("darkvision (60 feet)");
+            description.add("darkvision(60 feet)");
             
             weaponProficiencies.addArray(Weapons::simpleList);
             
@@ -69,7 +69,7 @@ namespace Monsters {
             baseWill=-1;
             startingSkillRanks = 2;
             startingFeatRanks = 1;
-            description.add("light sensitivity");
+            description.add("light_sensitivity");
             
             weaponProficiencies.addArray(Weapons::simpleList);
             weaponProficiencies.add(Weapons::falchion);
@@ -112,7 +112,7 @@ namespace Monsters {
             startingSkillRanks = 5;
             startingFeatRanks = 1;
             miscAC += 1;//natual armor
-            description.add("darkvision (60 feet)");
+            description.add("darkvision(60 feet)");
             
             
             weaponProficiencies.addArray(Weapons::simpleList);

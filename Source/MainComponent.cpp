@@ -145,24 +145,35 @@ void CharacterSheet::resized(){
 }
 
 Array<String> CharacterSheet::fillCharacterSheetStats() const{
-    return {String("Race ")  + static_cast<String>(character->race),
-            String("HP ")    + static_cast<String>(character->hp) +
-            String(" AC ")   + static_cast<String>(character->ac),
-            String("Str ")   + static_cast<String>(character->strength) +
-            String("  Dex ") + static_cast<String>(character->dexterity) +
-            String("  Con ") + static_cast<String>(character->constitution),
-            String("Int ")   + static_cast<String>(character->intelligence) +
-            String("  Wis ") + static_cast<String>(character->wisdom) +
-            String("  Cha ") + static_cast<String>(character->charisma),
-            String("Fort ")  + static_cast<String>(character->fort) +
-            String(" Ref ")  + static_cast<String>(character->ref) +
-            String(" Will ") + static_cast<String>(character->will),
-            String("Weapon: ") + character->equippedWeapons[0].name,
-            String("              ") + getWeaponDetails(),
-            String("Armor: ") + character->equippedArmor[0].name,
-            String("Feats: ") + getFeatNames(),
-            String("Description: ") + getDescription()
+    String description = getDescription();
+    String newLineDescription;
+    if(description.contains(" ")){
+        newLineDescription = description.fromFirstOccurrenceOf(" ", false, false);
+        description = description.replace(newLineDescription, "");
+    }
+    
+    Array<String> stats{String("Race ")  + static_cast<String>(character->race),
+                        String("HP ")    + static_cast<String>(character->hp) +
+                        String(" AC ")   + static_cast<String>(character->ac),
+                        String("Str ")   + static_cast<String>(character->strength) +
+                        String("  Dex ") + static_cast<String>(character->dexterity) +
+                        String("  Con ") + static_cast<String>(character->constitution),
+                        String("Int ")   + static_cast<String>(character->intelligence) +
+                        String("  Wis ") + static_cast<String>(character->wisdom) +
+                        String("  Cha ") + static_cast<String>(character->charisma),
+                        String("Fort ")  + static_cast<String>(character->fort) +
+                        String(" Ref ")  + static_cast<String>(character->ref) +
+                        String(" Will ") + static_cast<String>(character->will),
+                        String("Weapon: ") + character->equippedWeapons[0].name,
+                        String("              ") + getWeaponDetails(),
+                        String("Armor: ") + character->equippedArmor[0].name,
+                        String("Feats: ") + getFeatNames(),
+                        String("Description: ") + description,
+                        newLineDescription
     };
+    
+
+    return stats;
 }
 
 Array<String> CharacterSheet::fillCharacterSheetSkills() const{
@@ -201,9 +212,9 @@ String CharacterSheet::getFeatNames() const{
 }
 
 String CharacterSheet::getDescription() const{
-    String output = "";
-    for_indexed(auto d : character->description)
-        output += (i!=character->description.size()-1) ? (d + " ") : d ;
+    String output;
+    for_indexed(auto& d : character->description)
+        output += (i!=character->description.size()-1) ? (d + " ") : d;
     return output;
 }
 

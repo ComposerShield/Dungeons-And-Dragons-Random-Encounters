@@ -1,0 +1,30 @@
+Executable : /Users/adamshieldcomposer/Library/Android/sdk/cmake/3.10.2.4988404/bin/cmake
+arguments : 
+-H/Users/adamshieldcomposer/Documents/JUCE/DnD/Builds/Android/app
+-B/Users/adamshieldcomposer/Documents/JUCE/DnD/Builds/Android/app/.externalNativeBuild/cmake/debug_Debug/x86
+-DANDROID_ABI=x86
+-DANDROID_PLATFORM=android-16
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/Users/adamshieldcomposer/Documents/JUCE/DnD/Builds/Android/app/build/intermediates/cmake/debug_/debug/obj/x86
+-DCMAKE_BUILD_TYPE=Debug
+-DANDROID_NDK=/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle
+-DCMAKE_C_FLAGS=-fsigned-char
+-DCMAKE_CXX_FLAGS=-fsigned-char -std=c++1z
+-DCMAKE_SYSTEM_NAME=Android
+-DCMAKE_ANDROID_ARCH_ABI=x86
+-DCMAKE_SYSTEM_VERSION=16
+-DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+-DCMAKE_ANDROID_NDK=/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle
+-DCMAKE_TOOLCHAIN_FILE=/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/build/cmake/android.toolchain.cmake
+-G Ninja
+-DCMAKE_MAKE_PROGRAM=/Users/adamshieldcomposer/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja
+-DANDROID_TOOLCHAIN=clang
+-DANDROID_PLATFORM=android-16
+-DANDROID_STL=c++_static
+-DANDROID_CPP_FEATURES=exceptions rtti
+-DANDROID_ARM_MODE=arm
+-DANDROID_ARM_NEON=TRUE
+-DJUCE_BUILD_CONFIGURATION=DEBUG
+-DCMAKE_CXX_FLAGS_DEBUG=-O0
+-DCMAKE_C_FLAGS_DEBUG=-O0
+jvmArgs : 
+

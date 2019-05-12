@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/adamshieldcomposer/Documents/JUCE/DnD/Builds/Android/app/build/intermediates/incremental/mergeDebug_DebugResources/merged.dir/values/values.xml",
+            "map": [
+                {
+                    "source": "/Users/adamshieldcomposer/Documents/JUCE/DnD/Builds/Android/app/src/debug/res/values/string.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "2",
+                        "startOffsets": "54",
+                        "endColumns": "38",
+                        "endOffsets": "90"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "40",
+                        "endOffsets": "91"
+                    }
+                }
+            ]
+        }
+    ]
+}
