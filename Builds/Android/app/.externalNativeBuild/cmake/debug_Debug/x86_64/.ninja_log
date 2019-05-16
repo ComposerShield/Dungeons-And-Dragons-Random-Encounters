@@ -1,0 +1,19 @@
+# ninja log v5
+0	392	0	CMakeFiles/cpufeatures.dir/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/sources/android/cpufeatures/cpu-features.c.o	2a181fa39a2ca42c
+392	542	0	libcpufeatures.a	7c9efb8e84343f78
+543	7394	0	CMakeFiles/juce_jni.dir/Users/adamshieldcomposer/Documents/JUCE/DnD/Source/Skills_GUI.cpp.o	ba73fa08575832e3
+544	7844	0	CMakeFiles/juce_jni.dir/Users/adamshieldcomposer/Documents/JUCE/DnD/JuceLibraryCode/include_juce_audio_basics.cpp.o	af903c23cbc04a14
+543	12148	0	CMakeFiles/juce_jni.dir/Users/adamshieldcomposer/Documents/JUCE/DnD/Source/Character.cpp.o	208498e86cc9fa65
+542	12842	0	CMakeFiles/juce_jni.dir/Users/adamshieldcomposer/Documents/JUCE/DnD/Source/Main.cpp.o	d4d04d5fa0bdff73
+542	13492	0	CMakeFiles/juce_jni.dir/Users/adamshieldcomposer/Documents/JUCE/DnD/Source/MainComponent.cpp.o	1ee62e4b03d97035
+544	13891	0	CMakeFiles/juce_jni.dir/Users/adamshieldcomposer/Documents/JUCE/DnD/JuceLibraryCode/BinaryData.cpp.o	ab41327857a762dd
+546	14691	0	CMakeFiles/juce_jni.dir/Users/adamshieldcomposer/Documents/JUCE/DnD/JuceLibraryCode/include_juce_audio_processors.cpp.o	a375f9c82567bc1f
+5	330	0	CMakeFiles/cpufeatures.dir/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/sources/android/cpufeatures/cpu-features.c.o	2a181fa39a2ca42c
+330	527	0	libcpufeatures.a	7c9efb8e84343f78
+529	6079	0	CMakeFiles/juce_jni.dir/Users/adamshieldcomposer/Documents/JUCE/DnD/Source/Skills_GUI.cpp.o	ba73fa08575832e3
+531	6779	0	CMakeFiles/juce_jni.dir/Users/adamshieldcomposer/Documents/JUCE/DnD/JuceLibraryCode/include_juce_audio_basics.cpp.o	af903c23cbc04a14
+528	11278	0	CMakeFiles/juce_jni.dir/Users/adamshieldcomposer/Documents/JUCE/DnD/Source/Character.cpp.o	208498e86cc9fa65
+527	11989	0	CMakeFiles/juce_jni.dir/Users/adamshieldcomposer/Documents/JUCE/DnD/Source/Main.cpp.o	d4d04d5fa0bdff73
+528	12077	0	CMakeFiles/juce_jni.dir/Users/adamshieldcomposer/Documents/JUCE/DnD/Source/MainComponent.cpp.o	1ee62e4b03d97035
+529	12492	0	CMakeFiles/juce_jni.dir/Users/adamshieldcomposer/Documents/JUCE/DnD/JuceLibraryCode/BinaryData.cpp.o	ab41327857a762dd
+534	13427	0	CMakeFiles/juce_jni.dir/Users/adamshieldcomposer/Documents/JUCE/DnD/JuceLibraryCode/include_juce_audio_processors.cpp.o	a375f9c82567bc1f

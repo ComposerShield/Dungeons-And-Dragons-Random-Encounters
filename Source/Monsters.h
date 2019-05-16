@@ -29,28 +29,32 @@ namespace Monsters {
             baseWill=-1;
             startingSkillRanks = 15;
             startingFeatRanks = 1;
-            description.add("darkvision(60 feet)");
+            description.add("darkvision(60_feet)");
             
-            weaponProficiencies.addArray(Weapons::simpleList);
+            using namespace Weapons;
+            weaponProficiencies.addArray(simpleList);
             
             preferredWeapons.fill(
-                {Weapons::javelin, Weapons::morningstar, Weapons::shortspear, Weapons::dagger},
-                {Weapons::unarmed, Weapons::daggerPunching, Weapons::maceLight, Weapons::shortsword, Weapons::axeThrowing},
-                {Weapons::club, Weapons::sickle, Weapons::crossbowHand, Weapons::chainSpiked, Weapons::whip, Weapons::rapier}
+                {javelin, morningstar, shortspear, dagger},
+                {unarmed, daggerPunching, maceLight, shortsword, axeThrowing},
+                {club, sickle, crossbowHand, chainSpiked, whip, rapier}
                                   );
             
+            using namespace Armors;
             preferredArmor.fill(
-                {Armors::none, Armors::leather, Armors::shieldLW},
-                {Armors::padded, Armors::shieldLS},
-                {Armors::buckler, Armors::chainShirt}
+                {Armors::none, leather, shieldLW},
+                {padded, shieldLS},
+                {buckler, chainShirt}
             );
             
-            preferredSkills.fill({Skills::hide, Skills::listen, Skills::move_silently, Skills::ride, Skills::spot},
-                                 {Skills::hide, Skills::listen, Skills::move_silently, Skills::ride, Skills::spot},
+            using namespace Skills;
+            preferredSkills.fill({hide, listen, move_silently, ride, spot},
+                                 {hide, listen, move_silently, ride, spot},
                                  {});
             
-            preferredFeats.fill({Feats::alertness},
-                                {Feats::alertness, Feats::agile, Feats::athletic, Feats::combatReflexes},
+            using namespace Feats;
+            preferredFeats.fill({alertness},
+                                {alertness, agile, athletic, combatReflexes},
                                 {});
 
             finalizeNPC();
@@ -71,28 +75,32 @@ namespace Monsters {
             startingFeatRanks = 1;
             description.add("light_sensitivity");
             
-            weaponProficiencies.addArray(Weapons::simpleList);
-            weaponProficiencies.add(Weapons::falchion);
+            using namespace Weapons;
+            weaponProficiencies.addArray(simpleList);
+            weaponProficiencies.add(falchion);
             
-            preferredWeapons.fill(//TODO
-                           {Weapons::javelin, Weapons::falchion},
-                           {Weapons::maceHeavy, Weapons::maceLight, Weapons::shortsword, Weapons::longsword},
-                           {Weapons::dagger, Weapons::spear, Weapons::crossbowHand, Weapons::chainSpiked}
+            preferredWeapons.fill(
+                           {javelin, falchion},
+                           {maceHeavy, maceLight, shortsword, longsword},
+                           {dagger, spear, crossbowHand, chainSpiked}
                                   );
             
+            using namespace Armors;
             preferredArmor.fill(
-                                {Armors::studdedLeather, Armors::leather},
-                                {Armors::none, Armors::padded},
-                                {Armors::buckler}
+                                {studdedLeather, leather},
+                                {Armors::none, padded},
+                                {buckler}
                                 );
             
-            preferredSkills.fill({Skills::listen, Skills::spot},
+            using namespace Skills;
+            preferredSkills.fill({listen, spot},
                                  {},
                                  {}
                                  );
             
-            preferredFeats.fill({Feats::alertness},
-                                {Feats::improvedUnarmedStrike, Feats::combatExpertise, Feats::athletic, Feats::combatReflexes},
+            using namespace Feats;
+            preferredFeats.fill({alertness},
+                                {improvedUnarmedStrike, combatExpertise, athletic, combatReflexes},
                                 {});
             
             finalizeNPC();
@@ -112,31 +120,34 @@ namespace Monsters {
             startingSkillRanks = 5;
             startingFeatRanks = 1;
             miscAC += 1;//natual armor
-            description.add("darkvision(60 feet)");
+            description.add("darkvision(60_feet)");
             
+            using namespace Weapons;
+            weaponProficiencies.addArray(simpleList);
+            weaponProficiencies.add(falchion);
             
-            weaponProficiencies.addArray(Weapons::simpleList);
-            weaponProficiencies.add(Weapons::falchion);
-            
-            preferredWeapons.fill(//TODO
-                                  {Weapons::battleaxe, Weapons::shortbow},
-                                  {Weapons::handaxe, Weapons::maceLight, Weapons::shortsword, Weapons::longsword},
-                                  {Weapons::dagger, Weapons::spear, Weapons::longbow, Weapons::flailHeavy}
+            preferredWeapons.fill(
+                                  {battleaxe, shortbow},
+                                  {handaxe, maceLight, shortsword, longsword},
+                                  {dagger, spear, longbow, flailHeavy}
                                   );
             
+            using namespace Armors;
             preferredArmor.fill(
-                                {Armors::shieldHS, Armors::leather},
-                                {Armors::none, Armors::padded, Armors::shieldLS},
-                                {Armors::buckler}
+                                {shieldHS, leather},
+                                {Armors::none, padded, shieldLS},
+                                {buckler}
                                 );
             
-            preferredSkills.fill({Skills::listen, Skills::spot},
-                                 {Skills::climb, Skills::survival, Skills::swim, Skills::move_silently, Skills::spot},
+            using namespace Skills;
+            preferredSkills.fill({listen, spot},
+                                 {climb, survival, swim, move_silently, spot},
                                  {}
                                  );
             
-            preferredFeats.fill({Feats::alertness},
-                                {Feats::improvedUnarmedStrike, Feats::combatExpertise, Feats::athletic, Feats::combatReflexes},
+            using namespace Feats;
+            preferredFeats.fill({alertness},
+                                {improvedUnarmedStrike, combatExpertise, athletic, combatReflexes},
                                 {});
             
             finalizeNPC();
@@ -146,10 +157,59 @@ namespace Monsters {
     
     
     
+    struct Centaur : public NPC{
+        Centaur() : NPC({11,13,12,10,9,6}, 4, 2){
+            race = "centaur";
+            sizeMod = -1;
+            HD = {4, D8};
+            cr = 3;
+            baseFort=2;
+            baseRef=0;
+            baseWill=-1;
+            startingSkillRanks = 5;
+            startingFeatRanks = 1;
+            description.add("darkvision(60_feet)");
+            
+            using namespace Weapons;
+            weaponProficiencies.addArray(simpleList);
+            weaponProficiencies.addArray(martialAllList);
+            
+            preferredWeapons.fill(
+                                  {javelin, morningstar, shortspear, dagger},
+                                  {unarmed, daggerPunching, maceLight, shortsword, axeThrowing},
+                                  {club, sickle, crossbowHand, chainSpiked, whip, rapier}
+                                  );
+            naturalWeapons.add(Weapon("2 hooves", D6, none, x2, NATURAL, ZERO));
+            
+            using namespace Armors;
+            preferredArmor.fill(
+                                {Armors::none, leather, shieldLW},
+                                {padded, shieldLS},
+                                {buckler, chainShirt}
+                                );
+            
+            using namespace Skills;
+            preferredSkills.fill({hide, listen, move_silently, ride, spot},
+                                 {hide, listen, move_silently, ride, spot},
+                                 {});
+            
+            using namespace Feats;
+            preferredFeats.fill({alertness},
+                                {alertness, agile, athletic, combatReflexes},
+                                {});
+            
+            finalizeNPC();
+        }
+        Image getImage() override {return ImageCache::getFromMemory(BinaryData::goblin_png, 319005);}
+    };
+    
+    
+    
     inline std::map<String, std::function<NPC*()>> monsters = {
         {"goblin",  []{return new Goblin;}},
         {"orc",     []{return new Orc;}},
-        {"gnoll",   []{return new Gnoll;}}
+        {"gnoll",   []{return new Gnoll;}},
+        {"centaur", []{return new Centaur;}}
     };
     
 

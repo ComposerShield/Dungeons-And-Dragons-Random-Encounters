@@ -51,7 +51,8 @@ namespace Weapons{
         MARTIAL_ONE_HANDED_MELEE,
         MARTIAL_TWO_HANDED_MELEE,
         MARTIAL_RANGED,
-        EXOTIC
+        EXOTIC,
+        NATURAL
     };
     
     struct Weapon : public Item{

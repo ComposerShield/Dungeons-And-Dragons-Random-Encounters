@@ -60,6 +60,7 @@ public:
     std::map<String, Skill*> skillMap;
     Array<Feat>  feats;
     Array<Weapons::Weapon> weaponProficiencies;
+    Array<Weapons::Weapon> naturalWeapons;
     Die HD{1, D8}; //default
     
     
@@ -184,4 +185,3 @@ struct Feat{
 private:
     
 };
-

@@ -1,24 +1,22 @@
 {
   "buildFiles": [
-    "/Users/adamshieldcomposer/Documents/JUCE/DnD/Builds/Android/app/../../../../../../Library/Android/sdk/ndk-bundle/build/cmake/platforms.cmake",
-    "/Users/adamshieldcomposer/Documents/JUCE/DnD/Builds/Android/app/../../../../../../Library/Android/sdk/ndk-bundle/build/cmake/android.toolchain.cmake",
     "/Users/adamshieldcomposer/Documents/JUCE/DnD/Builds/Android/app/CMakeLists.txt"
   ],
   "cleanCommands": [
-    "/Users/adamshieldcomposer/Library/Android/sdk/cmake/3.10.2.4988404/bin/cmake --build /Users/adamshieldcomposer/Documents/JUCE/DnD/Builds/Android/app/.externalNativeBuild/cmake/release_Release/x86 --target clean"
+    "/Users/adamshieldcomposer/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/adamshieldcomposer/Documents/JUCE/DnD/Builds/Android/app/.externalNativeBuild/cmake/release_Release/x86 --target clean"
   ],
   "libraries": {
-    "juce_jni-Release-x86": {
-      "artifactName": "juce_jni",
-      "buildCommand": "/Users/adamshieldcomposer/Library/Android/sdk/cmake/3.10.2.4988404/bin/cmake --build /Users/adamshieldcomposer/Documents/JUCE/DnD/Builds/Android/app/.externalNativeBuild/cmake/release_Release/x86 --target juce_jni",
-      "abi": "x86",
-      "output": "/Users/adamshieldcomposer/Documents/JUCE/DnD/Builds/Android/app/build/intermediates/cmake/release_/release/obj/x86/libjuce_jni.so"
-    },
     "cpufeatures-Release-x86": {
       "artifactName": "cpufeatures",
-      "buildCommand": "/Users/adamshieldcomposer/Library/Android/sdk/cmake/3.10.2.4988404/bin/cmake --build /Users/adamshieldcomposer/Documents/JUCE/DnD/Builds/Android/app/.externalNativeBuild/cmake/release_Release/x86 --target cpufeatures",
+      "buildCommand": "/Users/adamshieldcomposer/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/adamshieldcomposer/Documents/JUCE/DnD/Builds/Android/app/.externalNativeBuild/cmake/release_Release/x86 --target cpufeatures",
       "abi": "x86",
       "output": "/Users/adamshieldcomposer/Documents/JUCE/DnD/Builds/Android/app/.externalNativeBuild/cmake/release_Release/x86/libcpufeatures.a"
+    },
+    "juce_jni-Release-x86": {
+      "artifactName": "juce_jni",
+      "buildCommand": "/Users/adamshieldcomposer/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/adamshieldcomposer/Documents/JUCE/DnD/Builds/Android/app/.externalNativeBuild/cmake/release_Release/x86 --target juce_jni",
+      "abi": "x86",
+      "output": "/Users/adamshieldcomposer/Documents/JUCE/DnD/Builds/Android/app/build/intermediates/cmake/release_/release/obj/x86/libjuce_jni.so"
     }
   }
 }

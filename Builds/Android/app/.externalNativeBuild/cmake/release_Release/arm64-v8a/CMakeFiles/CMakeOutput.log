@@ -3,17 +3,17 @@ The host system is: Darwin - 18.5.0 - x86_64
 Determining if the C compiler works passed with the following output:
 Change Dir: /Users/adamshieldcomposer/Documents/JUCE/DnD/Builds/Android/app/.externalNativeBuild/cmake/release_Release/arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/Users/adamshieldcomposer/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_8a91f"
-[1/2] Building C object CMakeFiles/cmTC_8a91f.dir/testCCompiler.c.o
-[2/2] Linking C executable cmTC_8a91f
+Run Build Command:"/Users/adamshieldcomposer/Library/Android/sdk/cmake/3.6.4111459/bin/ninja" "cmTC_925fa"
+[1/2] Building C object CMakeFiles/cmTC_925fa.dir/testCCompiler.c.o
+[2/2] Linking C executable cmTC_925fa
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /Users/adamshieldcomposer/Documents/JUCE/DnD/Builds/Android/app/.externalNativeBuild/cmake/release_Release/arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/Users/adamshieldcomposer/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_0fe0c"
-[1/2] Building C object CMakeFiles/cmTC_0fe0c.dir/CMakeCCompilerABI.c.o
-[2/2] Linking C executable cmTC_0fe0c
+Run Build Command:"/Users/adamshieldcomposer/Library/Android/sdk/cmake/3.6.4111459/bin/ninja" "cmTC_b2b4e"
+[1/2] Building C object CMakeFiles/cmTC_b2b4e.dir/CMakeCCompilerABI.c.o
+[2/2] Linking C executable cmTC_b2b4e
 Android (5058415 based on r339409) clang version 8.0.2 (https://android.googlesource.com/toolchain/clang 40173bab62ec746213857d083c0e8b0abb568790) (https://android.googlesource.com/toolchain/llvm 7a6618d69e7e8111e1d49dc9e7813767c5ca756a) (based on LLVM 8.0.2svn)
 Target: aarch64-none-linux-android21
 Thread model: posix
@@ -22,16 +22,16 @@ Found candidate GCC installation: /Users/adamshieldcomposer/Library/Android/sdk/
 Selected GCC installation: /Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x
 Candidate multilib: .;@m64
 Selected multilib: .;@m64
- "/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/bin/ld" --sysroot=/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -pie --fix-cortex-a53-843419 --enable-new-dtags --eh-frame-hdr -m aarch64linux -dynamic-linker /system/bin/linker64 -o cmTC_0fe0c /Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21/crtbegin_dynamic.o -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib64/clang/8.0.2/lib/linux/aarch64 -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/../lib64 -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21 -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib --exclude-libs libgcc.a --exclude-libs libatomic.a --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections CMakeFiles/cmTC_0fe0c.dir/CMakeCCompilerABI.c.o -lgcc -ldl -lc -lgcc -ldl /Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21/crtend_android.o
+ "/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/bin/ld" --sysroot=/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -pie --fix-cortex-a53-843419 --enable-new-dtags --eh-frame-hdr -m aarch64linux -dynamic-linker /system/bin/linker64 -o cmTC_b2b4e /Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21/crtbegin_dynamic.o -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib64/clang/8.0.2/lib/linux/aarch64 -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/../lib64 -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21 -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib --exclude-libs libgcc.a --exclude-libs libatomic.a --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections CMakeFiles/cmTC_b2b4e.dir/CMakeCCompilerABI.c.o -lgcc -ldl -lc -lgcc -ldl /Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21/crtend_android.o
 
 
 Parsed C implicit link information from above output:
-  link line regex: [^( *|.*[/\])(aarch64-linux-android-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  link line regex: [^( *|.*[/\])(aarch64-linux-android-ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /Users/adamshieldcomposer/Documents/JUCE/DnD/Builds/Android/app/.externalNativeBuild/cmake/release_Release/arm64-v8a/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/Users/adamshieldcomposer/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_0fe0c"]
-  ignore line: [[1/2] Building C object CMakeFiles/cmTC_0fe0c.dir/CMakeCCompilerABI.c.o]
-  ignore line: [[2/2] Linking C executable cmTC_0fe0c]
+  ignore line: [Run Build Command:"/Users/adamshieldcomposer/Library/Android/sdk/cmake/3.6.4111459/bin/ninja" "cmTC_b2b4e"]
+  ignore line: [[1/2] Building C object CMakeFiles/cmTC_b2b4e.dir/CMakeCCompilerABI.c.o]
+  ignore line: [[2/2] Linking C executable cmTC_b2b4e]
   ignore line: [Android (5058415 based on r339409) clang version 8.0.2 (https://android.googlesource.com/toolchain/clang 40173bab62ec746213857d083c0e8b0abb568790) (https://android.googlesource.com/toolchain/llvm 7a6618d69e7e8111e1d49dc9e7813767c5ca756a) (based on LLVM 8.0.2svn)]
   ignore line: [Target: aarch64-none-linux-android21]
   ignore line: [Thread model: posix]
@@ -42,7 +42,7 @@ Parsed C implicit link information from above output:
   ignore line: [@m64]
   ignore line: [Selected multilib: .]
   ignore line: [@m64]
-  link line: [ "/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/bin/ld" --sysroot=/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -pie --fix-cortex-a53-843419 --enable-new-dtags --eh-frame-hdr -m aarch64linux -dynamic-linker /system/bin/linker64 -o cmTC_0fe0c /Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21/crtbegin_dynamic.o -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib64/clang/8.0.2/lib/linux/aarch64 -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/../lib64 -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21 -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib --exclude-libs libgcc.a --exclude-libs libatomic.a --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections CMakeFiles/cmTC_0fe0c.dir/CMakeCCompilerABI.c.o -lgcc -ldl -lc -lgcc -ldl /Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21/crtend_android.o]
+  link line: [ "/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/bin/ld" --sysroot=/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -pie --fix-cortex-a53-843419 --enable-new-dtags --eh-frame-hdr -m aarch64linux -dynamic-linker /system/bin/linker64 -o cmTC_b2b4e /Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21/crtbegin_dynamic.o -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib64/clang/8.0.2/lib/linux/aarch64 -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/../lib64 -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21 -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib --exclude-libs libgcc.a --exclude-libs libatomic.a --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections CMakeFiles/cmTC_b2b4e.dir/CMakeCCompilerABI.c.o -lgcc -ldl -lc -lgcc -ldl /Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21/crtend_android.o]
     arg [/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/bin/ld] ==> ignore
     arg [--sysroot=/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot] ==> ignore
     arg [-pie] ==> ignore
@@ -54,7 +54,7 @@ Parsed C implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/system/bin/linker64] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_0fe0c] ==> ignore
+    arg [cmTC_b2b4e] ==> ignore
     arg [/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21/crtbegin_dynamic.o] ==> ignore
     arg [-L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib64/clang/8.0.2/lib/linux/aarch64] ==> dir [/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib64/clang/8.0.2/lib/linux/aarch64]
     arg [-L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x] ==> dir [/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x]
@@ -75,13 +75,15 @@ Parsed C implicit link information from above output:
     arg [-zrelro] ==> ignore
     arg [-znow] ==> ignore
     arg [--gc-sections] ==> ignore
-    arg [CMakeFiles/cmTC_0fe0c.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_b2b4e.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [-ldl] ==> lib [dl]
     arg [-lc] ==> lib [c]
     arg [-lgcc] ==> lib [gcc]
     arg [-ldl] ==> lib [dl]
     arg [/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21/crtend_android.o] ==> ignore
+  remove lib [gcc]
+  remove lib [gcc]
   collapse library dir [/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib64/clang/8.0.2/lib/linux/aarch64] ==> [/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib64/clang/8.0.2/lib/linux/aarch64]
   collapse library dir [/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x] ==> [/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x]
   collapse library dir [/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/../lib64] ==> [/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/aarch64-linux-android/lib64]
@@ -89,7 +91,7 @@ Parsed C implicit link information from above output:
   collapse library dir [/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android] ==> [/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android]
   collapse library dir [/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib] ==> [/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/aarch64-linux-android/lib]
   collapse library dir [/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib] ==> [/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib]
-  implicit libs: [gcc;dl;c;gcc;dl]
+  implicit libs: [dl;c;dl]
   implicit dirs: [/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib64/clang/8.0.2/lib/linux/aarch64;/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x;/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/aarch64-linux-android/lib64;/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21;/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android;/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/aarch64-linux-android/lib;/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib]
   implicit fwks: []
 
@@ -99,9 +101,9 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /Users/adamshieldcomposer/Documents/JUCE/DnD/Builds/Android/app/.externalNativeBuild/cmake/release_Release/arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/Users/adamshieldcomposer/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_ca5f8"
-[1/2] Building C object CMakeFiles/cmTC_ca5f8.dir/feature_tests.c.o
-[2/2] Linking C executable cmTC_ca5f8
+Run Build Command:"/Users/adamshieldcomposer/Library/Android/sdk/cmake/3.6.4111459/bin/ninja" "cmTC_75b3b"
+[1/2] Building C object CMakeFiles/cmTC_75b3b.dir/feature_tests.c.o
+[2/2] Linking C executable cmTC_75b3b
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -113,9 +115,9 @@ Run Build Command:"/Users/adamshieldcomposer/Library/Android/sdk/cmake/3.10.2.49
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /Users/adamshieldcomposer/Documents/JUCE/DnD/Builds/Android/app/.externalNativeBuild/cmake/release_Release/arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/Users/adamshieldcomposer/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_7c239"
-[1/2] Building C object CMakeFiles/cmTC_7c239.dir/feature_tests.c.o
-[2/2] Linking C executable cmTC_7c239
+Run Build Command:"/Users/adamshieldcomposer/Library/Android/sdk/cmake/3.6.4111459/bin/ninja" "cmTC_a1211"
+[1/2] Building C object CMakeFiles/cmTC_a1211.dir/feature_tests.c.o
+[2/2] Linking C executable cmTC_a1211
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -127,9 +129,9 @@ Run Build Command:"/Users/adamshieldcomposer/Library/Android/sdk/cmake/3.10.2.49
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /Users/adamshieldcomposer/Documents/JUCE/DnD/Builds/Android/app/.externalNativeBuild/cmake/release_Release/arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/Users/adamshieldcomposer/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_af77d"
-[1/2] Building C object CMakeFiles/cmTC_af77d.dir/feature_tests.c.o
-[2/2] Linking C executable cmTC_af77d
+Run Build Command:"/Users/adamshieldcomposer/Library/Android/sdk/cmake/3.6.4111459/bin/ninja" "cmTC_b24e8"
+[1/2] Building C object CMakeFiles/cmTC_b24e8.dir/feature_tests.c.o
+[2/2] Linking C executable cmTC_b24e8
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -139,17 +141,17 @@ Run Build Command:"/Users/adamshieldcomposer/Library/Android/sdk/cmake/3.10.2.49
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /Users/adamshieldcomposer/Documents/JUCE/DnD/Builds/Android/app/.externalNativeBuild/cmake/release_Release/arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/Users/adamshieldcomposer/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_791c8"
-[1/2] Building CXX object CMakeFiles/cmTC_791c8.dir/testCXXCompiler.cxx.o
-[2/2] Linking CXX executable cmTC_791c8
+Run Build Command:"/Users/adamshieldcomposer/Library/Android/sdk/cmake/3.6.4111459/bin/ninja" "cmTC_b3aa6"
+[1/2] Building CXX object CMakeFiles/cmTC_b3aa6.dir/testCXXCompiler.cxx.o
+[2/2] Linking CXX executable cmTC_b3aa6
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /Users/adamshieldcomposer/Documents/JUCE/DnD/Builds/Android/app/.externalNativeBuild/cmake/release_Release/arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/Users/adamshieldcomposer/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_cecd1"
-[1/2] Building CXX object CMakeFiles/cmTC_cecd1.dir/CMakeCXXCompilerABI.cpp.o
-[2/2] Linking CXX executable cmTC_cecd1
+Run Build Command:"/Users/adamshieldcomposer/Library/Android/sdk/cmake/3.6.4111459/bin/ninja" "cmTC_b109c"
+[1/2] Building CXX object CMakeFiles/cmTC_b109c.dir/CMakeCXXCompilerABI.cpp.o
+[2/2] Linking CXX executable cmTC_b109c
 Android (5058415 based on r339409) clang version 8.0.2 (https://android.googlesource.com/toolchain/clang 40173bab62ec746213857d083c0e8b0abb568790) (https://android.googlesource.com/toolchain/llvm 7a6618d69e7e8111e1d49dc9e7813767c5ca756a) (based on LLVM 8.0.2svn)
 Target: aarch64-none-linux-android21
 Thread model: posix
@@ -158,16 +160,16 @@ Found candidate GCC installation: /Users/adamshieldcomposer/Library/Android/sdk/
 Selected GCC installation: /Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x
 Candidate multilib: .;@m64
 Selected multilib: .;@m64
- "/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/bin/ld" --sysroot=/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -pie --fix-cortex-a53-843419 --enable-new-dtags --eh-frame-hdr -m aarch64linux -dynamic-linker /system/bin/linker64 -o cmTC_cecd1 /Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21/crtbegin_dynamic.o -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib64/clang/8.0.2/lib/linux/aarch64 -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/../lib64 -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21 -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib --exclude-libs libgcc.a --exclude-libs libatomic.a --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections CMakeFiles/cmTC_cecd1.dir/CMakeCXXCompilerABI.cpp.o -Bstatic -lc++ -Bdynamic -lm -lgcc -lgcc -ldl -lc -lgcc -lgcc -ldl /Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21/crtend_android.o
+ "/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/bin/ld" --sysroot=/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -pie --fix-cortex-a53-843419 --enable-new-dtags --eh-frame-hdr -m aarch64linux -dynamic-linker /system/bin/linker64 -o cmTC_b109c /Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21/crtbegin_dynamic.o -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib64/clang/8.0.2/lib/linux/aarch64 -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/../lib64 -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21 -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib --exclude-libs libgcc.a --exclude-libs libatomic.a --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections CMakeFiles/cmTC_b109c.dir/CMakeCXXCompilerABI.cpp.o -Bstatic -lc++ -Bdynamic -lm -lgcc -lgcc -ldl -lc -lgcc -lgcc -ldl /Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21/crtend_android.o
 
 
 Parsed CXX implicit link information from above output:
-  link line regex: [^( *|.*[/\])(aarch64-linux-android-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  link line regex: [^( *|.*[/\])(aarch64-linux-android-ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /Users/adamshieldcomposer/Documents/JUCE/DnD/Builds/Android/app/.externalNativeBuild/cmake/release_Release/arm64-v8a/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/Users/adamshieldcomposer/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_cecd1"]
-  ignore line: [[1/2] Building CXX object CMakeFiles/cmTC_cecd1.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [[2/2] Linking CXX executable cmTC_cecd1]
+  ignore line: [Run Build Command:"/Users/adamshieldcomposer/Library/Android/sdk/cmake/3.6.4111459/bin/ninja" "cmTC_b109c"]
+  ignore line: [[1/2] Building CXX object CMakeFiles/cmTC_b109c.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [[2/2] Linking CXX executable cmTC_b109c]
   ignore line: [Android (5058415 based on r339409) clang version 8.0.2 (https://android.googlesource.com/toolchain/clang 40173bab62ec746213857d083c0e8b0abb568790) (https://android.googlesource.com/toolchain/llvm 7a6618d69e7e8111e1d49dc9e7813767c5ca756a) (based on LLVM 8.0.2svn)]
   ignore line: [Target: aarch64-none-linux-android21]
   ignore line: [Thread model: posix]
@@ -178,7 +180,7 @@ Parsed CXX implicit link information from above output:
   ignore line: [@m64]
   ignore line: [Selected multilib: .]
   ignore line: [@m64]
-  link line: [ "/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/bin/ld" --sysroot=/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -pie --fix-cortex-a53-843419 --enable-new-dtags --eh-frame-hdr -m aarch64linux -dynamic-linker /system/bin/linker64 -o cmTC_cecd1 /Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21/crtbegin_dynamic.o -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib64/clang/8.0.2/lib/linux/aarch64 -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/../lib64 -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21 -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib --exclude-libs libgcc.a --exclude-libs libatomic.a --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections CMakeFiles/cmTC_cecd1.dir/CMakeCXXCompilerABI.cpp.o -Bstatic -lc++ -Bdynamic -lm -lgcc -lgcc -ldl -lc -lgcc -lgcc -ldl /Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21/crtend_android.o]
+  link line: [ "/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/bin/ld" --sysroot=/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -pie --fix-cortex-a53-843419 --enable-new-dtags --eh-frame-hdr -m aarch64linux -dynamic-linker /system/bin/linker64 -o cmTC_b109c /Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21/crtbegin_dynamic.o -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib64/clang/8.0.2/lib/linux/aarch64 -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/../lib64 -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21 -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib -L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib --exclude-libs libgcc.a --exclude-libs libatomic.a --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections CMakeFiles/cmTC_b109c.dir/CMakeCXXCompilerABI.cpp.o -Bstatic -lc++ -Bdynamic -lm -lgcc -lgcc -ldl -lc -lgcc -lgcc -ldl /Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21/crtend_android.o]
     arg [/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/bin/ld] ==> ignore
     arg [--sysroot=/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot] ==> ignore
     arg [-pie] ==> ignore
@@ -190,7 +192,7 @@ Parsed CXX implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/system/bin/linker64] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_cecd1] ==> ignore
+    arg [cmTC_b109c] ==> ignore
     arg [/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21/crtbegin_dynamic.o] ==> ignore
     arg [-L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib64/clang/8.0.2/lib/linux/aarch64] ==> dir [/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib64/clang/8.0.2/lib/linux/aarch64]
     arg [-L/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x] ==> dir [/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x]
@@ -211,7 +213,7 @@ Parsed CXX implicit link information from above output:
     arg [-zrelro] ==> ignore
     arg [-znow] ==> ignore
     arg [--gc-sections] ==> ignore
-    arg [CMakeFiles/cmTC_cecd1.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_b109c.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-Bstatic] ==> ignore
     arg [-lc++] ==> lib [c++]
     arg [-Bdynamic] ==> ignore
@@ -224,6 +226,10 @@ Parsed CXX implicit link information from above output:
     arg [-lgcc] ==> lib [gcc]
     arg [-ldl] ==> lib [dl]
     arg [/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21/crtend_android.o] ==> ignore
+  remove lib [gcc]
+  remove lib [gcc]
+  remove lib [gcc]
+  remove lib [gcc]
   collapse library dir [/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib64/clang/8.0.2/lib/linux/aarch64] ==> [/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib64/clang/8.0.2/lib/linux/aarch64]
   collapse library dir [/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x] ==> [/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x]
   collapse library dir [/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/../lib64] ==> [/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/aarch64-linux-android/lib64]
@@ -231,86 +237,19 @@ Parsed CXX implicit link information from above output:
   collapse library dir [/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android] ==> [/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android]
   collapse library dir [/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib] ==> [/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/aarch64-linux-android/lib]
   collapse library dir [/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib] ==> [/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib]
-  implicit libs: [c++;m;gcc;gcc;dl;c;gcc;gcc;dl]
+  implicit libs: [c++;m;dl;c;dl]
   implicit dirs: [/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib64/clang/8.0.2/lib/linux/aarch64;/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/lib/gcc/aarch64-linux-android/4.9.x;/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/aarch64-linux-android/lib64;/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21;/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android;/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/aarch64-linux-android/lib;/Users/adamshieldcomposer/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib]
   implicit fwks: []
 
 
 
 
-Detecting CXX [-std=c++1z] compiler features compiled with the following output:
-Change Dir: /Users/adamshieldcomposer/Documents/JUCE/DnD/Builds/Android/app/.externalNativeBuild/cmake/release_Release/arm64-v8a/CMakeFiles/CMakeTmp
-
-Run Build Command:"/Users/adamshieldcomposer/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_009ac"
-[1/2] Building CXX object CMakeFiles/cmTC_009ac.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_009ac
-
-
-    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
-    Feature record: CXX_FEATURE:1cxx_alias_templates
-    Feature record: CXX_FEATURE:1cxx_alignas
-    Feature record: CXX_FEATURE:1cxx_alignof
-    Feature record: CXX_FEATURE:1cxx_attributes
-    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
-    Feature record: CXX_FEATURE:1cxx_auto_type
-    Feature record: CXX_FEATURE:1cxx_binary_literals
-    Feature record: CXX_FEATURE:1cxx_constexpr
-    Feature record: CXX_FEATURE:1cxx_contextual_conversions
-    Feature record: CXX_FEATURE:1cxx_decltype
-    Feature record: CXX_FEATURE:1cxx_decltype_auto
-    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
-    Feature record: CXX_FEATURE:1cxx_default_function_template_args
-    Feature record: CXX_FEATURE:1cxx_defaulted_functions
-    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
-    Feature record: CXX_FEATURE:1cxx_delegating_constructors
-    Feature record: CXX_FEATURE:1cxx_deleted_functions
-    Feature record: CXX_FEATURE:1cxx_digit_separators
-    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
-    Feature record: CXX_FEATURE:1cxx_explicit_conversions
-    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
-    Feature record: CXX_FEATURE:1cxx_extern_templates
-    Feature record: CXX_FEATURE:1cxx_final
-    Feature record: CXX_FEATURE:1cxx_func_identifier
-    Feature record: CXX_FEATURE:1cxx_generalized_initializers
-    Feature record: CXX_FEATURE:1cxx_generic_lambdas
-    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
-    Feature record: CXX_FEATURE:1cxx_inline_namespaces
-    Feature record: CXX_FEATURE:1cxx_lambdas
-    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
-    Feature record: CXX_FEATURE:1cxx_local_type_template_args
-    Feature record: CXX_FEATURE:1cxx_long_long_type
-    Feature record: CXX_FEATURE:1cxx_noexcept
-    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
-    Feature record: CXX_FEATURE:1cxx_nullptr
-    Feature record: CXX_FEATURE:1cxx_override
-    Feature record: CXX_FEATURE:1cxx_range_for
-    Feature record: CXX_FEATURE:1cxx_raw_string_literals
-    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
-    Feature record: CXX_FEATURE:1cxx_relaxed_constexpr
-    Feature record: CXX_FEATURE:1cxx_return_type_deduction
-    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
-    Feature record: CXX_FEATURE:1cxx_rvalue_references
-    Feature record: CXX_FEATURE:1cxx_sizeof_member
-    Feature record: CXX_FEATURE:1cxx_static_assert
-    Feature record: CXX_FEATURE:1cxx_strong_enums
-    Feature record: CXX_FEATURE:1cxx_template_template_parameters
-    Feature record: CXX_FEATURE:1cxx_thread_local
-    Feature record: CXX_FEATURE:1cxx_trailing_return_types
-    Feature record: CXX_FEATURE:1cxx_unicode_literals
-    Feature record: CXX_FEATURE:1cxx_uniform_initialization
-    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
-    Feature record: CXX_FEATURE:1cxx_user_literals
-    Feature record: CXX_FEATURE:1cxx_variable_templates
-    Feature record: CXX_FEATURE:1cxx_variadic_macros
-    Feature record: CXX_FEATURE:1cxx_variadic_templates
-
-
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /Users/adamshieldcomposer/Documents/JUCE/DnD/Builds/Android/app/.externalNativeBuild/cmake/release_Release/arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/Users/adamshieldcomposer/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_48d5a"
-[1/2] Building CXX object CMakeFiles/cmTC_48d5a.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_48d5a
+Run Build Command:"/Users/adamshieldcomposer/Library/Android/sdk/cmake/3.6.4111459/bin/ninja" "cmTC_f7313"
+[1/2] Building CXX object CMakeFiles/cmTC_f7313.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_f7313
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -375,9 +314,9 @@ Run Build Command:"/Users/adamshieldcomposer/Library/Android/sdk/cmake/3.10.2.49
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /Users/adamshieldcomposer/Documents/JUCE/DnD/Builds/Android/app/.externalNativeBuild/cmake/release_Release/arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/Users/adamshieldcomposer/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_ece9f"
-[1/2] Building CXX object CMakeFiles/cmTC_ece9f.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_ece9f
+Run Build Command:"/Users/adamshieldcomposer/Library/Android/sdk/cmake/3.6.4111459/bin/ninja" "cmTC_0cb49"
+[1/2] Building CXX object CMakeFiles/cmTC_0cb49.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_0cb49
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -442,9 +381,9 @@ Run Build Command:"/Users/adamshieldcomposer/Library/Android/sdk/cmake/3.10.2.49
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /Users/adamshieldcomposer/Documents/JUCE/DnD/Builds/Android/app/.externalNativeBuild/cmake/release_Release/arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/Users/adamshieldcomposer/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_df228"
-[1/2] Building CXX object CMakeFiles/cmTC_df228.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_df228
+Run Build Command:"/Users/adamshieldcomposer/Library/Android/sdk/cmake/3.6.4111459/bin/ninja" "cmTC_850c1"
+[1/2] Building CXX object CMakeFiles/cmTC_850c1.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_850c1
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
