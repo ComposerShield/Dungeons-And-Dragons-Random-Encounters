@@ -106,8 +106,8 @@ namespace Weapons{
                                 pickHeavy       {"pick (heavy)",    D8, none, x2,       MARTIAL_ONE_HANDED_MELEE, ONE},
                                 rapier          {"rapier",          D6, none, x4,       MARTIAL_ONE_HANDED_MELEE, ONE},
                                 scimitar        {"scimitar",        D6, none, _18_20x2, MARTIAL_ONE_HANDED_MELEE, ONE},
-                                trident         {"scimitar",        D6, none, _18_20x2, MARTIAL_ONE_HANDED_MELEE, ONE},
-                                warhammer       {"scimitar",        D6, none, _18_20x2, MARTIAL_ONE_HANDED_MELEE, ONE},
+                                trident         {"trident",        D6, none, _18_20x2, MARTIAL_ONE_HANDED_MELEE, ONE},
+                                warhammer       {"warhammer",        D6, none, _18_20x2, MARTIAL_ONE_HANDED_MELEE, ONE},
     
                                 falchion        {"falchion",    {2, D4},none, _18_20x2, MARTIAL_TWO_HANDED_MELEE, TWO},
                                 flailHeavy      {"flail (heavy)",   D10,none, _19_20x2, MARTIAL_TWO_HANDED_MELEE, TWO},

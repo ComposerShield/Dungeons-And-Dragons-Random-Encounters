@@ -258,7 +258,7 @@ HeaderControls::HeaderControls() : generateButton("Generate"){
     addAndMakeVisible(&numOfMonsters);
     addAndMakeVisible(&generateButton);
     
-    for(auto monster : {"goblin", "orc", "gnoll"})
+    for(const auto& [monster, monsterPtr] : Monsters::monsters)
         monsterType.addItem(monster, monsterType.getNumItems()+1);
     for(auto i=1; i<20 ;++i)
         numOfMonsters.addItem(static_cast<String>(i), i);

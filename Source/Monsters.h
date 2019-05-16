@@ -29,7 +29,7 @@ namespace Monsters {
             baseWill=-1;
             startingSkillRanks = 15;
             startingFeatRanks = 1;
-            description.add("darkvision(60_feet)");
+            description.add("darkvision");
             
             using namespace Weapons;
             weaponProficiencies.addArray(simpleList);
@@ -59,7 +59,7 @@ namespace Monsters {
 
             finalizeNPC();
         }
-        Image getImage() override {return ImageCache::getFromMemory(BinaryData::goblin_png, 319005);}
+        Image getImage() override {return ImageCache::getFromMemory(BinaryData::goblin_png, BinaryData::goblin_pngSize);}
     };
     
     struct Orc : public NPC{
@@ -105,7 +105,7 @@ namespace Monsters {
             
             finalizeNPC();
         }
-        Image getImage() override {return ImageCache::getFromMemory(BinaryData::orc_png, 319005);}
+        Image getImage() override {return ImageCache::getFromMemory(BinaryData::orc_png, BinaryData::orc_pngSize);}
     };
     
     struct Gnoll : public NPC{
@@ -120,7 +120,7 @@ namespace Monsters {
             startingSkillRanks = 5;
             startingFeatRanks = 1;
             miscAC += 1;//natual armor
-            description.add("darkvision(60_feet)");
+            description.add("darkvision");
             
             using namespace Weapons;
             weaponProficiencies.addArray(simpleList);
@@ -158,34 +158,37 @@ namespace Monsters {
     
     
     struct Centaur : public NPC{
+        inline static Weapons::Weapon twoHooves = Weapons::Weapon("2 hooves", D6, none, x2, Weapons::NATURAL, ZERO);
+        
         Centaur() : NPC({11,13,12,10,9,6}, 4, 2){
             race = "centaur";
             sizeMod = -1;
             HD = {4, D8};
             cr = 3;
-            baseFort=2;
-            baseRef=0;
-            baseWill=-1;
+            baseFort=1;
+            baseRef=4;
+            baseWill=6;
             startingSkillRanks = 5;
-            startingFeatRanks = 1;
-            description.add("darkvision(60_feet)");
+            startingFeatRanks = 2;
+            description.add("darkvision");
             
             using namespace Weapons;
+
             weaponProficiencies.addArray(simpleList);
             weaponProficiencies.addArray(martialAllList);
             
             preferredWeapons.fill(
-                                  {javelin, morningstar, shortspear, dagger},
-                                  {unarmed, daggerPunching, maceLight, shortsword, axeThrowing},
-                                  {club, sickle, crossbowHand, chainSpiked, whip, rapier}
+                                  {longsword, longbow},
+                                  {unarmed, maceHeavy, shortsword},
+                                  {club, longspear, shortbow, swordTwoBladed}
                                   );
-            naturalWeapons.add(Weapon("2 hooves", D6, none, x2, NATURAL, ZERO));
+            naturalWeapons.add(Weapon(twoHooves));
             
             using namespace Armors;
             preferredArmor.fill(
-                                {Armors::none, leather, shieldLW},
-                                {padded, shieldLS},
-                                {buckler, chainShirt}
+                                {Armors::none},
+                                {padded, leather},
+                                {}
                                 );
             
             using namespace Skills;
@@ -194,13 +197,13 @@ namespace Monsters {
                                  {});
             
             using namespace Feats;
-            preferredFeats.fill({alertness},
-                                {alertness, agile, athletic, combatReflexes},
+            preferredFeats.fill({dodge, weaponFocus<twoHooves>},
+                                {track, animalAffinity, athletic, combatReflexes},
                                 {});
             
             finalizeNPC();
         }
-        Image getImage() override {return ImageCache::getFromMemory(BinaryData::goblin_png, 319005);}
+        Image getImage() override {return ImageCache::getFromMemory(BinaryData::centaur_png, BinaryData::centaur_pngSize);}
     };
     
     

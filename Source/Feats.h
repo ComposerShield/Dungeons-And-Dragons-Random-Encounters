@@ -27,6 +27,11 @@ namespace Feats {
         character->weaponProficiencies.add(exoticWeapon);
     }};
     
+    template<Weapons::Weapon& focus>
+    static inline Feat weaponFocus{"weapon focus", [](Character* character){
+        character->description.add("Weapon focus: " + focus.name);
+    }, {DEX, 15}};
+    
     //================FEATS==================//
     static const inline Feat    acrobatic{"acrobatic",[](Character* character){
                                     character->getSkill("jump").miscMod += 2;
@@ -158,6 +163,7 @@ namespace Feats {
                                 twoWeaponFighting{"two-weapon fighting",[](Character* character){
                                     character->description.add("Two weapon fighting.");
                                 }, {DEX, 15}};
+    
     
     
     inline const Array<Feat> featList{acrobatic, agile, alertness, animalAffinity, athletic, combatReflexes,

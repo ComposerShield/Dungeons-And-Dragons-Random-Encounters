@@ -8,6 +8,7 @@
         <FILE id="eIKYZk" name="Baskerville.ttc" compile="0" resource="1" file="/Library/Fonts/Baskerville.ttc"/>
         <FILE id="WURauD" name="Courier New.ttf" compile="0" resource="1" file="/Library/Fonts/Courier New.ttf"/>
         <FILE id="jM5QZ2" name="orc.png" compile="0" resource="1" file="Assets/orc.png"/>
+        <FILE id="z4tpso" name="centaur.png" compile="0" resource="1" file="Assets/centaur.png"/>
         <FILE id="gpWPJS" name="gnoll.png" compile="0" resource="1" file="Assets/gnoll.png"/>
         <FILE id="iCAqpa" name="goblin.png" compile="0" resource="1" file="Assets/goblin.png"/>
         <FILE id="Af1Txd" name="dnd_logo.png" compile="0" resource="1" file="Assets/dnd_logo.png"/>

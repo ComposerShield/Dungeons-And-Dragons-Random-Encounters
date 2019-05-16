@@ -17,6 +17,9 @@ namespace BinaryData
     extern const char*   orc_png;
     const int            orc_pngSize = 299549;
 
+    extern const char*   centaur_png;
+    const int            centaur_pngSize = 371389;
+
     extern const char*   gnoll_png;
     const int            gnoll_pngSize = 275706;
 
@@ -27,7 +30,7 @@ namespace BinaryData
     const int            dnd_logo_pngSize = 426629;
 
     // Number of elements in the namedResourceList and originalFileNames arrays.
-    const int namedResourceListSize = 6;
+    const int namedResourceListSize = 7;
 
     // Points to the start of a list of resource names.
     extern const char* namedResourceList[];

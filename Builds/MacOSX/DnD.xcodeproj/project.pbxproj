@@ -172,6 +172,13 @@
 			path = ../../Source/Feats.h;
 			sourceTree = "SOURCE_ROOT";
 		};
+		1952EF643F9C5AA46ED19E76 = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.png;
+			name = centaur.png;
+			path = ../../Assets/centaur.png;
+			sourceTree = "SOURCE_ROOT";
+		};
 		195616A86020C95921D67580 = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.cpp.objcpp;
@@ -598,6 +605,7 @@
 				56388E1C45B0ED6BA929E09E,
 				5B637348EB620561A72338DC,
 				6623E59D77C82D5356F2347B,
+				1952EF643F9C5AA46ED19E76,
 				AB531D5F26DEEB75E9C5869B,
 				93E345CBF7D01A0B5C20DA9D,
 				8DA8D49FC96BAF1DC1C09892,
