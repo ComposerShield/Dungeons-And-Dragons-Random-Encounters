@@ -188,7 +188,7 @@ namespace Monsters {
             preferredArmor.fill(
                                 {Armors::none},
                                 {padded, leather},
-                                {}
+                                {Armors::none}
                                 );
             
             using namespace Skills;
@@ -197,7 +197,7 @@ namespace Monsters {
                                  {});
             
             using namespace Feats;
-            preferredFeats.fill({dodge, weaponFocus<twoHooves>},
+            preferredFeats.fill({dodge, weaponFocus(twoHooves)},
                                 {track, animalAffinity, athletic, combatReflexes},
                                 {});
             

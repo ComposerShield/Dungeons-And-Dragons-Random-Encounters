@@ -27,10 +27,13 @@ namespace Feats {
         character->weaponProficiencies.add(exoticWeapon);
     }};
     
-    template<Weapons::Weapon& focus>
-    static inline Feat weaponFocus{"weapon focus", [](Character* character){
+    struct weaponFocus : public Feat{
+        weaponFocus(Weapons::Weapon focus) : Feat("weapon focus", [focus](Character* character){
         character->description.add("Weapon focus: " + focus.name);
-    }, {DEX, 15}};
+        }, {DEX, 15})
+        {
+        }
+    };
     
     //================FEATS==================//
     static const inline Feat    acrobatic{"acrobatic",[](Character* character){
