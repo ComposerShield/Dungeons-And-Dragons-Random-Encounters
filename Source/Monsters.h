@@ -99,9 +99,9 @@ namespace Monsters {
                                  );
             
             using namespace Feats;
-            preferredFeats.fill({alertness},
-                                {improvedUnarmedStrike, combatExpertise, athletic, combatReflexes},
-                                {});
+            preferredFeats.fill({alertness, martialProf_oneHandedMelee, martialProf_lightMelee},
+                                {improvedUnarmedStrike, combatExpertise, combatReflexes},
+                                {martialProf_ranged, athletic, improvedInitiative});
             
             finalizeNPC();
         }

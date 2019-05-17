@@ -15,20 +15,31 @@
 namespace Feats {
     auto nullFunc = [](Array<Skill>& skillList){};
     
-    template<Weapons::WeaponType weaponType>
-    auto weaponProfFunc = [](Character* character){
-        for(auto& weapon : Weapons::martialAllList)
-            if(weapon.type == weaponType)
-                character->weaponProficiencies.add(weapon);
+    struct weaponProficiency : public Feat{
+        weaponProficiency(String name, Array<Weapons::Weapon> weapons) :
+            Feat("Weapon Prof: "+name,
+                 [weapons](Character* character){
+                    for(auto& weapon : weapons)
+                        character->weaponProficiencies.add(weapon);
+                 }
+                 ){}
+        weaponProficiency(String name, Weapons::Weapon weapon) :
+            Feat("Weapon Prof: "+name,
+                 [weapon](Character* character){
+                         character->weaponProficiencies.add(weapon);
+                 }
+                 ){}
     };
+    
     
     template<Weapons::Weapon& exoticWeapon>
     static inline Feat exoticProf{"exoticProf ", [](Character* character){
         character->weaponProficiencies.add(exoticWeapon);
     }};
     
+    
     struct weaponFocus : public Feat{
-        weaponFocus(Weapons::Weapon focus) : Feat("weapon focus", [focus](Character* character){
+        weaponFocus(Weapons::Weapon focus) : Feat("weapon focus: "+ focus.name, [focus](Character* character){
         character->description.add("Weapon focus: " + focus.name);
         }, {DEX, 15})
         {
@@ -126,18 +137,6 @@ namespace Feats {
                                     character->getSkill("use magic device").miscMod += 2;
                                 }},
     
-                                martialProf_lightMelee    ("martialProf_lightMelee",
-                                                           weaponProfFunc<Weapons::MARTIAL_LIGHT_MELEE>),
-    
-                                martialProf_oneHandedMelee("martialProf_oneHandedMelee",
-                                                           weaponProfFunc<Weapons::MARTIAL_ONE_HANDED_MELEE>),
-    
-                                martialProf_twoHandedMelee("martialProf_twoHandedMelee",
-                                                           weaponProfFunc<Weapons::MARTIAL_TWO_HANDED_MELEE>),
-    
-                                martialProf_ranged        ("martialProf_ranged",
-                                                           weaponProfFunc<Weapons::MARTIAL_RANGED>),
-    
                                 pointBlankShot{"point blank shot",[](Character* character){
                                     character->rangedMiscBonus += 1;
                                 }},
@@ -166,6 +165,21 @@ namespace Feats {
                                 twoWeaponFighting{"two-weapon fighting",[](Character* character){
                                     character->description.add("Two weapon fighting.");
                                 }, {DEX, 15}};
+    
+    
+    
+    
+    static const inline weaponProficiency   martialProf_lightMelee    ("martialProf_lightMelee",
+                                                                       Weapons::martialLightList),
+    
+                                            martialProf_oneHandedMelee("martialProf_oneHandedMelee",
+                                                                       Weapons::martialOneHandedMeleeList),
+    
+                                            martialProf_twoHandedMelee("martialProf_twoHandedMelee",
+                                                                       Weapons::martialTwoHandedMeleeList),
+    
+                                            martialProf_ranged        ("martialProf_ranged",
+                                                                       Weapons::martialRanged);
     
     
     
