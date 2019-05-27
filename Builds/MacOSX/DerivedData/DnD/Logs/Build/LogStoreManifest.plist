@@ -70,6 +70,38 @@
 			<key>uniqueIdentifier</key>
 			<string>07EC3977-63CD-48A9-93D5-70F722FDF66C</string>
 		</dict>
+		<key>0E77B5EB-BAAC-4434-82A0-0FA279A96E37</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>0E77B5EB-BAAC-4434-82A0-0FA279A96E37.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>DnD project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>DnD - App</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build DnD - App</string>
+			<key>timeStartedRecording</key>
+			<real>580608998.095819</real>
+			<key>timeStoppedRecording</key>
+			<real>580609005.25878298</real>
+			<key>title</key>
+			<string>Build DnD - App</string>
+			<key>uniqueIdentifier</key>
+			<string>0E77B5EB-BAAC-4434-82A0-0FA279A96E37</string>
+		</dict>
 		<key>1634770D-29A0-48F6-923E-33A830299039</key>
 		<dict>
 			<key>className</key>
@@ -197,6 +229,38 @@
 			<string>Build DnD - App</string>
 			<key>uniqueIdentifier</key>
 			<string>378A0B71-2679-45B4-A8D8-0DD5E18226AB</string>
+		</dict>
+		<key>3DB76F67-3E35-46D5-971C-351FA59FA70E</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>3DB76F67-3E35-46D5-971C-351FA59FA70E.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>DnD project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>DnD - App</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build DnD - App</string>
+			<key>timeStartedRecording</key>
+			<real>580608804.72811496</real>
+			<key>timeStoppedRecording</key>
+			<real>580608808.62067902</real>
+			<key>title</key>
+			<string>Build DnD - App</string>
+			<key>uniqueIdentifier</key>
+			<string>3DB76F67-3E35-46D5-971C-351FA59FA70E</string>
 		</dict>
 		<key>426A9B86-D208-499F-B3CF-7CE0DD9ACD26</key>
 		<dict>
@@ -326,6 +390,38 @@
 			<key>uniqueIdentifier</key>
 			<string>5544B2CF-8831-4C5B-B5F9-37B9C6B1199B</string>
 		</dict>
+		<key>56FDB432-2E73-43D9-9ED2-0208A76509AA</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>56FDB432-2E73-43D9-9ED2-0208A76509AA.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>DnD project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>DnD - App</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build DnD - App</string>
+			<key>timeStartedRecording</key>
+			<real>580608851.66284001</real>
+			<key>timeStoppedRecording</key>
+			<real>580608855.832793</real>
+			<key>title</key>
+			<string>Build DnD - App</string>
+			<key>uniqueIdentifier</key>
+			<string>56FDB432-2E73-43D9-9ED2-0208A76509AA</string>
+		</dict>
 		<key>5B9AB629-2F50-4F59-96AB-84257D088C2A</key>
 		<dict>
 			<key>className</key>
@@ -357,6 +453,134 @@
 			<string>Build DnD - App</string>
 			<key>uniqueIdentifier</key>
 			<string>5B9AB629-2F50-4F59-96AB-84257D088C2A</string>
+		</dict>
+		<key>631EAB80-C8EB-4EAC-B389-D1B7FE33DABE</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>631EAB80-C8EB-4EAC-B389-D1B7FE33DABE.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>DnD project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>DnD - App</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build DnD - App</string>
+			<key>timeStartedRecording</key>
+			<real>580608786.30030203</real>
+			<key>timeStoppedRecording</key>
+			<real>580608790.44500601</real>
+			<key>title</key>
+			<string>Build DnD - App</string>
+			<key>uniqueIdentifier</key>
+			<string>631EAB80-C8EB-4EAC-B389-D1B7FE33DABE</string>
+		</dict>
+		<key>6CC2B84F-CE9A-40F8-90E1-E9CF1A31CA0E</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>6CC2B84F-CE9A-40F8-90E1-E9CF1A31CA0E.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>DnD project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>DnD - App</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build DnD - App</string>
+			<key>timeStartedRecording</key>
+			<real>580608861.24544799</real>
+			<key>timeStoppedRecording</key>
+			<real>580608865.08611095</real>
+			<key>title</key>
+			<string>Build DnD - App</string>
+			<key>uniqueIdentifier</key>
+			<string>6CC2B84F-CE9A-40F8-90E1-E9CF1A31CA0E</string>
+		</dict>
+		<key>870B3AE7-F5B5-4F91-9215-28D9C7064A06</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>870B3AE7-F5B5-4F91-9215-28D9C7064A06.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>DnD project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>DnD - App</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build DnD - App</string>
+			<key>timeStartedRecording</key>
+			<real>580608939.469908</real>
+			<key>timeStoppedRecording</key>
+			<real>580608943.59493995</real>
+			<key>title</key>
+			<string>Build DnD - App</string>
+			<key>uniqueIdentifier</key>
+			<string>870B3AE7-F5B5-4F91-9215-28D9C7064A06</string>
+		</dict>
+		<key>8959A5B5-4C51-4759-A7F2-66060BDB3B50</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>8959A5B5-4C51-4759-A7F2-66060BDB3B50.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>DnD project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>DnD - App</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build DnD - App</string>
+			<key>timeStartedRecording</key>
+			<real>580608690.78774595</real>
+			<key>timeStoppedRecording</key>
+			<real>580608695.12960005</real>
+			<key>title</key>
+			<string>Build DnD - App</string>
+			<key>uniqueIdentifier</key>
+			<string>8959A5B5-4C51-4759-A7F2-66060BDB3B50</string>
 		</dict>
 		<key>902494DB-6C6C-4294-97B4-81BB566654CE</key>
 		<dict>
@@ -454,6 +678,38 @@
 			<key>uniqueIdentifier</key>
 			<string>94F53043-BFE9-424F-BAF6-3FC9BC71801B</string>
 		</dict>
+		<key>9C1F63A2-8D51-4767-A003-6211BC4E36A7</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>9C1F63A2-8D51-4767-A003-6211BC4E36A7.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>DnD project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>DnD - App</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build DnD - App</string>
+			<key>timeStartedRecording</key>
+			<real>580608874.44111001</real>
+			<key>timeStoppedRecording</key>
+			<real>580608878.32509303</real>
+			<key>title</key>
+			<string>Build DnD - App</string>
+			<key>uniqueIdentifier</key>
+			<string>9C1F63A2-8D51-4767-A003-6211BC4E36A7</string>
+		</dict>
 		<key>ADD21561-BEF5-499C-8132-62993EABBAC8</key>
 		<dict>
 			<key>className</key>
@@ -518,6 +774,70 @@
 			<key>uniqueIdentifier</key>
 			<string>AF9D1C70-CECB-4620-9AEF-91411CFC0829</string>
 		</dict>
+		<key>B155F35B-74D0-4E50-AD9A-EA050401D004</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>B155F35B-74D0-4E50-AD9A-EA050401D004.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>DnD project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>DnD - App</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build DnD - App</string>
+			<key>timeStartedRecording</key>
+			<real>580608929.382635</real>
+			<key>timeStoppedRecording</key>
+			<real>580608933.76153004</real>
+			<key>title</key>
+			<string>Build DnD - App</string>
+			<key>uniqueIdentifier</key>
+			<string>B155F35B-74D0-4E50-AD9A-EA050401D004</string>
+		</dict>
+		<key>B5DAECAB-A999-4D25-B44B-959D7ED0F017</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>B5DAECAB-A999-4D25-B44B-959D7ED0F017.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>DnD project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>DnD - App</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build DnD - App</string>
+			<key>timeStartedRecording</key>
+			<real>580608918.48916304</real>
+			<key>timeStoppedRecording</key>
+			<real>580608922.39808095</real>
+			<key>title</key>
+			<string>Build DnD - App</string>
+			<key>uniqueIdentifier</key>
+			<string>B5DAECAB-A999-4D25-B44B-959D7ED0F017</string>
+		</dict>
 		<key>C68D28D8-74BA-4FB1-AA2C-E8F464CDDD8F</key>
 		<dict>
 			<key>className</key>
@@ -550,6 +870,38 @@
 			<key>uniqueIdentifier</key>
 			<string>C68D28D8-74BA-4FB1-AA2C-E8F464CDDD8F</string>
 		</dict>
+		<key>C8A12D5A-24F7-48F1-BDDA-BCF1624EB135</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>C8A12D5A-24F7-48F1-BDDA-BCF1624EB135.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>DnD project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>DnD - App</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build DnD - App</string>
+			<key>timeStartedRecording</key>
+			<real>580608796.74158299</real>
+			<key>timeStoppedRecording</key>
+			<real>580608800.65270901</real>
+			<key>title</key>
+			<string>Build DnD - App</string>
+			<key>uniqueIdentifier</key>
+			<string>C8A12D5A-24F7-48F1-BDDA-BCF1624EB135</string>
+		</dict>
 		<key>CEDE1FC7-EEF2-46F5-943E-C9469F6C3EC0</key>
 		<dict>
 			<key>className</key>
@@ -581,6 +933,38 @@
 			<string>Build DnD - App</string>
 			<key>uniqueIdentifier</key>
 			<string>CEDE1FC7-EEF2-46F5-943E-C9469F6C3EC0</string>
+		</dict>
+		<key>DFEEA145-ADCD-4BF8-8A51-0834D8D5B845</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>DFEEA145-ADCD-4BF8-8A51-0834D8D5B845.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>DnD project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>DnD - App</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build DnD - App</string>
+			<key>timeStartedRecording</key>
+			<real>580608697.96303403</real>
+			<key>timeStoppedRecording</key>
+			<real>580608701.98106599</real>
+			<key>title</key>
+			<string>Build DnD - App</string>
+			<key>uniqueIdentifier</key>
+			<string>DFEEA145-ADCD-4BF8-8A51-0834D8D5B845</string>
 		</dict>
 		<key>E4333699-F5D0-4FAB-88AF-EE45F4FFE8BD</key>
 		<dict>
@@ -645,6 +1029,38 @@
 			<string>Build DnD - App</string>
 			<key>uniqueIdentifier</key>
 			<string>E665DE05-EACF-4418-A51B-3CCE11084764</string>
+		</dict>
+		<key>E9C10726-AA1A-4485-8E1B-35AA34FC7D93</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>E9C10726-AA1A-4485-8E1B-35AA34FC7D93.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>DnD project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>DnD - App</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build DnD - App</string>
+			<key>timeStartedRecording</key>
+			<real>580608946.86212301</real>
+			<key>timeStoppedRecording</key>
+			<real>580608951.18833303</real>
+			<key>title</key>
+			<string>Build DnD - App</string>
+			<key>uniqueIdentifier</key>
+			<string>E9C10726-AA1A-4485-8E1B-35AA34FC7D93</string>
 		</dict>
 		<key>EE068D35-1185-4CC7-A917-9AA6683F6978</key>
 		<dict>

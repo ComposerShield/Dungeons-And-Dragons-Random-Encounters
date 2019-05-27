@@ -15,12 +15,12 @@ MainComponent::MainComponent()
     LookAndFeel::getDefaultLookAndFeel().setDefaultSansSerifTypefaceName("Avenir Next");
     
     addAndMakeVisible(&headerControls);
-    addAndMakeVisible(&viewport);
+    addAndMakeVisible(*viewport);
     headerControls.generateButton.addListener(this);
     
-    viewport.setViewedComponent(&characterSheetWindow, false);
-    viewport.setScrollBarThickness(20);
-    viewport.setScrollBarsShown(true, false);
+    viewport->setViewedComponent(&characterSheetWindow, false);
+    viewport->setScrollBarThickness(20);
+    viewport->setScrollBarsShown(true, false);
     
     resized();
     
@@ -44,10 +44,10 @@ void MainComponent::resized()
 {
     auto bounds = getLocalBounds();
     headerControls.setBounds(bounds.removeFromTop(80));
-    viewport.setBounds(bounds);
+    viewport->setBounds(bounds);
     characterSheetWindow.setBounds(bounds.expanded(0, 400));
-    viewport.setViewPositionProportionately(0.0, 0.0);
     
+    viewport->setViewPositionProportionately(0.0, 0.0);
 }
 
 void MainComponent::buttonClicked(Button * button){
@@ -204,9 +204,9 @@ String CharacterSheet::getWeaponDetails() const{
 
 String CharacterSheet::getFeatNames() const{
     String output = "";
-    for_indexed(auto& feat : character->feats){
+    for_indexed(auto& feat : *character->feats){
         output += feat.name;
-        if(i != character->feats.size()-1) output += ", ";
+        if(i != character->feats->size()-1) output += ", ";
     }
     return output;
 }

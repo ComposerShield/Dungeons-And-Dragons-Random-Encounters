@@ -105,7 +105,7 @@ private:
     HeaderControls headerControls;
     CharacterSheetWindow characterSheetWindow;
     void buttonClicked (Button* button) override;
-    Viewport viewport;
+    std::unique_ptr<Viewport> viewport;
     Array<std::shared_ptr<NPC>> monsters;
     
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)

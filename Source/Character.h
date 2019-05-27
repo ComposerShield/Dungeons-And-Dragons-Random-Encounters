@@ -59,7 +59,7 @@ public:
     Array<Skill> skills = Skills::skillList;
     std::unique_ptr<Array<Feat>> featList;
     std::map<String, Skill*> skillMap;
-    Array<Feat>  feats;
+    std::unique_ptr<Array<Feat>> feats;
     Array<Weapons::Weapon> weaponProficiencies;
     Array<Weapons::Weapon> naturalWeapons;
     Die HD{1, D8}; //default

@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>DB677A79-9745-4B66-AD2F-89544877D0A7</key>
+		<key>A7C4C7DA-32C5-4DE7-9BCC-8DB46A254D3E</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
 			<key>fileName</key>
-			<string>DB677A79-9745-4B66-AD2F-89544877D0A7.xcactivitylog</string>
+			<string>A7C4C7DA-32C5-4DE7-9BCC-8DB46A254D3E.xcactivitylog</string>
 			<key>primaryObservable</key>
 			<dict>
 				<key>highLevelStatus</key>
@@ -24,13 +24,13 @@
 			<key>signature</key>
 			<string>DnD_-_App-gtcrlskdpouftdgxnezfdyliuoiu</string>
 			<key>timeStartedRecording</key>
-			<real>580608402.546767</real>
+			<real>580608998.10367799</real>
 			<key>timeStoppedRecording</key>
-			<real>580608402.56085598</real>
+			<real>580609005.25020194</real>
 			<key>title</key>
 			<string>Build target DnD - App</string>
 			<key>uniqueIdentifier</key>
-			<string>DB677A79-9745-4B66-AD2F-89544877D0A7</string>
+			<string>A7C4C7DA-32C5-4DE7-9BCC-8DB46A254D3E</string>
 		</dict>
 	</dict>
 	<key>preserveOldLogs</key>

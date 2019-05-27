@@ -35,7 +35,7 @@ void Character::evaluateCharacterSheet(){
         resetVal(val);
     
     randomize();
-    for(auto& feat : feats) feat.function;
+    for(auto& feat : *feats) feat.function;
     for(auto& skill : skills){
         skill.calculateKeyAbilityMod(skill.abilityFromArray(abilitiesAsArray()));
     }
@@ -66,7 +66,7 @@ void Character::populateSkillMods(Array<std::pair<Skill, int>> skillList) const{
 }
 
 void Character::activateFeats(){
-    for(auto feat : feats)
+    for(auto feat : *feats)
         feat.function(this);
 }
 
@@ -92,7 +92,7 @@ bool Character::checkPrerequisites(Prerequisite& prerequisite){
         using T = std::decay_t<decltype(prerequisite)>;
         
         if constexpr (std::is_same_v<T, Feat>){
-            for(auto& feat : feats)
+            for(auto& feat : *feats)
                 if(feat.name==prerequisite.name)
                     return true;
         }
@@ -113,7 +113,7 @@ void NPC::finalizeNPC(){
     equippedWeapons.add(getRandomFromPref(preferredWeapons));
     equippedArmor.add(getRandomFromPref(preferredArmor));
     for(auto i=0; i<startingFeatRanks;++i)
-        feats.add(getRandomFromPref(preferredFeats));
+        feats->add(getRandomFromPref(preferredFeats));
     populateSkillRanks();
     
 }
