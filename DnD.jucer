@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <JUCERPROJECT id="cp7rmZ" name="DnD" projectType="guiapp" jucerVersion="5.4.1"
-              cppLanguageStandard="17">
+              cppLanguageStandard="17" defines="_LIBCPP_DISABLE_AVAILABILITY">
   <MAINGROUP id="TV0qGq" name="DnD">
     <GROUP id="{8FF29A55-BEE8-3342-4F07-5752919E8C8A}" name="Source">
       <GROUP id="{2405B3F5-959C-F729-06DF-808CDA112D37}" name="Assets">

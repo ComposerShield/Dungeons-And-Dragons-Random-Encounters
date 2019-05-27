@@ -11,7 +11,7 @@
 #include "Character.h"
 #include "Feats.h"
 
-Character::Character(Array<uint8> abilities, uint8 baseAttack, int init) : featList(Feats::featList){
+Character::Character(Array<uint8> abilities, uint8 baseAttack, int init){
     strength =      abilities[0];
     dexterity =     abilities[1];
     constitution =  abilities[2];
@@ -23,7 +23,7 @@ Character::Character(Array<uint8> abilities, uint8 baseAttack, int init) : featL
     baseInitiative = init;
     
     populateSkillMap();
-    
+    featList.reset(new Array<Feat>(Feats::featList));
 }
 
 void Character::evaluateCharacterSheet(){
@@ -87,6 +87,26 @@ constexpr int Character::rollHD() const{
     return total;
 }
 
+bool Character::checkPrerequisites(Prerequisite& prerequisite){
+    return std::visit([this](auto& prerequisite)->bool{
+        using T = std::decay_t<decltype(prerequisite)>;
+        
+        if constexpr (std::is_same_v<T, Feat>){
+            for(auto& feat : feats)
+                if(feat.name==prerequisite.name)
+                    return true;
+        }
+        else if constexpr (std::is_same_v<T, AbilityVal>){
+            auto [ability, min] = prerequisite;
+            if(min<=abilityFromArray(ability))
+                return true;
+        }
+        else return false;
+        
+        return false;
+    }, prerequisite);
+}
+
 //========================NPC=============================//
 
 void NPC::finalizeNPC(){
@@ -114,7 +134,7 @@ t NPC::grabFromPrefList(Array<t> list) const{
         else if constexpr (std::is_same_v<t, Weapons::Weapon>)
             return grabFromPrefList(defaultWeapons);
         else if constexpr (std::is_same_v<t, Feat>)
-            return grabFromPrefList(featList);
+            return grabFromPrefList(*featList);
         else{
             jassertfalse;
             return t();

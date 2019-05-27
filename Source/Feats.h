@@ -12,6 +12,7 @@
 #include "Character.h"
 #include "Common.h"
 
+
 namespace Feats {
     auto nullFunc = [](Array<Skill>& skillList){};
     
@@ -188,6 +189,11 @@ namespace Feats {
         improvedInitiative, investigator, ironWill, martialProf_lightMelee, pointBlankShot, farShot,
         martialProf_oneHandedMelee, martialProf_twoHandedMelee, martialProf_ranged, preciseShot,
         stealthy, toughness, track, twoWeaponFighting};
+    
+    
+    
+    
+        
     
     
 }

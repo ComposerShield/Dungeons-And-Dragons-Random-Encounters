@@ -20,6 +20,8 @@ enum Ability{
     CHA
 };
 
+using AbilityVal = std::pair<Ability, int>;
+
 struct Skill{
     String name;
     Ability keyAbility;

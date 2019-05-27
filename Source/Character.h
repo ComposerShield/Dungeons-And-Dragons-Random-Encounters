@@ -19,6 +19,7 @@
 #include "Common.h"
 
 struct Feat;
+using Prerequisite = std::variant<Feat, AbilityVal>;
 
 class Character{
 public:
@@ -55,8 +56,8 @@ public:
     
     EquippedWeapons equippedWeapons;
     EquippedArmor   equippedArmor;
-    const Array<Skill> skills = Skills::skillList;
-    const Array<Feat> featList;
+    Array<Skill> skills = Skills::skillList;
+    std::unique_ptr<Array<Feat>> featList;
     std::map<String, Skill*> skillMap;
     Array<Feat>  feats;
     Array<Weapons::Weapon> weaponProficiencies;
@@ -64,13 +65,25 @@ public:
     Die HD{1, D8}; //default
     
     
-    std::pair<void*, int> characterImageData;
     Image characterImage;
     
     Skill& getSkill(String skill) const;
     void evaluateCharacterSheet();
+    bool checkPrerequisites(Prerequisite& prerequisite);
+    inline uint8 abilityFromArray(Ability ability) const noexcept{
+        switch(ability){
+            case STR: return *abilityList[0];
+            case DEX: return *abilityList[1];
+            case CON: return *abilityList[2];
+            case INT: return *abilityList[3];
+            case WIS: return *abilityList[4];
+            case CHA: return *abilityList[5];
+        }
+    }
     
     virtual Image getImage() = 0;
+    
+    
     
 private:
     constexpr int getFortitude()  const {return baseFort + abilityMod(constitution) + miscFort;}
@@ -138,6 +151,8 @@ public:
     PreferredFeats  preferredFeats;
     double cr;
     
+    
+    
 private:
     
     template<typename t>
@@ -154,6 +169,9 @@ class PC : public Character{
     PC (Array<uint8> abilities, uint8 baseAttack, int init) : Character(abilities, baseAttack, init){}
     virtual ~PC(){};
 };
+
+
+
 
 
 struct Feat{
